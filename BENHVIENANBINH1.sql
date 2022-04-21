@@ -67,7 +67,7 @@ CREATE TABLE GOIVACXIN
 (
 	MA_GVX CHAR(5),
 	TEN_GVX NVARCHAR(30) NOT NULL,
-	LOAI_GVX BIT NOT NULL, --0 là tiêm lẻ, 1 là gói tiêm, 2 là tiêm bắt buộc theo gói
+	LOAI_GVX INT NOT NULL, --0 là tiêm lẻ, 1 là gói tiêm, 2 là tiêm bắt buộc theo gói
 	NGAYSX DATE,
 	NGAYHH DATE,
 	DOITUONGTIEM NVARCHAR(100),
