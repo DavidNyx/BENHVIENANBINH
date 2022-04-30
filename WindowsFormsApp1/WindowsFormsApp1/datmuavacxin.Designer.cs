@@ -66,7 +66,7 @@ namespace WindowsFormsApp1
             this.label15 = new System.Windows.Forms.Label();
             this.label21 = new System.Windows.Forms.Label();
             this.comboBox4 = new System.Windows.Forms.ComboBox();
-            this.maskedTextBox3 = new System.Windows.Forms.MaskedTextBox();
+            this.ngaytiem = new System.Windows.Forms.MaskedTextBox();
             this.label27 = new System.Windows.Forms.Label();
             this.label33 = new System.Windows.Forms.Label();
             this.label14 = new System.Windows.Forms.Label();
@@ -79,6 +79,7 @@ namespace WindowsFormsApp1
             this.button3 = new System.Windows.Forms.Button();
             this.checkBox1 = new System.Windows.Forms.CheckBox();
             this.checkBox2 = new System.Windows.Forms.CheckBox();
+            this.checkBox3 = new System.Windows.Forms.CheckBox();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
@@ -458,13 +459,13 @@ namespace WindowsFormsApp1
             this.comboBox4.TabIndex = 93;
             this.comboBox4.SelectedIndexChanged += new System.EventHandler(this.comboBox4_SelectedIndexChanged);
             // 
-            // maskedTextBox3
+            // ngaytiem
             // 
-            this.maskedTextBox3.Location = new System.Drawing.Point(812, 111);
-            this.maskedTextBox3.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.maskedTextBox3.Name = "maskedTextBox3";
-            this.maskedTextBox3.Size = new System.Drawing.Size(313, 22);
-            this.maskedTextBox3.TabIndex = 104;
+            this.ngaytiem.Location = new System.Drawing.Point(812, 111);
+            this.ngaytiem.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.ngaytiem.Name = "ngaytiem";
+            this.ngaytiem.Size = new System.Drawing.Size(313, 22);
+            this.ngaytiem.TabIndex = 104;
             // 
             // label27
             // 
@@ -573,6 +574,7 @@ namespace WindowsFormsApp1
             this.button3.TabIndex = 116;
             this.button3.Text = "Thanh toán";
             this.button3.UseVisualStyleBackColor = true;
+            this.button3.Click += new System.EventHandler(this.button3_Click);
             // 
             // checkBox1
             // 
@@ -594,11 +596,22 @@ namespace WindowsFormsApp1
             this.checkBox2.UseVisualStyleBackColor = true;
             this.checkBox2.CheckedChanged += new System.EventHandler(this.checkBox2_CheckedChanged);
             // 
+            // checkBox3
+            // 
+            this.checkBox3.AutoSize = true;
+            this.checkBox3.Location = new System.Drawing.Point(628, 386);
+            this.checkBox3.Name = "checkBox3";
+            this.checkBox3.Size = new System.Drawing.Size(18, 17);
+            this.checkBox3.TabIndex = 119;
+            this.checkBox3.UseVisualStyleBackColor = true;
+            this.checkBox3.CheckedChanged += new System.EventHandler(this.checkBox3_CheckedChanged);
+            // 
             // datmuavacxin
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1169, 922);
+            this.Controls.Add(this.checkBox3);
             this.Controls.Add(this.checkBox2);
             this.Controls.Add(this.checkBox1);
             this.Controls.Add(this.button3);
@@ -613,7 +626,7 @@ namespace WindowsFormsApp1
             this.Controls.Add(this.label16);
             this.Controls.Add(this.maskedTextBox2);
             this.Controls.Add(this.maskedTextBox1);
-            this.Controls.Add(this.maskedTextBox3);
+            this.Controls.Add(this.ngaytiem);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.textBox7);
             this.Controls.Add(this.label9);
@@ -699,7 +712,7 @@ namespace WindowsFormsApp1
         private System.Windows.Forms.Label label15;
         private System.Windows.Forms.Label label21;
         private System.Windows.Forms.ComboBox comboBox4;
-        private System.Windows.Forms.MaskedTextBox maskedTextBox3;
+        private System.Windows.Forms.MaskedTextBox ngaytiem;
         private System.Windows.Forms.Label label27;
         private System.Windows.Forms.Label label33;
         private System.Windows.Forms.Label label14;
@@ -712,5 +725,6 @@ namespace WindowsFormsApp1
         private System.Windows.Forms.Button button3;
         private System.Windows.Forms.CheckBox checkBox1;
         private System.Windows.Forms.CheckBox checkBox2;
+        private System.Windows.Forms.CheckBox checkBox3;
     }
 }

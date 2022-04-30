@@ -88,7 +88,6 @@ namespace WindowsFormsApp1
             this.label1.Size = new System.Drawing.Size(335, 39);
             this.label1.TabIndex = 0;
             this.label1.Text = "Đăng ký tiêm chủng";
-            this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
             // label2
             // 
@@ -220,7 +219,6 @@ namespace WindowsFormsApp1
             this.label12.Size = new System.Drawing.Size(192, 20);
             this.label12.TabIndex = 18;
             this.label12.Text = "3. Tra cứu tiêm chủng";
-            this.label12.Click += new System.EventHandler(this.label12_Click);
             // 
             // label13
             // 
@@ -232,7 +230,6 @@ namespace WindowsFormsApp1
             this.label13.Size = new System.Drawing.Size(76, 17);
             this.label13.TabIndex = 19;
             this.label13.Text = "*Tiêm gói";
-            this.label13.Click += new System.EventHandler(this.label13_Click);
             // 
             // dataGridView1
             // 
@@ -243,7 +240,6 @@ namespace WindowsFormsApp1
             this.dataGridView1.RowHeadersWidth = 51;
             this.dataGridView1.Size = new System.Drawing.Size(425, 212);
             this.dataGridView1.TabIndex = 20;
-            this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
             // 
             // dataGridView2
             // 
@@ -254,8 +250,7 @@ namespace WindowsFormsApp1
             this.dataGridView2.RowHeadersWidth = 51;
             this.dataGridView2.Size = new System.Drawing.Size(425, 254);
             this.dataGridView2.TabIndex = 22;
-            this.dataGridView2.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView2_CellContentClick);
-            // 
+           
             // label14
             // 
             this.label14.AutoSize = true;
@@ -266,7 +261,6 @@ namespace WindowsFormsApp1
             this.label14.Size = new System.Drawing.Size(67, 17);
             this.label14.TabIndex = 21;
             this.label14.Text = "*Tiêm lẻ";
-            this.label14.Click += new System.EventHandler(this.label14_Click);
             // 
             // label19
             // 
@@ -398,7 +392,6 @@ namespace WindowsFormsApp1
             this.comboBox5.Name = "comboBox5";
             this.comboBox5.Size = new System.Drawing.Size(331, 24);
             this.comboBox5.TabIndex = 52;
-            this.comboBox5.SelectedIndexChanged += new System.EventHandler(this.comboBox5_SelectedIndexChanged);
             // 
             // button3
             // 
@@ -419,7 +412,6 @@ namespace WindowsFormsApp1
             this.vacxin.Name = "vacxin";
             this.vacxin.Size = new System.Drawing.Size(321, 24);
             this.vacxin.TabIndex = 60;
-            this.vacxin.SelectedIndexChanged += new System.EventHandler(this.comboBox2_SelectedIndexChanged);
             // 
             // label17
             // 
