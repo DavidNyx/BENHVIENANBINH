@@ -15,7 +15,10 @@ CREATE PROC INSERT_PDKT
 AS
 BEGIN 
 	IF @NGAYTIEM <= (SELECT GETDATE())
-		RETURN 0 --N'Ngày tiêm không hợp lệ.'
+		Begin
+			RAISERROR (N'Ngày tiêm không hợp lệ', 16, 1)
+			RETURN 0 --N'Ngày tiêm không hợp lệ.'
+		end
 	INSERT PHIEUDKTIEM VALUES(@MA_PDKT, @MA_KH, @MA_GVX, @MA_TT, @NGAYTIEM)
 END
 GO
@@ -57,7 +60,10 @@ BEGIN
 		DECLARE @FLAG BIT
 		EXEC @FLAG = INSERT_NGH @MA_KH, @HOTEN_NGH, @NGAYSINH_NGH, @SDT_NGH, @DIACHI_NGH
 		IF @FLAG = 0
+		Begin
+			RAISERROR (N'Người giám hộ không hợp lệ', 16, 1)
 			RETURN 0 --N'Người giám hộ không hợp lệ.'
+		end
 	END
 	INSERT KHACHHANG VALUES (@MA_KH, @HOTEN, @DIACHI, @NGAYSINH, @SDT, GETDATE(), @CMND)
 END

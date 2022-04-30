@@ -38,7 +38,6 @@ namespace WindowsFormsApp1
             this.label22 = new System.Windows.Forms.Label();
             this.textBox5 = new System.Windows.Forms.TextBox();
             this.label23 = new System.Windows.Forms.Label();
-            this.maskedTextBox2 = new System.Windows.Forms.MaskedTextBox();
             this.label24 = new System.Windows.Forms.Label();
             this.textBox6 = new System.Windows.Forms.TextBox();
             this.label25 = new System.Windows.Forms.Label();
@@ -47,36 +46,37 @@ namespace WindowsFormsApp1
             this.label8 = new System.Windows.Forms.Label();
             this.textBox2 = new System.Windows.Forms.TextBox();
             this.label7 = new System.Windows.Forms.Label();
-            this.maskedTextBox1 = new System.Windows.Forms.MaskedTextBox();
             this.label6 = new System.Windows.Forms.Label();
             this.hoten = new System.Windows.Forms.TextBox();
             this.label10 = new System.Windows.Forms.Label();
             this.label11 = new System.Windows.Forms.Label();
             this.makh = new System.Windows.Forms.TextBox();
             this.label13 = new System.Windows.Forms.Label();
-            this.label16 = new System.Windows.Forms.Label();
-            this.maskedTextBox4 = new System.Windows.Forms.MaskedTextBox();
-            this.label15 = new System.Windows.Forms.Label();
-            this.label17 = new System.Windows.Forms.Label();
-            this.label18 = new System.Windows.Forms.Label();
             this.label30 = new System.Windows.Forms.Label();
             this.dataGridView2 = new System.Windows.Forms.DataGridView();
             this.label31 = new System.Windows.Forms.Label();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.label32 = new System.Windows.Forms.Label();
             this.button1 = new System.Windows.Forms.Button();
+            this.textBox7 = new System.Windows.Forms.TextBox();
+            this.label9 = new System.Windows.Forms.Label();
+            this.button2 = new System.Windows.Forms.Button();
+            this.maskedTextBox1 = new System.Windows.Forms.MaskedTextBox();
+            this.maskedTextBox2 = new System.Windows.Forms.MaskedTextBox();
+            this.label15 = new System.Windows.Forms.Label();
             this.label21 = new System.Windows.Forms.Label();
+            this.comboBox4 = new System.Windows.Forms.ComboBox();
+            this.maskedTextBox3 = new System.Windows.Forms.MaskedTextBox();
             this.label27 = new System.Windows.Forms.Label();
+            this.label33 = new System.Windows.Forms.Label();
             this.label14 = new System.Windows.Forms.Label();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.label19 = new System.Windows.Forms.Label();
-            this.textBox7 = new System.Windows.Forms.TextBox();
-            this.label9 = new System.Windows.Forms.Label();
-            this.button2 = new System.Windows.Forms.Button();
-            this.label33 = new System.Windows.Forms.Label();
             this.comboBox2 = new System.Windows.Forms.ComboBox();
-            this.comboBox4 = new System.Windows.Forms.ComboBox();
+            this.label17 = new System.Windows.Forms.Label();
+            this.label16 = new System.Windows.Forms.Label();
+            this.button3 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
@@ -164,13 +164,6 @@ namespace WindowsFormsApp1
             this.label23.TabIndex = 62;
             this.label23.Text = "SĐT:";
             // 
-            // maskedTextBox2
-            // 
-            this.maskedTextBox2.Location = new System.Drawing.Point(125, 326);
-            this.maskedTextBox2.Name = "maskedTextBox2";
-            this.maskedTextBox2.Size = new System.Drawing.Size(127, 20);
-            this.maskedTextBox2.TabIndex = 61;
-            // 
             // label24
             // 
             this.label24.AutoSize = true;
@@ -241,22 +234,15 @@ namespace WindowsFormsApp1
             this.label7.TabIndex = 51;
             this.label7.Text = "SĐT:";
             // 
-            // maskedTextBox1
-            // 
-            this.maskedTextBox1.Location = new System.Drawing.Point(125, 195);
-            this.maskedTextBox1.Name = "maskedTextBox1";
-            this.maskedTextBox1.Size = new System.Drawing.Size(282, 20);
-            this.maskedTextBox1.TabIndex = 50;
-            // 
             // label6
             // 
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label6.Location = new System.Drawing.Point(52, 198);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(67, 13);
+            this.label6.Size = new System.Drawing.Size(161, 13);
             this.label6.TabIndex = 49;
-            this.label6.Text = "Ngày sinh:";
+            this.label6.Text = "Ngày sinh (MM/DD/YYYY):";
             // 
             // hoten
             // 
@@ -301,54 +287,6 @@ namespace WindowsFormsApp1
             this.label13.Size = new System.Drawing.Size(201, 13);
             this.label13.TabIndex = 44;
             this.label13.Text = "*Đã từng tiêm chủng tại bệnh viện";
-            // 
-            // label16
-            // 
-            this.label16.AutoSize = true;
-            this.label16.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label16.Location = new System.Drawing.Point(486, 230);
-            this.label16.Name = "label16";
-            this.label16.Size = new System.Drawing.Size(194, 13);
-            this.label16.TabIndex = 75;
-            this.label16.Text = "*Đặt mua vắc xin thuộc hệ thống";
-            // 
-            // maskedTextBox4
-            // 
-            this.maskedTextBox4.Location = new System.Drawing.Point(609, 250);
-            this.maskedTextBox4.Name = "maskedTextBox4";
-            this.maskedTextBox4.Size = new System.Drawing.Size(236, 20);
-            this.maskedTextBox4.TabIndex = 84;
-            // 
-            // label15
-            // 
-            this.label15.AutoSize = true;
-            this.label15.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label15.Location = new System.Drawing.Point(486, 253);
-            this.label15.Name = "label15";
-            this.label15.Size = new System.Drawing.Size(121, 13);
-            this.label15.TabIndex = 83;
-            this.label15.Text = "*Đăng ký ngày tiêm:";
-            this.label15.Click += new System.EventHandler(this.label15_Click);
-            // 
-            // label17
-            // 
-            this.label17.AutoSize = true;
-            this.label17.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label17.Location = new System.Drawing.Point(495, 326);
-            this.label17.Name = "label17";
-            this.label17.Size = new System.Drawing.Size(102, 13);
-            this.label17.TabIndex = 79;
-            this.label17.Text = "Mã (gói) vắc xin:";
-            // 
-            // label18
-            // 
-            this.label18.AutoSize = true;
-            this.label18.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label18.Location = new System.Drawing.Point(486, 302);
-            this.label18.Name = "label18";
-            this.label18.Size = new System.Drawing.Size(107, 13);
-            this.label18.TabIndex = 78;
-            this.label18.Text = "*Đăng ký tiêm gói";
             // 
             // label30
             // 
@@ -398,73 +336,12 @@ namespace WindowsFormsApp1
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(765, 359);
+            this.button1.Location = new System.Drawing.Point(765, 146);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(80, 23);
             this.button1.TabIndex = 90;
-            this.button1.Text = "Đặt mua";
+            this.button1.Text = "Lọc vắc xin";
             this.button1.UseVisualStyleBackColor = true;
-            // 
-            // label21
-            // 
-            this.label21.AutoSize = true;
-            this.label21.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label21.Location = new System.Drawing.Point(486, 279);
-            this.label21.Name = "label21";
-            this.label21.Size = new System.Drawing.Size(120, 13);
-            this.label21.TabIndex = 92;
-            this.label21.Text = "*Đăng ký trung tâm:";
-            this.label21.Click += new System.EventHandler(this.label21_Click);
-            // 
-            // label27
-            // 
-            this.label27.AutoSize = true;
-            this.label27.Location = new System.Drawing.Point(486, 159);
-            this.label27.MaximumSize = new System.Drawing.Size(354, 0);
-            this.label27.Name = "label27";
-            this.label27.Size = new System.Drawing.Size(349, 39);
-            this.label27.TabIndex = 100;
-            this.label27.Text = "*Nếu bệnh viện có khả năng đặt mua, bạn sẽ nhận được báo giá và thông báo yêu cầu" +
-    " thanh toán trong vòng 14 ngày kể từ lúc nhận thông báo. Nếu trễ hẹn sẽ bị hủy l" +
-    "ịch tiêm";
-            // 
-            // label14
-            // 
-            this.label14.AutoSize = true;
-            this.label14.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label14.Location = new System.Drawing.Point(486, 88);
-            this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(193, 13);
-            this.label14.TabIndex = 98;
-            this.label14.Text = "*Đặt mua vắc xin ngoài hệ thống";
-            // 
-            // textBox1
-            // 
-            this.textBox1.Location = new System.Drawing.Point(579, 203);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(266, 20);
-            this.textBox1.TabIndex = 97;
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(495, 206);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(78, 13);
-            this.label2.TabIndex = 96;
-            this.label2.Text = "Tên vắc xin:";
-            // 
-            // label19
-            // 
-            this.label19.AutoSize = true;
-            this.label19.Location = new System.Drawing.Point(486, 106);
-            this.label19.MaximumSize = new System.Drawing.Size(354, 0);
-            this.label19.Name = "label19";
-            this.label19.Size = new System.Drawing.Size(354, 26);
-            this.label19.TabIndex = 95;
-            this.label19.Text = "*Nếu bạn đặt mua vắc xin ngoài hệ thống, bạn chỉ có thể đăng ký tiêm lẻ và thanh " +
-    "toán 1 lần\r\n";
             // 
             // textBox7
             // 
@@ -485,54 +362,184 @@ namespace WindowsFormsApp1
             // 
             // button2
             // 
-            this.button2.Location = new System.Drawing.Point(400, 714);
+            this.button2.Location = new System.Drawing.Point(402, 714);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(75, 23);
             this.button2.TabIndex = 103;
             this.button2.Text = "Xem";
             this.button2.UseVisualStyleBackColor = true;
             // 
-            // label33
+            // maskedTextBox1
             // 
-            this.label33.AutoSize = true;
-            this.label33.Location = new System.Drawing.Point(486, 132);
-            this.label33.MaximumSize = new System.Drawing.Size(354, 0);
-            this.label33.Name = "label33";
-            this.label33.Size = new System.Drawing.Size(345, 26);
-            this.label33.TabIndex = 99;
-            this.label33.Text = "*Nếu bệnh viện không thể phục vụ loại vắc xin đó, bạn sẽ được thông báo qua số đi" +
-    "ệnt hoại và hủy lịch tiêm chủng";
+            this.maskedTextBox1.Location = new System.Drawing.Point(220, 195);
+            this.maskedTextBox1.Name = "maskedTextBox1";
+            this.maskedTextBox1.Size = new System.Drawing.Size(187, 20);
+            this.maskedTextBox1.TabIndex = 105;
             // 
-            // comboBox2
+            // maskedTextBox2
             // 
-            this.comboBox2.FormattingEnabled = true;
-            this.comboBox2.Location = new System.Drawing.Point(603, 323);
-            this.comboBox2.Name = "comboBox2";
-            this.comboBox2.Size = new System.Drawing.Size(242, 21);
-            this.comboBox2.TabIndex = 81;
+            this.maskedTextBox2.Location = new System.Drawing.Point(125, 326);
+            this.maskedTextBox2.Name = "maskedTextBox2";
+            this.maskedTextBox2.Size = new System.Drawing.Size(127, 20);
+            this.maskedTextBox2.TabIndex = 106;
+            // 
+            // label15
+            // 
+            this.label15.AutoSize = true;
+            this.label15.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label15.Location = new System.Drawing.Point(486, 93);
+            this.label15.Name = "label15";
+            this.label15.Size = new System.Drawing.Size(121, 13);
+            this.label15.TabIndex = 83;
+            this.label15.Text = "*Đăng ký ngày tiêm:";
+            this.label15.Click += new System.EventHandler(this.label15_Click);
+            // 
+            // label21
+            // 
+            this.label21.AutoSize = true;
+            this.label21.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label21.Location = new System.Drawing.Point(486, 122);
+            this.label21.Name = "label21";
+            this.label21.Size = new System.Drawing.Size(120, 13);
+            this.label21.TabIndex = 92;
+            this.label21.Text = "*Đăng ký trung tâm:";
+            this.label21.Click += new System.EventHandler(this.label21_Click);
             // 
             // comboBox4
             // 
             this.comboBox4.FormattingEnabled = true;
-            this.comboBox4.Location = new System.Drawing.Point(609, 276);
+            this.comboBox4.Location = new System.Drawing.Point(609, 119);
             this.comboBox4.Name = "comboBox4";
             this.comboBox4.Size = new System.Drawing.Size(236, 21);
             this.comboBox4.TabIndex = 93;
+            this.comboBox4.SelectedIndexChanged += new System.EventHandler(this.comboBox4_SelectedIndexChanged);
+            // 
+            // maskedTextBox3
+            // 
+            this.maskedTextBox3.Location = new System.Drawing.Point(609, 90);
+            this.maskedTextBox3.Name = "maskedTextBox3";
+            this.maskedTextBox3.Size = new System.Drawing.Size(236, 20);
+            this.maskedTextBox3.TabIndex = 104;
+            // 
+            // label27
+            // 
+            this.label27.AutoSize = true;
+            this.label27.Location = new System.Drawing.Point(486, 242);
+            this.label27.MaximumSize = new System.Drawing.Size(354, 0);
+            this.label27.Name = "label27";
+            this.label27.Size = new System.Drawing.Size(349, 39);
+            this.label27.TabIndex = 115;
+            this.label27.Text = "*Nếu bệnh viện có khả năng đặt mua, bạn sẽ nhận được báo giá và thông báo yêu cầu" +
+    " thanh toán trong vòng 14 ngày kể từ lúc nhận thông báo. Nếu trễ hẹn sẽ bị hủy l" +
+    "ịch tiêm";
+            // 
+            // label33
+            // 
+            this.label33.AutoSize = true;
+            this.label33.Location = new System.Drawing.Point(486, 216);
+            this.label33.MaximumSize = new System.Drawing.Size(354, 0);
+            this.label33.Name = "label33";
+            this.label33.Size = new System.Drawing.Size(345, 26);
+            this.label33.TabIndex = 114;
+            this.label33.Text = "*Nếu bệnh viện không thể phục vụ loại vắc xin đó, bạn sẽ được thông báo qua số đi" +
+    "ện thoại và hủy lịch tiêm chủng";
+            // 
+            // label14
+            // 
+            this.label14.AutoSize = true;
+            this.label14.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label14.Location = new System.Drawing.Point(486, 172);
+            this.label14.Name = "label14";
+            this.label14.Size = new System.Drawing.Size(193, 13);
+            this.label14.TabIndex = 113;
+            this.label14.Text = "*Đặt mua vắc xin ngoài hệ thống";
+            // 
+            // textBox1
+            // 
+            this.textBox1.Location = new System.Drawing.Point(579, 287);
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(266, 20);
+            this.textBox1.TabIndex = 112;
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(495, 290);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(78, 13);
+            this.label2.TabIndex = 111;
+            this.label2.Text = "Tên vắc xin:";
+            // 
+            // label19
+            // 
+            this.label19.AutoSize = true;
+            this.label19.Location = new System.Drawing.Point(486, 190);
+            this.label19.MaximumSize = new System.Drawing.Size(354, 0);
+            this.label19.Name = "label19";
+            this.label19.Size = new System.Drawing.Size(354, 26);
+            this.label19.TabIndex = 110;
+            this.label19.Text = "*Nếu bạn đặt mua vắc xin ngoài hệ thống, bạn chỉ có thể đăng ký tiêm lẻ và thanh " +
+    "toán 1 lần\r\n";
+            // 
+            // comboBox2
+            // 
+            this.comboBox2.FormattingEnabled = true;
+            this.comboBox2.Location = new System.Drawing.Point(609, 332);
+            this.comboBox2.Name = "comboBox2";
+            this.comboBox2.Size = new System.Drawing.Size(236, 21);
+            this.comboBox2.TabIndex = 109;
+            // 
+            // label17
+            // 
+            this.label17.AutoSize = true;
+            this.label17.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label17.Location = new System.Drawing.Point(504, 335);
+            this.label17.Name = "label17";
+            this.label17.Size = new System.Drawing.Size(102, 13);
+            this.label17.TabIndex = 108;
+            this.label17.Text = "Mã (gói) vắc xin:";
+            // 
+            // label16
+            // 
+            this.label16.AutoSize = true;
+            this.label16.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label16.Location = new System.Drawing.Point(486, 314);
+            this.label16.Name = "label16";
+            this.label16.Size = new System.Drawing.Size(223, 13);
+            this.label16.TabIndex = 107;
+            this.label16.Text = "*Đặt mua (gói) vắc xin thuộc hệ thống";
+            // 
+            // button3
+            // 
+            this.button3.Location = new System.Drawing.Point(765, 359);
+            this.button3.Name = "button3";
+            this.button3.Size = new System.Drawing.Size(80, 23);
+            this.button3.TabIndex = 116;
+            this.button3.Text = "Thanh toán";
+            this.button3.UseVisualStyleBackColor = true;
             // 
             // datmuavacxin
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(877, 749);
-            this.Controls.Add(this.button2);
-            this.Controls.Add(this.textBox7);
-            this.Controls.Add(this.label9);
+            this.Controls.Add(this.button3);
             this.Controls.Add(this.label27);
             this.Controls.Add(this.label33);
             this.Controls.Add(this.label14);
             this.Controls.Add(this.textBox1);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label19);
+            this.Controls.Add(this.comboBox2);
+            this.Controls.Add(this.label17);
+            this.Controls.Add(this.label16);
+            this.Controls.Add(this.maskedTextBox2);
+            this.Controls.Add(this.maskedTextBox1);
+            this.Controls.Add(this.maskedTextBox3);
+            this.Controls.Add(this.button2);
+            this.Controls.Add(this.textBox7);
+            this.Controls.Add(this.label9);
             this.Controls.Add(this.comboBox4);
             this.Controls.Add(this.label21);
             this.Controls.Add(this.button1);
@@ -541,18 +548,12 @@ namespace WindowsFormsApp1
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.label32);
             this.Controls.Add(this.label30);
-            this.Controls.Add(this.maskedTextBox4);
             this.Controls.Add(this.label15);
-            this.Controls.Add(this.comboBox2);
-            this.Controls.Add(this.label17);
-            this.Controls.Add(this.label18);
-            this.Controls.Add(this.label16);
             this.Controls.Add(this.label20);
             this.Controls.Add(this.textBox4);
             this.Controls.Add(this.label22);
             this.Controls.Add(this.textBox5);
             this.Controls.Add(this.label23);
-            this.Controls.Add(this.maskedTextBox2);
             this.Controls.Add(this.label24);
             this.Controls.Add(this.textBox6);
             this.Controls.Add(this.label25);
@@ -561,7 +562,6 @@ namespace WindowsFormsApp1
             this.Controls.Add(this.label8);
             this.Controls.Add(this.textBox2);
             this.Controls.Add(this.label7);
-            this.Controls.Add(this.maskedTextBox1);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.hoten);
             this.Controls.Add(this.label10);
@@ -593,7 +593,6 @@ namespace WindowsFormsApp1
         private System.Windows.Forms.Label label22;
         private System.Windows.Forms.TextBox textBox5;
         private System.Windows.Forms.Label label23;
-        private System.Windows.Forms.MaskedTextBox maskedTextBox2;
         private System.Windows.Forms.Label label24;
         private System.Windows.Forms.TextBox textBox6;
         private System.Windows.Forms.Label label25;
@@ -602,35 +601,36 @@ namespace WindowsFormsApp1
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.TextBox textBox2;
         private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.MaskedTextBox maskedTextBox1;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.TextBox hoten;
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.Label label11;
         private System.Windows.Forms.TextBox makh;
         private System.Windows.Forms.Label label13;
-        private System.Windows.Forms.Label label16;
-        private System.Windows.Forms.MaskedTextBox maskedTextBox4;
-        private System.Windows.Forms.Label label15;
-        private System.Windows.Forms.Label label17;
-        private System.Windows.Forms.Label label18;
         private System.Windows.Forms.Label label30;
         private System.Windows.Forms.DataGridView dataGridView2;
         private System.Windows.Forms.Label label31;
         private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.Label label32;
         private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.TextBox textBox7;
+        private System.Windows.Forms.Label label9;
+        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.MaskedTextBox maskedTextBox1;
+        private System.Windows.Forms.MaskedTextBox maskedTextBox2;
+        private System.Windows.Forms.Label label15;
         private System.Windows.Forms.Label label21;
+        private System.Windows.Forms.ComboBox comboBox4;
+        private System.Windows.Forms.MaskedTextBox maskedTextBox3;
         private System.Windows.Forms.Label label27;
+        private System.Windows.Forms.Label label33;
         private System.Windows.Forms.Label label14;
         private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label19;
-        private System.Windows.Forms.TextBox textBox7;
-        private System.Windows.Forms.Label label9;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Label label33;
         private System.Windows.Forms.ComboBox comboBox2;
-        private System.Windows.Forms.ComboBox comboBox4;
+        private System.Windows.Forms.Label label17;
+        private System.Windows.Forms.Label label16;
+        private System.Windows.Forms.Button button3;
     }
 }

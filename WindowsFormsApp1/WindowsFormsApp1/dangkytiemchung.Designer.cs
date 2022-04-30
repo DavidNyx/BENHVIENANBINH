@@ -52,7 +52,6 @@ namespace WindowsFormsApp1
             this.label22 = new System.Windows.Forms.Label();
             this.textBox5 = new System.Windows.Forms.TextBox();
             this.label23 = new System.Windows.Forms.Label();
-            this.label24 = new System.Windows.Forms.Label();
             this.textBox6 = new System.Windows.Forms.TextBox();
             this.label25 = new System.Windows.Forms.Label();
             this.label20 = new System.Windows.Forms.Label();
@@ -62,16 +61,17 @@ namespace WindowsFormsApp1
             this.label28 = new System.Windows.Forms.Label();
             this.comboBox5 = new System.Windows.Forms.ComboBox();
             this.button3 = new System.Windows.Forms.Button();
-            this.comboBox2 = new System.Windows.Forms.ComboBox();
+            this.vacxin = new System.Windows.Forms.ComboBox();
             this.label17 = new System.Windows.Forms.Label();
             this.textBox7 = new System.Windows.Forms.TextBox();
             this.label9 = new System.Windows.Forms.Label();
             this.maskedTextBox1 = new System.Windows.Forms.MaskedTextBox();
             this.maskedTextBox2 = new System.Windows.Forms.MaskedTextBox();
-            this.maskedTextBox3 = new System.Windows.Forms.MaskedTextBox();
+            this.ngaytiem = new System.Windows.Forms.MaskedTextBox();
             this.button4 = new System.Windows.Forms.Button();
             this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.label10 = new System.Windows.Forms.Label();
+            this.label15 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
             this.SuspendLayout();
@@ -147,9 +147,9 @@ namespace WindowsFormsApp1
             this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label6.Location = new System.Drawing.Point(46, 175);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(67, 13);
+            this.label6.Size = new System.Drawing.Size(161, 13);
             this.label6.TabIndex = 7;
-            this.label6.Text = "Ngày sinh:";
+            this.label6.Text = "Ngày sinh (MM/DD/YYYY):";
             // 
             // label7
             // 
@@ -274,7 +274,7 @@ namespace WindowsFormsApp1
             // 
             // textBox5
             // 
-            this.textBox5.Location = new System.Drawing.Point(294, 301);
+            this.textBox5.Location = new System.Drawing.Point(294, 274);
             this.textBox5.Name = "textBox5";
             this.textBox5.Size = new System.Drawing.Size(107, 20);
             this.textBox5.TabIndex = 38;
@@ -283,27 +283,17 @@ namespace WindowsFormsApp1
             // 
             this.label23.AutoSize = true;
             this.label23.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label23.Location = new System.Drawing.Point(252, 304);
+            this.label23.Location = new System.Drawing.Point(252, 277);
             this.label23.Name = "label23";
             this.label23.Size = new System.Drawing.Size(36, 13);
             this.label23.TabIndex = 37;
             this.label23.Text = "SĐT:";
             // 
-            // label24
-            // 
-            this.label24.AutoSize = true;
-            this.label24.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label24.Location = new System.Drawing.Point(46, 304);
-            this.label24.Name = "label24";
-            this.label24.Size = new System.Drawing.Size(67, 13);
-            this.label24.TabIndex = 35;
-            this.label24.Text = "Ngày sinh:";
-            // 
             // textBox6
             // 
             this.textBox6.Location = new System.Drawing.Point(119, 274);
             this.textBox6.Name = "textBox6";
-            this.textBox6.Size = new System.Drawing.Size(282, 20);
+            this.textBox6.Size = new System.Drawing.Size(130, 20);
             this.textBox6.TabIndex = 34;
             // 
             // label25
@@ -334,6 +324,7 @@ namespace WindowsFormsApp1
             this.button1.TabIndex = 45;
             this.button1.Text = "Thanh toán";
             this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // label27
             // 
@@ -341,9 +332,9 @@ namespace WindowsFormsApp1
             this.label27.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label27.Location = new System.Drawing.Point(46, 387);
             this.label27.Name = "label27";
-            this.label27.Size = new System.Drawing.Size(121, 13);
+            this.label27.Size = new System.Drawing.Size(166, 13);
             this.label27.TabIndex = 46;
-            this.label27.Text = "*Đăng ký ngày tiêm:";
+            this.label27.Text = "*Ngày tiêm (MM/DD/YYYY):";
             // 
             // button2
             // 
@@ -383,20 +374,20 @@ namespace WindowsFormsApp1
             this.button3.UseVisualStyleBackColor = true;
             this.button3.Click += new System.EventHandler(this.button3_Click);
             // 
-            // comboBox2
+            // vacxin
             // 
-            this.comboBox2.FormattingEnabled = true;
-            this.comboBox2.Location = new System.Drawing.Point(154, 471);
-            this.comboBox2.Name = "comboBox2";
-            this.comboBox2.Size = new System.Drawing.Size(247, 21);
-            this.comboBox2.TabIndex = 60;
-            this.comboBox2.SelectedIndexChanged += new System.EventHandler(this.comboBox2_SelectedIndexChanged);
+            this.vacxin.FormattingEnabled = true;
+            this.vacxin.Location = new System.Drawing.Point(159, 466);
+            this.vacxin.Name = "vacxin";
+            this.vacxin.Size = new System.Drawing.Size(242, 21);
+            this.vacxin.TabIndex = 60;
+            this.vacxin.SelectedIndexChanged += new System.EventHandler(this.comboBox2_SelectedIndexChanged);
             // 
             // label17
             // 
             this.label17.AutoSize = true;
             this.label17.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label17.Location = new System.Drawing.Point(46, 474);
+            this.label17.Location = new System.Drawing.Point(46, 469);
             this.label17.Name = "label17";
             this.label17.Size = new System.Drawing.Size(107, 13);
             this.label17.TabIndex = 58;
@@ -421,24 +412,24 @@ namespace WindowsFormsApp1
             // 
             // maskedTextBox1
             // 
-            this.maskedTextBox1.Location = new System.Drawing.Point(119, 173);
+            this.maskedTextBox1.Location = new System.Drawing.Point(213, 173);
             this.maskedTextBox1.Name = "maskedTextBox1";
-            this.maskedTextBox1.Size = new System.Drawing.Size(282, 20);
+            this.maskedTextBox1.Size = new System.Drawing.Size(188, 20);
             this.maskedTextBox1.TabIndex = 65;
             // 
             // maskedTextBox2
             // 
-            this.maskedTextBox2.Location = new System.Drawing.Point(119, 302);
+            this.maskedTextBox2.Location = new System.Drawing.Point(213, 302);
             this.maskedTextBox2.Name = "maskedTextBox2";
-            this.maskedTextBox2.Size = new System.Drawing.Size(127, 20);
+            this.maskedTextBox2.Size = new System.Drawing.Size(188, 20);
             this.maskedTextBox2.TabIndex = 66;
             // 
-            // maskedTextBox3
+            // ngaytiem
             // 
-            this.maskedTextBox3.Location = new System.Drawing.Point(169, 384);
-            this.maskedTextBox3.Name = "maskedTextBox3";
-            this.maskedTextBox3.Size = new System.Drawing.Size(232, 20);
-            this.maskedTextBox3.TabIndex = 67;
+            this.ngaytiem.Location = new System.Drawing.Point(218, 384);
+            this.ngaytiem.Name = "ngaytiem";
+            this.ngaytiem.Size = new System.Drawing.Size(183, 20);
+            this.ngaytiem.TabIndex = 67;
             // 
             // button4
             // 
@@ -468,20 +459,31 @@ namespace WindowsFormsApp1
             this.label10.TabIndex = 69;
             this.label10.Text = "*Trung tâm tiêm:";
             // 
+            // label15
+            // 
+            this.label15.AutoSize = true;
+            this.label15.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label15.Location = new System.Drawing.Point(46, 305);
+            this.label15.Name = "label15";
+            this.label15.Size = new System.Drawing.Size(161, 13);
+            this.label15.TabIndex = 71;
+            this.label15.Text = "Ngày sinh (MM/DD/YYYY):";
+            // 
             // dangkytiemchung
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 551);
+            this.Controls.Add(this.label15);
             this.Controls.Add(this.comboBox1);
             this.Controls.Add(this.label10);
             this.Controls.Add(this.button4);
-            this.Controls.Add(this.maskedTextBox3);
+            this.Controls.Add(this.ngaytiem);
             this.Controls.Add(this.maskedTextBox2);
             this.Controls.Add(this.maskedTextBox1);
             this.Controls.Add(this.textBox7);
             this.Controls.Add(this.label9);
-            this.Controls.Add(this.comboBox2);
+            this.Controls.Add(this.vacxin);
             this.Controls.Add(this.label17);
             this.Controls.Add(this.button3);
             this.Controls.Add(this.comboBox5);
@@ -494,7 +496,6 @@ namespace WindowsFormsApp1
             this.Controls.Add(this.label22);
             this.Controls.Add(this.textBox5);
             this.Controls.Add(this.label23);
-            this.Controls.Add(this.label24);
             this.Controls.Add(this.textBox6);
             this.Controls.Add(this.label25);
             this.Controls.Add(this.label19);
@@ -518,6 +519,7 @@ namespace WindowsFormsApp1
             this.Controls.Add(this.label1);
             this.Name = "dangkytiemchung";
             this.Text = "Đăng ký tiêm chủng";
+            this.Load += new System.EventHandler(this.dangkytiemchung_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).EndInit();
             this.ResumeLayout(false);
@@ -550,7 +552,6 @@ namespace WindowsFormsApp1
         private System.Windows.Forms.Label label22;
         private System.Windows.Forms.TextBox textBox5;
         private System.Windows.Forms.Label label23;
-        private System.Windows.Forms.Label label24;
         private System.Windows.Forms.TextBox textBox6;
         private System.Windows.Forms.Label label25;
         private System.Windows.Forms.Label label20;
@@ -560,16 +561,17 @@ namespace WindowsFormsApp1
         private System.Windows.Forms.Label label28;
         private System.Windows.Forms.ComboBox comboBox5;
         private System.Windows.Forms.Button button3;
-        private System.Windows.Forms.ComboBox comboBox2;
+        private System.Windows.Forms.ComboBox vacxin;
         private System.Windows.Forms.Label label17;
         private System.Windows.Forms.TextBox textBox7;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.MaskedTextBox maskedTextBox1;
         private System.Windows.Forms.MaskedTextBox maskedTextBox2;
-        private System.Windows.Forms.MaskedTextBox maskedTextBox3;
+        private System.Windows.Forms.MaskedTextBox ngaytiem;
         private System.Windows.Forms.Button button4;
         private System.Windows.Forms.ComboBox comboBox1;
         private System.Windows.Forms.Label label10;
+        private System.Windows.Forms.Label label15;
     }
 }
 

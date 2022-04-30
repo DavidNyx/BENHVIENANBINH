@@ -15,6 +15,7 @@ namespace WindowsFormsApp1
         public datmuavacxin()
         {
             InitializeComponent();
+
         }
 
         private void label2_Click(object sender, EventArgs e)
@@ -55,6 +56,27 @@ namespace WindowsFormsApp1
         private void label27_Click_1(object sender, EventArgs e)
         {
 
+        }
+
+        private void comboBox2_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void comboBox4_SelectedIndexChanged(object sender, EventArgs e)
+        {
+           /* nachos.sqlCon.Open();
+
+
+            SqlCommand cmd1 = new SqlCommand("select GOIVACXIN.MA_GVX, ten_gvx from goivacxin, kho where soluongton = 0 and ma_tt= '" + trungtam + "' ", nachos.sqlCon);
+            SqlDataAdapter adapt1 = new SqlDataAdapter();
+            adapt1.SelectCommand = cmd1;
+            DataTable table1 = new DataTable();
+            adapt1.Fill(table1);
+            comboBox4.DataSource = table1;
+            comboBox4.DisplayMember = "GOIVACXIN.MA_GVX";
+            comboBox4.ValueMember = "GOIVACXIN.MA_GVX";
+            nachos.sqlCon.Close();*/
         }
     }
 }

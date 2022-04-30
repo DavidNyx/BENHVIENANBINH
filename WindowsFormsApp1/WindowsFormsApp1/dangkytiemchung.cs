@@ -41,8 +41,8 @@ namespace WindowsFormsApp1
             maskedTextBox1.ValidatingType = typeof(System.DateTime);
             maskedTextBox2.Mask = "00/00/0000";
             maskedTextBox2.ValidatingType = typeof(System.DateTime);
-            maskedTextBox3.Mask = "00/00/0000";
-            maskedTextBox3.ValidatingType = typeof(System.DateTime);
+            ngaytiem.Mask = "00/00/0000";
+            ngaytiem.ValidatingType = typeof(System.DateTime);
         }
 
         private void label1_Click(object sender, EventArgs e)
@@ -87,7 +87,7 @@ namespace WindowsFormsApp1
 
         private void button3_Click(object sender, EventArgs e)
         {
-            nachos.sqlCon.Open();
+            /*nachos.sqlCon.Open();
             object selecteditem = comboBox5.SelectedValue;
             string trungtam = selecteditem.ToString();
             SqlCommand cmd2 = new SqlCommand("select GOIVACXIN.MA_GVX, ten_gvx from goivacxin, kho where KHO.ma_tt = '" + trungtam + "' ", nachos.sqlCon);
@@ -95,10 +95,10 @@ namespace WindowsFormsApp1
             adapt4.SelectCommand = cmd2;
             DataTable table4 = new DataTable();
             adapt4.Fill(table4);
-            comboBox2.DataSource = table4;
-            comboBox2.DisplayMember = "TEN_GVX";
-            comboBox2.ValueMember = "GOIVACXIN.MA_GVX";
-            nachos.sqlCon.Close();
+            vacxin.DataSource = table4;
+            vacxin.DisplayMember = "GOIVACXIN.MA_GVX";
+            vacxin.ValueMember = "GOIVACXIN.MA_GVX";
+            nachos.sqlCon.Close();*/
         }
 
         private void comboBox4_SelectedIndexChanged(object sender, EventArgs e)
@@ -136,6 +136,34 @@ namespace WindowsFormsApp1
             adapt3.Fill(table3);
             dataGridView1.DataSource = new BindingSource(table3, null);
             nachos.sqlCon.Close();
+        }
+
+        private void dangkytiemchung_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            
+            try
+            {
+                nachos.sqlCon.Open();
+
+                object selecteditem = comboBox5.SelectedValue;
+                string trungtam = selecteditem.ToString();
+
+                var strSQLCommand = "EXEC dbo.INSERT_PDKT 'DK003', '" + makh.Text + "', '" + ngaytiem.Text + "', '" + trungtam + "', '" + textBox8.Text + "' ";  // statement is wrong! will raise an exception
+                var command = new SqlCommand(strSQLCommand, nachos.sqlCon);
+                command.ExecuteNonQuery();
+                nachos.sqlCon.Close();
+            }
+            catch (SqlException sqlEx)
+            {
+                MessageBox.Show(sqlEx.Message);
+            }
+
+            
         }
     }
 }
