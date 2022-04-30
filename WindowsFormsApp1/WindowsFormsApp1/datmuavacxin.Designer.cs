@@ -435,7 +435,6 @@ namespace WindowsFormsApp1
             this.label15.Size = new System.Drawing.Size(153, 17);
             this.label15.TabIndex = 83;
             this.label15.Text = "*Đăng ký ngày tiêm:";
-            this.label15.Click += new System.EventHandler(this.label15_Click);
             // 
             // label21
             // 
@@ -447,7 +446,6 @@ namespace WindowsFormsApp1
             this.label21.Size = new System.Drawing.Size(152, 17);
             this.label21.TabIndex = 92;
             this.label21.Text = "*Đăng ký trung tâm:";
-            this.label21.Click += new System.EventHandler(this.label21_Click);
             // 
             // comboBox4
             // 
@@ -457,7 +455,6 @@ namespace WindowsFormsApp1
             this.comboBox4.Name = "comboBox4";
             this.comboBox4.Size = new System.Drawing.Size(313, 24);
             this.comboBox4.TabIndex = 93;
-            this.comboBox4.SelectedIndexChanged += new System.EventHandler(this.comboBox4_SelectedIndexChanged);
             // 
             // ngaytiem
             // 
@@ -665,7 +662,6 @@ namespace WindowsFormsApp1
             this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "datmuavacxin";
             this.Text = " Đăng ký tiêm chủng:";
-            this.Load += new System.EventHandler(this.datmuavacxin_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);

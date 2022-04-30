@@ -96,12 +96,12 @@ namespace WindowsFormsApp1
                     object selecteditem = comboBox5.SelectedValue;
                     string trungtam = selecteditem.ToString();
                     object selecteditem2 = vacxin.SelectedValue;
-                    string vacxin2 = selecteditem2.ToString();
+                    string goivacxin = selecteditem2.ToString();
                     SqlCommand sqlCommand = new SqlCommand("SELECT COUNT(*) FROM PHIEUDKTIEM", nachos.sqlCon);
                     int num = (Int32)sqlCommand.ExecuteScalar();
                     num += 1;
 
-                    var strSQLCommand = "EXEC dbo.INSERT_PDKT 'DK" + num.ToString() + "', '" + makh.Text + "', '" + ngaytiem.Text + "', '" + trungtam + "', '" + vacxin2 + "' ";  // statement is wrong! will raise an exception
+                    var strSQLCommand = "EXEC dbo.INSERT_PDKT 'DK" + num.ToString() + "', '" + makh.Text + "', '" + ngaytiem.Text + "', '" + trungtam + "', '" + goivacxin + "' ";  // statement is wrong! will raise an exception
                     var command = new SqlCommand(strSQLCommand, nachos.sqlCon);
                     command.ExecuteNonQuery();
                 }

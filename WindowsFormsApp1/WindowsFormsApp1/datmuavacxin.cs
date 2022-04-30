@@ -40,51 +40,6 @@ namespace WindowsFormsApp1
             disableShowInfoVacxin();
         }
 
-        private void label3_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label27_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void maskedTextBox3_MaskInputRejected(object sender, MaskInputRejectedEventArgs e)
-        {
-
-        }
-
-        private void datmuavacxin_Load(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label15_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label21_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label27_Click_1(object sender, EventArgs e)
-        {
-
-        }
-
-        private void comboBox2_SelectedIndexChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void comboBox4_SelectedIndexChanged(object sender, EventArgs e)
-        {
-           
-        }
-
         private void button1_Click(object sender, EventArgs e)
         {
             nachos.sqlCon.Open();
@@ -218,18 +173,114 @@ namespace WindowsFormsApp1
                 {
                     try
                     {
-
-                        
-
                         object selecteditem = comboBox4.SelectedValue;
                         string trungtam = selecteditem.ToString();
                         object selecteditem2 = comboBox2.SelectedValue;
                         string goivacxin = selecteditem2.ToString();
+                        SqlCommand sqlCommand = new SqlCommand("SELECT COUNT(*) FROM PHIEUDKTIEM", nachos.sqlCon);
+                        int num = (Int32)sqlCommand.ExecuteScalar();
+                        num += 1;
 
-                        var strSQLCommand = "EXEC dbo.INSERT_PDKT 'DK003', '" + makh.Text + "', '" + ngaytiem.Text + "', '" + trungtam + "', '" + goivacxin + "'";  // statement is wrong! will raise an exception
+                        var strSQLCommand = "EXEC dbo.INSERT_PDKT 'DK" + num.ToString() + "', '" + makh.Text + "', '" + ngaytiem.Text + "', '" + trungtam + "', '" + goivacxin + "'";  // statement is wrong! will raise an exception
                         var command = new SqlCommand(strSQLCommand, nachos.sqlCon);
                         command.ExecuteNonQuery();
+
+                        sqlCommand = new SqlCommand("SELECT COUNT(*) FROM PHIEUDATMUAVX", nachos.sqlCon);
+                        int numOrder = (Int32)sqlCommand.ExecuteScalar();
+                        numOrder += 1;
+
+                        sqlCommand = new SqlCommand("SELECT TEN_GVX FROM GOIVACXIN WHERE MA_GVX='" + goivacxin + "'", nachos.sqlCon);
+                        String vacxinName = (String)sqlCommand.ExecuteScalar();
                         
+                        strSQLCommand = "EXEC dbo.INSERT_PDMVX 'DM" + numOrder.ToString() + "', 'DK" + num.ToString() + "', '" + goivacxin + "', '" + vacxinName + "'";  // statement is wrong! will raise an exception
+                        command = new SqlCommand(strSQLCommand, nachos.sqlCon);
+                        command.ExecuteNonQuery();
+                    }
+                    catch (SqlException sqlEx)
+                    {
+                        MessageBox.Show(sqlEx.Message);
+                    }
+
+                }
+                else
+                {
+                    try
+                    {
+                        object selecteditem = comboBox4.SelectedValue;
+                        string trungtam = selecteditem.ToString();
+
+                        SqlCommand sqlCommand = new SqlCommand("SELECT COUNT(*) FROM PHIEUDKTIEM", nachos.sqlCon);
+                        int num = (Int32)sqlCommand.ExecuteScalar();
+                        num += 1;
+
+                        var strSQLCommand = "EXEC dbo.INSERT_PDKT 'DK" + num.ToString() + "', '" + makh.Text + "', '" + ngaytiem.Text + "', '" + trungtam + "', null";  // statement is wrong! will raise an exception
+                        var command = new SqlCommand(strSQLCommand, nachos.sqlCon);
+                        command.ExecuteNonQuery();
+
+                        sqlCommand = new SqlCommand("SELECT COUNT(*) FROM PHIEUDATMUAVX", nachos.sqlCon);
+                        int numOrder = (Int32)sqlCommand.ExecuteScalar();
+                        numOrder += 1;
+
+                        strSQLCommand = "EXEC dbo.INSERT_PDMVX 'DM" + numOrder.ToString() + "', 'DK" + num.ToString() + "', null, '" + textBox1.Text + "'";  // statement is wrong! will raise an exception
+                        command = new SqlCommand(strSQLCommand, nachos.sqlCon);
+                        command.ExecuteNonQuery();
+                    }
+                    
+                    catch (SqlException sqlEx)
+                    {
+                        MessageBox.Show(sqlEx.Message);
+                    }
+                    MessageBox.Show("Đặt mua vacxin thành công");
+                }
+            }
+            else
+            {
+                if (checkBox3.Checked)
+                {
+                    SqlCommand sqlCommand = new SqlCommand("SELECT COUNT(*) FROM KHACHHANG", nachos.sqlCon);
+                    int numCustomers = (Int32)sqlCommand.ExecuteScalar();
+                    numCustomers += 1;
+
+                    if (!checkBox2.Checked)
+                    {
+                        maskedTextBox2.Text = "01/01/2022";
+                    }
+
+                    try
+                    {
+                        var strSQLCommand = "EXEC dbo.INSERT_KH 'KH" + numCustomers.ToString() + "', N'" + textBox1.Text + "', '" + maskedTextBox1.Text + "', '" + textBox3.Text + "', '" + textBox2.Text + "', '" + textBox7.Text + "', '" + textBox6.Text + "', '" + maskedTextBox2.Text + "', '" + textBox5.Text + "', '" + textBox4.Text + "'";  // statement is wrong! will raise an exception
+                        var command = new SqlCommand(strSQLCommand, nachos.sqlCon);
+                        command.ExecuteNonQuery();
+                    }
+                    catch (SqlException sqlEx)
+                    {
+                        MessageBox.Show(sqlEx.Message);
+                    }
+
+                    try
+                    {
+                        object selecteditem = comboBox4.SelectedValue;
+                        string trungtam = selecteditem.ToString();
+                        object selecteditem2 = comboBox2.SelectedValue;
+                        string goivacxin = selecteditem2.ToString();
+                        sqlCommand = new SqlCommand("SELECT COUNT(*) FROM PHIEUDKTIEM", nachos.sqlCon);
+                        int num = (Int32)sqlCommand.ExecuteScalar();
+                        num += 1;
+
+                        var strSQLCommand = "EXEC dbo.INSERT_PDKT 'DK" + num.ToString() + "', '" + "KH" + numCustomers.ToString() + "', '" + ngaytiem.Text + "', '" + trungtam + "', '" + goivacxin + "' ";  // statement is wrong! will raise an exception
+                        var command = new SqlCommand(strSQLCommand, nachos.sqlCon);
+                        command.ExecuteNonQuery();
+
+                        sqlCommand = new SqlCommand("SELECT COUNT(*) FROM PHIEUDATMUAVX", nachos.sqlCon);
+                        int numOrder = (Int32)sqlCommand.ExecuteScalar();
+                        numOrder += 1;
+
+                        sqlCommand = new SqlCommand("SELECT TEN_GVX FROM GOIVACXIN WHERE MA_GVX='" + goivacxin + "'", nachos.sqlCon);
+                        String vacxinName = (String)sqlCommand.ExecuteScalar();
+
+                        strSQLCommand = "EXEC dbo.INSERT_PDMVX 'DM" + numOrder.ToString() + "', 'DK" + num.ToString() + "', '" + goivacxin + "', '" + vacxinName + "'";  // statement is wrong! will raise an exception
+                        command = new SqlCommand(strSQLCommand, nachos.sqlCon);
+                        command.ExecuteNonQuery();
                     }
                     catch (SqlException sqlEx)
                     {
@@ -237,7 +288,41 @@ namespace WindowsFormsApp1
                     }
                     MessageBox.Show("Đặt mua vacxin thành công");
                 }
-                
+
+                else
+                {
+                    SqlCommand sqlCommand = new SqlCommand("SELECT COUNT(*) FROM KHACHHANG", nachos.sqlCon);
+                    int numCustomers = (Int32)sqlCommand.ExecuteScalar();
+                    numCustomers += 1;
+
+                    try
+                    {
+                        sqlCommand = new SqlCommand("SELECT COUNT(*) FROM PHIEUDKTIEM", nachos.sqlCon);
+                        int num = (Int32)sqlCommand.ExecuteScalar();
+                        num += 1;
+
+                        object selecteditem = comboBox4.SelectedValue;
+                        string trungtam = selecteditem.ToString();
+
+                        var strSQLCommand = "EXEC dbo.INSERT_PDKT 'DK" + num.ToString() + "', '" + "KH" + numCustomers.ToString() + "', '" + ngaytiem.Text + "', '" + trungtam + "', null";  // statement is wrong! will raise an exception
+                        var command = new SqlCommand(strSQLCommand, nachos.sqlCon);
+                        command.ExecuteNonQuery();
+
+                        sqlCommand = new SqlCommand("SELECT COUNT(*) FROM PHIEUDATMUAVX", nachos.sqlCon);
+                        int numOrder = (Int32)sqlCommand.ExecuteScalar();
+                        numOrder += 1;
+
+                        strSQLCommand = "EXEC dbo.INSERT_PDMVX 'DM" + numOrder.ToString() + "', 'DK" + num.ToString() + "', null, '" + textBox1.Text + "'";  // statement is wrong! will raise an exception
+                        command = new SqlCommand(strSQLCommand, nachos.sqlCon);
+                        command.ExecuteNonQuery();
+                    }
+
+                    catch (SqlException sqlEx)
+                    {
+                        MessageBox.Show(sqlEx.Message);
+                    }
+                    MessageBox.Show("Đặt mua vacxin thành công");
+                }
             }
             nachos.sqlCon.Close();
         }
