@@ -87,7 +87,7 @@ namespace WindowsFormsApp1
 
         private void button3_Click(object sender, EventArgs e)
         {
-            /*nachos.sqlCon.Open();
+            nachos.sqlCon.Open();
             object selecteditem = comboBox5.SelectedValue;
             string trungtam = selecteditem.ToString();
             SqlCommand cmd2 = new SqlCommand("select GOIVACXIN.MA_GVX, ten_gvx from goivacxin, kho where KHO.ma_tt = '" + trungtam + "' ", nachos.sqlCon);
@@ -96,9 +96,9 @@ namespace WindowsFormsApp1
             DataTable table4 = new DataTable();
             adapt4.Fill(table4);
             vacxin.DataSource = table4;
-            vacxin.DisplayMember = "GOIVACXIN.MA_GVX";
-            vacxin.ValueMember = "GOIVACXIN.MA_GVX";
-            nachos.sqlCon.Close();*/
+            vacxin.DisplayMember = "MA_GVX";
+            vacxin.ValueMember = "MA_GVX";
+            nachos.sqlCon.Close();
         }
 
         private void comboBox4_SelectedIndexChanged(object sender, EventArgs e)
@@ -126,12 +126,12 @@ namespace WindowsFormsApp1
             nachos.sqlCon.Open();
             object selecteditem = comboBox1.SelectedValue;
             string trungtam = selecteditem.ToString();
-            SqlDataAdapter adapt1 = new SqlDataAdapter("SELECT * from goivacxin, kho where ma_tt = '" + trungtam + "' and LOAI_GVX = 1", nachos.sqlCon);
+            SqlDataAdapter adapt1 = new SqlDataAdapter("SELECT * from goivacxin, kho where ma_tt = '" + trungtam + "' and LOAI_GVX != 0", nachos.sqlCon);
             DataTable table1 = new DataTable();
             adapt1.Fill(table1);
             dataGridView2.DataSource = new BindingSource(table1, null);
 
-            SqlDataAdapter adapt3 = new SqlDataAdapter("SELECT * from goivacxin, kho where ma_tt = '" + trungtam + "' and LOAI_GVX != 1", nachos.sqlCon);
+            SqlDataAdapter adapt3 = new SqlDataAdapter("SELECT * from goivacxin, kho where ma_tt = '" + trungtam + "' and LOAI_GVX = 0", nachos.sqlCon);
             DataTable table3 = new DataTable();
             adapt3.Fill(table3);
             dataGridView1.DataSource = new BindingSource(table3, null);
@@ -145,8 +145,7 @@ namespace WindowsFormsApp1
 
         private void button1_Click(object sender, EventArgs e)
         {
-            
-            try
+            /*try
             {
                 nachos.sqlCon.Open();
 
@@ -161,9 +160,15 @@ namespace WindowsFormsApp1
             catch (SqlException sqlEx)
             {
                 MessageBox.Show(sqlEx.Message);
-            }
+            }*/
+        }
 
-            
+        private void button2_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            datmuavacxin them = new datmuavacxin();
+            them.ShowDialog();
+            this.Close();
         }
     }
 }

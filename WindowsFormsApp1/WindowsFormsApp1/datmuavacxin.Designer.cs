@@ -124,7 +124,7 @@ namespace WindowsFormsApp1
             // 
             this.label20.AutoSize = true;
             this.label20.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label20.Location = new System.Drawing.Point(52, 127);
+            this.label20.Location = new System.Drawing.Point(56, 127);
             this.label20.Name = "label20";
             this.label20.Size = new System.Drawing.Size(49, 13);
             this.label20.TabIndex = 66;
@@ -323,6 +323,7 @@ namespace WindowsFormsApp1
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.Size = new System.Drawing.Size(352, 259);
             this.dataGridView1.TabIndex = 87;
+            this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
             // 
             // label32
             // 
@@ -342,6 +343,7 @@ namespace WindowsFormsApp1
             this.button1.TabIndex = 90;
             this.button1.Text = "Lọc vắc xin";
             this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // textBox7
             // 
@@ -368,6 +370,7 @@ namespace WindowsFormsApp1
             this.button2.TabIndex = 103;
             this.button2.Text = "Xem";
             this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // maskedTextBox1
             // 
