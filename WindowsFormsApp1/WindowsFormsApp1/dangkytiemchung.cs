@@ -44,6 +44,7 @@ namespace WindowsFormsApp1
             ngaytiem.Mask = "00/00/0000";
             ngaytiem.ValidatingType = typeof(System.DateTime);
             disableShowInfoToRegister();
+            disableShowInfoUnder18ToRegister();
         }
 
         private void label1_Click(object sender, EventArgs e)
@@ -206,6 +207,31 @@ namespace WindowsFormsApp1
 
         }
 
+        private void showInfoUnder18ToRegister()
+        {
+            label25.Show();
+            textBox6.Show();
+            label23.Show();
+            textBox6.Show();
+            label15.Show();
+            maskedTextBox2.Show();
+            label22.Show();
+            textBox4.Show();
+            textBox5.Show();
+        }
+        private void disableShowInfoUnder18ToRegister()
+        {
+            label25.Hide();
+            textBox6.Hide();
+            label23.Hide();
+            textBox6.Hide();
+            label15.Hide();
+            maskedTextBox2.Hide();
+            label22.Hide();
+            textBox4.Hide();
+            textBox5.Hide();
+        }
+
         private void checkBox1_CheckedChanged(object sender, EventArgs e)
         {
             if (checkBox1.Checked)
@@ -215,6 +241,18 @@ namespace WindowsFormsApp1
             else
             {
                 disableShowInfoToRegister();
+            }
+        }
+
+        private void checkBox2_CheckedChanged(object sender, EventArgs e)
+        {
+            if (checkBox2.Checked)
+            {
+                showInfoUnder18ToRegister();
+            }
+            else
+            {
+                disableShowInfoUnder18ToRegister();
             }
         }
     }
