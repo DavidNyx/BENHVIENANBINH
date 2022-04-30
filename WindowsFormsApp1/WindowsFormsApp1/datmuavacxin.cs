@@ -33,15 +33,11 @@ namespace WindowsFormsApp1
             maskedTextBox1.ValidatingType = typeof(System.DateTime);
             maskedTextBox2.Mask = "00/00/0000";
             maskedTextBox2.ValidatingType = typeof(System.DateTime);
-            maskedTextBox3.Mask = "00/00/0000";
-            maskedTextBox3.ValidatingType = typeof(System.DateTime);
+            ngaytiem.Mask = "00/00/0000";
+            ngaytiem.ValidatingType = typeof(System.DateTime);
             disableShowInfoToRegister();
             disableShowInfoUnder18ToRegister();
-        }
-
-        private void label2_Click(object sender, EventArgs e)
-        {
-
+            disableShowInfoVacxin();
         }
 
         private void label3_Click(object sender, EventArgs e)
@@ -102,7 +98,7 @@ namespace WindowsFormsApp1
             DataTable table1 = new DataTable();
             adapt1.Fill(table1);
             comboBox2.DataSource = table1;
-            comboBox2.DisplayMember = "MA_GVX";
+            comboBox2.DisplayMember = "TEN_GVX";
             comboBox2.ValueMember = "MA_GVX";
 
             nachos.sqlCon.Close();
@@ -112,12 +108,12 @@ namespace WindowsFormsApp1
         {
             nachos.sqlCon.Open();
 
-            SqlDataAdapter adapt3 = new SqlDataAdapter("SELECT * from goivacxin, kho, kho where soluongton = 0 and LOAI_GVX = 0", nachos.sqlCon);
+            SqlDataAdapter adapt3 = new SqlDataAdapter("SELECT * from goivacxin, kho where soluongton = 0 and LOAI_GVX = 0", nachos.sqlCon);
             DataTable table3 = new DataTable();
             adapt3.Fill(table3);
             dataGridView1.DataSource = new BindingSource(table3, null);
 
-            SqlDataAdapter adapt4 = new SqlDataAdapter("SELECT * from goivacxin, kho, kho where soluongton = 0 and LOAI_GVX != 0", nachos.sqlCon);
+            SqlDataAdapter adapt4 = new SqlDataAdapter("SELECT * from goivacxin, kho where soluongton = 0 and LOAI_GVX != 0", nachos.sqlCon);
             DataTable table4 = new DataTable();
             adapt4.Fill(table4);
             dataGridView2.DataSource = new BindingSource(table4, null);
@@ -211,6 +207,68 @@ namespace WindowsFormsApp1
             {
                 disableShowInfoUnder18ToRegister();
             }
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            nachos.sqlCon.Open();
+            if (!checkBox1.Checked)
+            {
+                if (checkBox3.Checked)
+                {
+                    try
+                    {
+
+                        
+
+                        object selecteditem = comboBox4.SelectedValue;
+                        string trungtam = selecteditem.ToString();
+                        object selecteditem2 = comboBox2.SelectedValue;
+                        string goivacxin = selecteditem2.ToString();
+
+                        var strSQLCommand = "EXEC dbo.INSERT_PDKT 'DK003', '" + makh.Text + "', '" + ngaytiem.Text + "', '" + trungtam + "', '" + goivacxin + "'";  // statement is wrong! will raise an exception
+                        var command = new SqlCommand(strSQLCommand, nachos.sqlCon);
+                        command.ExecuteNonQuery();
+                        
+                    }
+                    catch (SqlException sqlEx)
+                    {
+                        MessageBox.Show(sqlEx.Message);
+                    }
+                    MessageBox.Show("Đặt mua vacxin thành công");
+                }
+                
+            }
+            nachos.sqlCon.Close();
+        }
+
+        private void showInfoVacxin()
+        {
+            label17.Show();
+            comboBox2.Show();
+            label2.Hide();
+            textBox1.Hide();
+        }
+
+        private void disableShowInfoVacxin()
+        {
+            label17.Hide();
+            comboBox2.Hide();
+            label2.Show();
+            textBox1.Show();
+        }
+
+        private void checkBox3_CheckedChanged(object sender, EventArgs e)
+        {
+            if (checkBox3.Checked)
+            {
+                showInfoVacxin();
+            }
+            else
+            {
+                disableShowInfoVacxin();
+            }
+
         }
     }
 }

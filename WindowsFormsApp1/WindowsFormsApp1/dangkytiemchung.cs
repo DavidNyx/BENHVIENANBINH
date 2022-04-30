@@ -47,46 +47,6 @@ namespace WindowsFormsApp1
             disableShowInfoUnder18ToRegister();
         }
 
-        private void label1_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label9_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label12_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label10_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label13_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void dataGridView2_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-
-        }
-
-        private void label29_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label14_Click(object sender, EventArgs e)
-        {
-
-        }
-
         private void button3_Click(object sender, EventArgs e)
         {
             nachos.sqlCon.Open();
@@ -101,26 +61,6 @@ namespace WindowsFormsApp1
             vacxin.DisplayMember = "MA_GVX";
             vacxin.ValueMember = "MA_GVX";
             nachos.sqlCon.Close();
-        }
-
-        private void comboBox4_SelectedIndexChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void comboBox5_SelectedIndexChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-
-        }
-
-        private void comboBox2_SelectedIndexChanged(object sender, EventArgs e)
-        {
-
         }
 
         private void button4_Click(object sender, EventArgs e)
@@ -142,27 +82,81 @@ namespace WindowsFormsApp1
 
         private void dangkytiemchung_Load(object sender, EventArgs e)
         {
-
         }
 
         private void button1_Click(object sender, EventArgs e)
         {
-            /*try
+            nachos.sqlCon.Open();
+
+            if (!checkBox1.Checked)
             {
-                nachos.sqlCon.Open();
 
-                object selecteditem = comboBox5.SelectedValue;
-                string trungtam = selecteditem.ToString();
+                try
+                {
+                    object selecteditem = comboBox5.SelectedValue;
+                    string trungtam = selecteditem.ToString();
+                    object selecteditem2 = vacxin.SelectedValue;
+                    string vacxin2 = selecteditem2.ToString();
+                    SqlCommand sqlCommand = new SqlCommand("SELECT COUNT(*) FROM PHIEUDKTIEM", nachos.sqlCon);
+                    int num = (Int32)sqlCommand.ExecuteScalar();
+                    num += 1;
 
-                var strSQLCommand = "EXEC dbo.INSERT_PDKT 'DK003', '" + makh.Text + "', '" + ngaytiem.Text + "', '" + trungtam + "', '" + textBox8.Text + "' ";  // statement is wrong! will raise an exception
-                var command = new SqlCommand(strSQLCommand, nachos.sqlCon);
-                command.ExecuteNonQuery();
-                nachos.sqlCon.Close();
+                    var strSQLCommand = "EXEC dbo.INSERT_PDKT 'DK" + num.ToString() + "', '" + makh.Text + "', '" + ngaytiem.Text + "', '" + trungtam + "', '" + vacxin2 + "' ";  // statement is wrong! will raise an exception
+                    var command = new SqlCommand(strSQLCommand, nachos.sqlCon);
+                    command.ExecuteNonQuery();
+                }
+                catch (SqlException sqlEx)
+                {
+                    MessageBox.Show(sqlEx.Message);
+                }
+                MessageBox.Show("Đăng ký tiêm chủng thành công");
             }
-            catch (SqlException sqlEx)
+
+            else
             {
-                MessageBox.Show(sqlEx.Message);
-            }*/
+                SqlCommand sqlCommand = new SqlCommand("SELECT COUNT(*) FROM KHACHHANG", nachos.sqlCon);
+                int numCustomers = (Int32)sqlCommand.ExecuteScalar();
+                numCustomers += 1;
+
+                if (!checkBox2.Checked)
+                {
+                    maskedTextBox2.Text = "01/01/2022";
+                }
+                
+                try
+                {
+                    var strSQLCommand = "EXEC dbo.INSERT_KH 'KH" + numCustomers.ToString() + "', N'" + textBox1.Text + "', '" + maskedTextBox1.Text + "', '" + textBox3.Text + "', '" + textBox2.Text + "', '" + textBox7.Text + "', '" + textBox6.Text + "', '" + maskedTextBox2.Text + "', '" + textBox5.Text + "', '" + textBox4.Text + "'";  // statement is wrong! will raise an exception
+                    var command = new SqlCommand(strSQLCommand, nachos.sqlCon);
+                    command.ExecuteNonQuery();
+                }
+                catch (SqlException sqlEx)
+                {
+                    MessageBox.Show(sqlEx.Message);
+                }
+
+                try
+                {
+                    object selecteditem = comboBox5.SelectedValue;
+                    string trungtam = selecteditem.ToString();
+                    object selecteditem2 = vacxin.SelectedValue;
+                    string vacxin2 = selecteditem2.ToString();
+                    sqlCommand = new SqlCommand("SELECT COUNT(*) FROM PHIEUDKTIEM", nachos.sqlCon);
+                    int num = (Int32)sqlCommand.ExecuteScalar();
+                    num += 1;
+
+                    var strSQLCommand = "EXEC dbo.INSERT_PDKT 'DK" + num.ToString() + "', '" + "KH" + numCustomers.ToString() + "', '" + ngaytiem.Text + "', '" + trungtam + "', '" + vacxin2 + "' ";  // statement is wrong! will raise an exception
+                    var command = new SqlCommand(strSQLCommand, nachos.sqlCon);
+                    command.ExecuteNonQuery();
+                }
+                catch (SqlException sqlEx)
+                {
+                    MessageBox.Show(sqlEx.Message);
+                }
+                MessageBox.Show("Đăng ký tiêm chủng thành công");
+
+            }
+            
+            nachos.sqlCon.Close();
         }
 
         private void button2_Click(object sender, EventArgs e)
