@@ -43,6 +43,7 @@ namespace WindowsFormsApp1
             maskedTextBox2.ValidatingType = typeof(System.DateTime);
             ngaytiem.Mask = "00/00/0000";
             ngaytiem.ValidatingType = typeof(System.DateTime);
+            disableShowInfoToRegister();
         }
 
         private void label1_Click(object sender, EventArgs e)
@@ -169,6 +170,52 @@ namespace WindowsFormsApp1
             datmuavacxin them = new datmuavacxin();
             them.ShowDialog();
             this.Close();
+        }
+
+        private void showInfoToRegister()
+        {
+            label5.Show();
+            textBox1.Show();
+            label6.Show();
+            maskedTextBox1.Show();
+            label8.Show();
+            textBox3.Show();
+            textBox2.Show();
+            label9.Show();
+            textBox7.Show();
+            label7.Show();
+
+            label20.Hide();
+            makh.Hide();
+        }
+
+        private void disableShowInfoToRegister()
+        {
+            label5.Hide();
+            textBox1.Hide();
+            label6.Hide();
+            maskedTextBox1.Hide();
+            label8.Hide();
+            textBox3.Hide();
+            textBox2.Hide();
+            label9.Hide();
+            textBox7.Hide();
+            label7.Hide();
+            label20.Show();
+            makh.Show();
+
+        }
+
+        private void checkBox1_CheckedChanged(object sender, EventArgs e)
+        {
+            if (checkBox1.Checked)
+            {
+                showInfoToRegister();
+            }
+            else
+            {
+                disableShowInfoToRegister();
+            }
         }
     }
 }

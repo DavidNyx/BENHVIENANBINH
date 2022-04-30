@@ -16,3 +16,22 @@ D:\PTTK HTTT\BENHVIENANBINH\WindowsFormsApp1\WindowsFormsApp1\obj\Debug\WindowsF
 D:\PTTK HTTT\BENHVIENANBINH\WindowsFormsApp1\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.exe
 D:\PTTK HTTT\BENHVIENANBINH\WindowsFormsApp1\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.pdb
 D:\PTTK HTTT\BENHVIENANBINH\WindowsFormsApp1\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.dangnhapnhanvien.resources
+D:\BENHVIENANBINH\WindowsFormsApp1\WindowsFormsApp1\bin\Debug\WindowsFormsApp1.exe.config
+D:\BENHVIENANBINH\WindowsFormsApp1\WindowsFormsApp1\bin\Debug\WindowsFormsApp1.exe
+D:\BENHVIENANBINH\WindowsFormsApp1\WindowsFormsApp1\bin\Debug\WindowsFormsApp1.pdb
+D:\BENHVIENANBINH\WindowsFormsApp1\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.csproj.AssemblyReference.cache
+D:\BENHVIENANBINH\WindowsFormsApp1\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.csproj.SuggestedBindingRedirects.cache
+D:\BENHVIENANBINH\WindowsFormsApp1\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.dangkytiemchung.resources
+D:\BENHVIENANBINH\WindowsFormsApp1\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.dangnhapnhanvien.resources
+D:\BENHVIENANBINH\WindowsFormsApp1\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.datmuavacxin.resources
+D:\BENHVIENANBINH\WindowsFormsApp1\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.duyetvacxin.resources
+D:\BENHVIENANBINH\WindowsFormsApp1\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.menukhachhang.resources
+D:\BENHVIENANBINH\WindowsFormsApp1\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.Properties.Resources.resources
+D:\BENHVIENANBINH\WindowsFormsApp1\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.thanhtoan1.resources
+D:\BENHVIENANBINH\WindowsFormsApp1\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.thanhtoan2.resources
+D:\BENHVIENANBINH\WindowsFormsApp1\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.tracuutiemchung.resources
+D:\BENHVIENANBINH\WindowsFormsApp1\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.trangchu.resources
+D:\BENHVIENANBINH\WindowsFormsApp1\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.csproj.GenerateResource.cache
+D:\BENHVIENANBINH\WindowsFormsApp1\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.csproj.CoreCompileInputs.cache
+D:\BENHVIENANBINH\WindowsFormsApp1\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.exe
+D:\BENHVIENANBINH\WindowsFormsApp1\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.pdb
