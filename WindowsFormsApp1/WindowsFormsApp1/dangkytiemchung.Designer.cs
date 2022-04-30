@@ -37,7 +37,6 @@ namespace WindowsFormsApp1
             this.label5 = new System.Windows.Forms.Label();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
-            this.maskedTextBox1 = new System.Windows.Forms.MaskedTextBox();
             this.label7 = new System.Windows.Forms.Label();
             this.textBox2 = new System.Windows.Forms.TextBox();
             this.textBox3 = new System.Windows.Forms.TextBox();
@@ -53,7 +52,6 @@ namespace WindowsFormsApp1
             this.label22 = new System.Windows.Forms.Label();
             this.textBox5 = new System.Windows.Forms.TextBox();
             this.label23 = new System.Windows.Forms.Label();
-            this.maskedTextBox2 = new System.Windows.Forms.MaskedTextBox();
             this.label24 = new System.Windows.Forms.Label();
             this.textBox6 = new System.Windows.Forms.TextBox();
             this.label25 = new System.Windows.Forms.Label();
@@ -61,21 +59,19 @@ namespace WindowsFormsApp1
             this.button1 = new System.Windows.Forms.Button();
             this.label27 = new System.Windows.Forms.Label();
             this.button2 = new System.Windows.Forms.Button();
-            this.label10 = new System.Windows.Forms.Label();
-            this.comboBox4 = new System.Windows.Forms.ComboBox();
             this.label28 = new System.Windows.Forms.Label();
             this.comboBox5 = new System.Windows.Forms.ComboBox();
             this.button3 = new System.Windows.Forms.Button();
-            this.maskedTextBox3 = new System.Windows.Forms.MaskedTextBox();
-            this.label26 = new System.Windows.Forms.Label();
             this.comboBox2 = new System.Windows.Forms.ComboBox();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.label17 = new System.Windows.Forms.Label();
-            this.label18 = new System.Windows.Forms.Label();
-            this.label16 = new System.Windows.Forms.Label();
-            this.label15 = new System.Windows.Forms.Label();
             this.textBox7 = new System.Windows.Forms.TextBox();
             this.label9 = new System.Windows.Forms.Label();
+            this.maskedTextBox1 = new System.Windows.Forms.MaskedTextBox();
+            this.maskedTextBox2 = new System.Windows.Forms.MaskedTextBox();
+            this.maskedTextBox3 = new System.Windows.Forms.MaskedTextBox();
+            this.button4 = new System.Windows.Forms.Button();
+            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.label10 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
             this.SuspendLayout();
@@ -155,13 +151,6 @@ namespace WindowsFormsApp1
             this.label6.TabIndex = 7;
             this.label6.Text = "Ngày sinh:";
             // 
-            // maskedTextBox1
-            // 
-            this.maskedTextBox1.Location = new System.Drawing.Point(119, 172);
-            this.maskedTextBox1.Name = "maskedTextBox1";
-            this.maskedTextBox1.Size = new System.Drawing.Size(282, 20);
-            this.maskedTextBox1.TabIndex = 9;
-            // 
             // label7
             // 
             this.label7.AutoSize = true;
@@ -221,27 +210,28 @@ namespace WindowsFormsApp1
             // 
             this.label13.AutoSize = true;
             this.label13.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label13.Location = new System.Drawing.Point(459, 136);
+            this.label13.Location = new System.Drawing.Point(459, 108);
             this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(53, 13);
+            this.label13.Size = new System.Drawing.Size(60, 13);
             this.label13.TabIndex = 19;
-            this.label13.Text = "*Tiêm lẻ";
+            this.label13.Text = "*Tiêm gói";
             this.label13.Click += new System.EventHandler(this.label13_Click);
             // 
             // dataGridView1
             // 
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(462, 152);
+            this.dataGridView1.Location = new System.Drawing.Point(462, 126);
             this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(319, 193);
+            this.dataGridView1.Size = new System.Drawing.Size(319, 172);
             this.dataGridView1.TabIndex = 20;
+            this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
             // 
             // dataGridView2
             // 
             this.dataGridView2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView2.Location = new System.Drawing.Point(462, 374);
+            this.dataGridView2.Location = new System.Drawing.Point(462, 327);
             this.dataGridView2.Name = "dataGridView2";
-            this.dataGridView2.Size = new System.Drawing.Size(319, 213);
+            this.dataGridView2.Size = new System.Drawing.Size(319, 206);
             this.dataGridView2.TabIndex = 22;
             this.dataGridView2.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView2_CellContentClick);
             // 
@@ -249,11 +239,12 @@ namespace WindowsFormsApp1
             // 
             this.label14.AutoSize = true;
             this.label14.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label14.Location = new System.Drawing.Point(452, 354);
+            this.label14.Location = new System.Drawing.Point(459, 308);
             this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(60, 13);
+            this.label14.Size = new System.Drawing.Size(53, 13);
             this.label14.TabIndex = 21;
-            this.label14.Text = "*Tiêm gói";
+            this.label14.Text = "*Tiêm lẻ";
+            this.label14.Click += new System.EventHandler(this.label14_Click);
             // 
             // label19
             // 
@@ -298,13 +289,6 @@ namespace WindowsFormsApp1
             this.label23.TabIndex = 37;
             this.label23.Text = "SĐT:";
             // 
-            // maskedTextBox2
-            // 
-            this.maskedTextBox2.Location = new System.Drawing.Point(119, 301);
-            this.maskedTextBox2.Name = "maskedTextBox2";
-            this.maskedTextBox2.Size = new System.Drawing.Size(113, 20);
-            this.maskedTextBox2.TabIndex = 36;
-            // 
             // label24
             // 
             this.label24.AutoSize = true;
@@ -344,7 +328,7 @@ namespace WindowsFormsApp1
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(326, 566);
+            this.button1.Location = new System.Drawing.Point(326, 510);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(75, 23);
             this.button1.TabIndex = 45;
@@ -363,129 +347,60 @@ namespace WindowsFormsApp1
             // 
             // button2
             // 
-            this.button2.Location = new System.Drawing.Point(49, 566);
+            this.button2.Location = new System.Drawing.Point(49, 510);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(97, 23);
             this.button2.TabIndex = 48;
             this.button2.Text = "Đặt mua vắc xin";
             this.button2.UseVisualStyleBackColor = true;
             // 
-            // label10
-            // 
-            this.label10.AutoSize = true;
-            this.label10.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label10.Location = new System.Drawing.Point(46, 415);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(120, 13);
-            this.label10.TabIndex = 49;
-            this.label10.Text = "*Đăng ký trung tâm:";
-            // 
-            // comboBox4
-            // 
-            this.comboBox4.FormattingEnabled = true;
-            this.comboBox4.Location = new System.Drawing.Point(169, 412);
-            this.comboBox4.Name = "comboBox4";
-            this.comboBox4.Size = new System.Drawing.Size(232, 21);
-            this.comboBox4.TabIndex = 50;
-            // 
             // label28
             // 
             this.label28.AutoSize = true;
             this.label28.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label28.Location = new System.Drawing.Point(459, 86);
+            this.label28.Location = new System.Drawing.Point(46, 413);
             this.label28.Name = "label28";
-            this.label28.Size = new System.Drawing.Size(96, 13);
+            this.label28.Size = new System.Drawing.Size(100, 13);
             this.label28.TabIndex = 51;
-            this.label28.Text = "*Trung tâm tiêm";
+            this.label28.Text = "*Trung tâm tiêm:";
             // 
             // comboBox5
             // 
             this.comboBox5.FormattingEnabled = true;
-            this.comboBox5.Location = new System.Drawing.Point(561, 83);
+            this.comboBox5.Location = new System.Drawing.Point(152, 410);
             this.comboBox5.Name = "comboBox5";
-            this.comboBox5.Size = new System.Drawing.Size(213, 21);
+            this.comboBox5.Size = new System.Drawing.Size(249, 21);
             this.comboBox5.TabIndex = 52;
+            this.comboBox5.SelectedIndexChanged += new System.EventHandler(this.comboBox5_SelectedIndexChanged);
             // 
             // button3
             // 
-            this.button3.Location = new System.Drawing.Point(699, 110);
+            this.button3.Location = new System.Drawing.Point(326, 437);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(75, 23);
             this.button3.TabIndex = 54;
-            this.button3.Text = "Tra cứu";
+            this.button3.Text = "Lọc Vắc xin";
             this.button3.UseVisualStyleBackColor = true;
-            // 
-            // maskedTextBox3
-            // 
-            this.maskedTextBox3.Location = new System.Drawing.Point(169, 384);
-            this.maskedTextBox3.Name = "maskedTextBox3";
-            this.maskedTextBox3.Size = new System.Drawing.Size(232, 20);
-            this.maskedTextBox3.TabIndex = 47;
-            // 
-            // label26
-            // 
-            this.label26.AutoSize = true;
-            this.label26.Location = new System.Drawing.Point(46, 534);
-            this.label26.Name = "label26";
-            this.label26.Size = new System.Drawing.Size(225, 13);
-            this.label26.TabIndex = 61;
-            this.label26.Text = "*Bạn chỉ được chọn tiêm lẻ hoặc tiêm theo gói";
+            this.button3.Click += new System.EventHandler(this.button3_Click);
             // 
             // comboBox2
             // 
             this.comboBox2.FormattingEnabled = true;
-            this.comboBox2.Location = new System.Drawing.Point(130, 508);
+            this.comboBox2.Location = new System.Drawing.Point(154, 471);
             this.comboBox2.Name = "comboBox2";
-            this.comboBox2.Size = new System.Drawing.Size(271, 21);
+            this.comboBox2.Size = new System.Drawing.Size(247, 21);
             this.comboBox2.TabIndex = 60;
-            // 
-            // comboBox1
-            // 
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(130, 460);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(271, 21);
-            this.comboBox1.TabIndex = 59;
+            this.comboBox2.SelectedIndexChanged += new System.EventHandler(this.comboBox2_SelectedIndexChanged);
             // 
             // label17
             // 
             this.label17.AutoSize = true;
             this.label17.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label17.Location = new System.Drawing.Point(46, 511);
+            this.label17.Location = new System.Drawing.Point(46, 474);
             this.label17.Name = "label17";
-            this.label17.Size = new System.Drawing.Size(54, 13);
+            this.label17.Size = new System.Drawing.Size(107, 13);
             this.label17.TabIndex = 58;
-            this.label17.Text = "Tên gói:";
-            // 
-            // label18
-            // 
-            this.label18.AutoSize = true;
-            this.label18.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label18.Location = new System.Drawing.Point(46, 488);
-            this.label18.Name = "label18";
-            this.label18.Size = new System.Drawing.Size(107, 13);
-            this.label18.TabIndex = 57;
-            this.label18.Text = "*Đăng ký tiêm gói";
-            // 
-            // label16
-            // 
-            this.label16.AutoSize = true;
-            this.label16.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label16.Location = new System.Drawing.Point(46, 463);
-            this.label16.Name = "label16";
-            this.label16.Size = new System.Drawing.Size(78, 13);
-            this.label16.TabIndex = 56;
-            this.label16.Text = "Tên vắc xin:";
-            // 
-            // label15
-            // 
-            this.label15.AutoSize = true;
-            this.label15.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label15.Location = new System.Drawing.Point(46, 440);
-            this.label15.Name = "label15";
-            this.label15.Size = new System.Drawing.Size(100, 13);
-            this.label15.TabIndex = 55;
-            this.label15.Text = "*Đăng ký tiêm lẻ";
+            this.label17.Text = "*Mã (gói) vắc xin:";
             // 
             // textBox7
             // 
@@ -504,27 +419,74 @@ namespace WindowsFormsApp1
             this.label9.TabIndex = 62;
             this.label9.Text = "CMND:";
             // 
+            // maskedTextBox1
+            // 
+            this.maskedTextBox1.Location = new System.Drawing.Point(119, 173);
+            this.maskedTextBox1.Name = "maskedTextBox1";
+            this.maskedTextBox1.Size = new System.Drawing.Size(282, 20);
+            this.maskedTextBox1.TabIndex = 65;
+            // 
+            // maskedTextBox2
+            // 
+            this.maskedTextBox2.Location = new System.Drawing.Point(119, 302);
+            this.maskedTextBox2.Name = "maskedTextBox2";
+            this.maskedTextBox2.Size = new System.Drawing.Size(127, 20);
+            this.maskedTextBox2.TabIndex = 66;
+            // 
+            // maskedTextBox3
+            // 
+            this.maskedTextBox3.Location = new System.Drawing.Point(169, 384);
+            this.maskedTextBox3.Name = "maskedTextBox3";
+            this.maskedTextBox3.Size = new System.Drawing.Size(232, 20);
+            this.maskedTextBox3.TabIndex = 67;
+            // 
+            // button4
+            // 
+            this.button4.Location = new System.Drawing.Point(706, 80);
+            this.button4.Name = "button4";
+            this.button4.Size = new System.Drawing.Size(75, 23);
+            this.button4.TabIndex = 68;
+            this.button4.Text = "Tra cứu";
+            this.button4.UseVisualStyleBackColor = true;
+            this.button4.Click += new System.EventHandler(this.button4_Click);
+            // 
+            // comboBox1
+            // 
+            this.comboBox1.FormattingEnabled = true;
+            this.comboBox1.Location = new System.Drawing.Point(568, 82);
+            this.comboBox1.Name = "comboBox1";
+            this.comboBox1.Size = new System.Drawing.Size(132, 21);
+            this.comboBox1.TabIndex = 70;
+            // 
+            // label10
+            // 
+            this.label10.AutoSize = true;
+            this.label10.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label10.Location = new System.Drawing.Point(462, 85);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(100, 13);
+            this.label10.TabIndex = 69;
+            this.label10.Text = "*Trung tâm tiêm:";
+            // 
             // dangkytiemchung
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 607);
+            this.ClientSize = new System.Drawing.Size(800, 551);
+            this.Controls.Add(this.comboBox1);
+            this.Controls.Add(this.label10);
+            this.Controls.Add(this.button4);
+            this.Controls.Add(this.maskedTextBox3);
+            this.Controls.Add(this.maskedTextBox2);
+            this.Controls.Add(this.maskedTextBox1);
             this.Controls.Add(this.textBox7);
             this.Controls.Add(this.label9);
-            this.Controls.Add(this.label26);
             this.Controls.Add(this.comboBox2);
-            this.Controls.Add(this.comboBox1);
             this.Controls.Add(this.label17);
-            this.Controls.Add(this.label18);
-            this.Controls.Add(this.label16);
-            this.Controls.Add(this.label15);
             this.Controls.Add(this.button3);
             this.Controls.Add(this.comboBox5);
             this.Controls.Add(this.label28);
-            this.Controls.Add(this.comboBox4);
-            this.Controls.Add(this.label10);
             this.Controls.Add(this.button2);
-            this.Controls.Add(this.maskedTextBox3);
             this.Controls.Add(this.label27);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.label20);
@@ -532,7 +494,6 @@ namespace WindowsFormsApp1
             this.Controls.Add(this.label22);
             this.Controls.Add(this.textBox5);
             this.Controls.Add(this.label23);
-            this.Controls.Add(this.maskedTextBox2);
             this.Controls.Add(this.label24);
             this.Controls.Add(this.textBox6);
             this.Controls.Add(this.label25);
@@ -547,7 +508,6 @@ namespace WindowsFormsApp1
             this.Controls.Add(this.label8);
             this.Controls.Add(this.textBox2);
             this.Controls.Add(this.label7);
-            this.Controls.Add(this.maskedTextBox1);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.textBox1);
             this.Controls.Add(this.label5);
@@ -575,7 +535,6 @@ namespace WindowsFormsApp1
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.MaskedTextBox maskedTextBox1;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.TextBox textBox2;
         private System.Windows.Forms.TextBox textBox3;
@@ -591,7 +550,6 @@ namespace WindowsFormsApp1
         private System.Windows.Forms.Label label22;
         private System.Windows.Forms.TextBox textBox5;
         private System.Windows.Forms.Label label23;
-        private System.Windows.Forms.MaskedTextBox maskedTextBox2;
         private System.Windows.Forms.Label label24;
         private System.Windows.Forms.TextBox textBox6;
         private System.Windows.Forms.Label label25;
@@ -599,21 +557,19 @@ namespace WindowsFormsApp1
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Label label27;
         private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Label label10;
-        private System.Windows.Forms.ComboBox comboBox4;
         private System.Windows.Forms.Label label28;
         private System.Windows.Forms.ComboBox comboBox5;
         private System.Windows.Forms.Button button3;
-        private System.Windows.Forms.MaskedTextBox maskedTextBox3;
-        private System.Windows.Forms.Label label26;
         private System.Windows.Forms.ComboBox comboBox2;
-        private System.Windows.Forms.ComboBox comboBox1;
         private System.Windows.Forms.Label label17;
-        private System.Windows.Forms.Label label18;
-        private System.Windows.Forms.Label label16;
-        private System.Windows.Forms.Label label15;
         private System.Windows.Forms.TextBox textBox7;
         private System.Windows.Forms.Label label9;
+        private System.Windows.Forms.MaskedTextBox maskedTextBox1;
+        private System.Windows.Forms.MaskedTextBox maskedTextBox2;
+        private System.Windows.Forms.MaskedTextBox maskedTextBox3;
+        private System.Windows.Forms.Button button4;
+        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.Label label10;
     }
 }
 

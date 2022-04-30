@@ -52,6 +52,12 @@
     <Compile Include="dangkytiemchung.Designer.cs">
       <DependentUpon>dangkytiemchung.cs</DependentUpon>
     </Compile>
+    <Compile Include="dangnhapnhanvien.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="dangnhapnhanvien.Designer.cs">
+      <DependentUpon>dangnhapnhanvien.cs</DependentUpon>
+    </Compile>
     <Compile Include="datmuavacxin.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -63,6 +69,12 @@
     </Compile>
     <Compile Include="duyetvacxin.Designer.cs">
       <DependentUpon>duyetvacxin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="menukhachhang.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="menukhachhang.Designer.cs">
+      <DependentUpon>menukhachhang.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -84,14 +96,26 @@
     <Compile Include="tracuutiemchung.Designer.cs">
       <DependentUpon>tracuutiemchung.cs</DependentUpon>
     </Compile>
+    <Compile Include="trangchu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="trangchu.Designer.cs">
+      <DependentUpon>trangchu.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="dangkytiemchung.resx">
       <DependentUpon>dangkytiemchung.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="dangnhapnhanvien.resx">
+      <DependentUpon>dangnhapnhanvien.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="datmuavacxin.resx">
       <DependentUpon>datmuavacxin.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="duyetvacxin.resx">
       <DependentUpon>duyetvacxin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="menukhachhang.resx">
+      <DependentUpon>menukhachhang.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -110,6 +134,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="tracuutiemchung.resx">
       <DependentUpon>tracuutiemchung.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="trangchu.resx">
+      <DependentUpon>trangchu.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
