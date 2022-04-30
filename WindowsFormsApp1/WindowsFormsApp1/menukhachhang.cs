@@ -40,5 +40,13 @@ namespace WindowsFormsApp1
             them.ShowDialog();
             this.Close();
         }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            tracuutiemchung them = new tracuutiemchung();
+            them.ShowDialog();
+            this.Close();
+        }
     }
 }

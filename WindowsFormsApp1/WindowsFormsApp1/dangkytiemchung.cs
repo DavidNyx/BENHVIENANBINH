@@ -13,7 +13,7 @@ namespace WindowsFormsApp1
 {
     public partial class dangkytiemchung : Form
     {
-        public dangkytiemchung()
+    public dangkytiemchung()
         {
             InitializeComponent();
 
@@ -43,6 +43,8 @@ namespace WindowsFormsApp1
             maskedTextBox2.ValidatingType = typeof(System.DateTime);
             ngaytiem.Mask = "00/00/0000";
             ngaytiem.ValidatingType = typeof(System.DateTime);
+            disableShowInfoToRegister();
+            disableShowInfoUnder18ToRegister();
         }
 
         private void label1_Click(object sender, EventArgs e)
@@ -169,6 +171,89 @@ namespace WindowsFormsApp1
             datmuavacxin them = new datmuavacxin();
             them.ShowDialog();
             this.Close();
+        }
+
+        private void showInfoToRegister()
+        {
+            label5.Show();
+            textBox1.Show();
+            label6.Show();
+            maskedTextBox1.Show();
+            label8.Show();
+            textBox3.Show();
+            textBox2.Show();
+            label9.Show();
+            textBox7.Show();
+            label7.Show();
+
+            label20.Hide();
+            makh.Hide();
+        }
+
+        private void disableShowInfoToRegister()
+        {
+            label5.Hide();
+            textBox1.Hide();
+            label6.Hide();
+            maskedTextBox1.Hide();
+            label8.Hide();
+            textBox3.Hide();
+            textBox2.Hide();
+            label9.Hide();
+            textBox7.Hide();
+            label7.Hide();
+            label20.Show();
+            makh.Show();
+
+        }
+
+        private void showInfoUnder18ToRegister()
+        {
+            label25.Show();
+            textBox6.Show();
+            label23.Show();
+            textBox6.Show();
+            label15.Show();
+            maskedTextBox2.Show();
+            label22.Show();
+            textBox4.Show();
+            textBox5.Show();
+        }
+        private void disableShowInfoUnder18ToRegister()
+        {
+            label25.Hide();
+            textBox6.Hide();
+            label23.Hide();
+            textBox6.Hide();
+            label15.Hide();
+            maskedTextBox2.Hide();
+            label22.Hide();
+            textBox4.Hide();
+            textBox5.Hide();
+        }
+
+        private void checkBox1_CheckedChanged(object sender, EventArgs e)
+        {
+            if (checkBox1.Checked)
+            {
+                showInfoToRegister();
+            }
+            else
+            {
+                disableShowInfoToRegister();
+            }
+        }
+
+        private void checkBox2_CheckedChanged(object sender, EventArgs e)
+        {
+            if (checkBox2.Checked)
+            {
+                showInfoUnder18ToRegister();
+            }
+            else
+            {
+                disableShowInfoUnder18ToRegister();
+            }
         }
     }
 }

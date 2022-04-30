@@ -19,15 +19,6 @@ namespace WindowsFormsApp1
 
             string connString = @"Data Source=" + nachos.servername + ";Initial Catalog=" + nachos.dbname + ";Integrated Security=True;" + "UID=" + nachos.username.Trim() + "password=" + nachos.password.Trim();
             nachos.sqlCon = new SqlConnection(connString);
-
-            SqlCommand cmd = new SqlCommand("select ma_pdkt from phieudktiem where ma_kh = '" + textBox1.Text + "' ", nachos.sqlCon);
-            SqlDataAdapter adapt = new SqlDataAdapter();
-            adapt.SelectCommand = cmd;
-            DataTable table = new DataTable();
-            adapt.Fill(table);
-            comboBox1.DataSource = table;
-            comboBox1.DisplayMember = "ten_tt";
-            comboBox1.ValueMember = "ma_tt";
         }
 
         private void label14_Click(object sender, EventArgs e)
@@ -72,12 +63,21 @@ namespace WindowsFormsApp1
             SqlDataAdapter adapt3 = new SqlDataAdapter("SELECT * from khachhang where ma_kh = '" + textBox1.Text + "' ", nachos.sqlCon);
             DataTable table3 = new DataTable();
             adapt3.Fill(table3);
-            dataGridView1.DataSource = new BindingSource(table3, null);
+            dataGridView3.DataSource = new BindingSource(table3, null);
 
             SqlDataAdapter adapt2 = new SqlDataAdapter("SELECT * from nguoigiamho where ma_kh = '" + textBox1.Text + "' ", nachos.sqlCon);
             DataTable table2 = new DataTable();
             adapt2.Fill(table2);
-            dataGridView2.DataSource = new BindingSource(table3, null);
+            dataGridView4.DataSource = new BindingSource(table2, null);
+
+            SqlCommand cmd = new SqlCommand("select ma_pdkt from phieudktiem where ma_kh = '" + textBox1.Text + "' ", nachos.sqlCon);
+            SqlDataAdapter adapt = new SqlDataAdapter();
+            adapt.SelectCommand = cmd;
+            DataTable table = new DataTable();
+            adapt.Fill(table);
+            comboBox1.DataSource = table;
+            comboBox1.DisplayMember = "ma_pdkt";
+            comboBox1.ValueMember = "ma_pdkt";
 
             nachos.sqlCon.Close();
         }
@@ -94,7 +94,22 @@ namespace WindowsFormsApp1
 
         private void button2_Click(object sender, EventArgs e)
         {
+            nachos.sqlCon.Open();
 
+            object selecteditem = comboBox1.SelectedValue;
+            string phieudkt = selecteditem.ToString();
+
+            SqlDataAdapter adapt3 = new SqlDataAdapter("SELECT * from HOSOBENHAN where MA_PDKT = '" + phieudkt + "' ", nachos.sqlCon);
+            DataTable table3 = new DataTable();
+            adapt3.Fill(table3);
+            dataGridView1.DataSource = new BindingSource(table3, null);
+
+            SqlDataAdapter adapt2 = new SqlDataAdapter("SELECT * from phieudktiem where MA_PDKT = '" + phieudkt + "' ", nachos.sqlCon);
+            DataTable table2 = new DataTable();
+            adapt2.Fill(table2);
+            dataGridView2.DataSource = new BindingSource(table2, null);
+
+            nachos.sqlCon.Close();
         }
 
         private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
