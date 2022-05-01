@@ -177,6 +177,8 @@ namespace WindowsFormsApp1
                         string trungtam = selecteditem.ToString();
                         object selecteditem2 = comboBox2.SelectedValue;
                         string goivacxin = selecteditem2.ToString();
+                        nachos.id = makh.Text;
+
                         SqlCommand sqlCommand = new SqlCommand("SELECT COUNT(*) FROM PHIEUDKTIEM", nachos.sqlCon);
                         int num = (Int32)sqlCommand.ExecuteScalar();
                         num += 1;
@@ -200,7 +202,8 @@ namespace WindowsFormsApp1
                     {
                         MessageBox.Show(sqlEx.Message);
                     }
-
+                    MessageBox.Show("Đặt mua vacxin thành công");
+                    navigateToPurchase();
                 }
                 else
                 {
@@ -208,6 +211,7 @@ namespace WindowsFormsApp1
                     {
                         object selecteditem = comboBox4.SelectedValue;
                         string trungtam = selecteditem.ToString();
+                        nachos.id = makh.Text;
 
                         SqlCommand sqlCommand = new SqlCommand("SELECT COUNT(*) FROM PHIEUDKTIEM", nachos.sqlCon);
                         int num = (Int32)sqlCommand.ExecuteScalar();
@@ -231,6 +235,7 @@ namespace WindowsFormsApp1
                         MessageBox.Show(sqlEx.Message);
                     }
                     MessageBox.Show("Đặt mua vacxin thành công");
+                    navigateToPurchase();
                 }
             }
             else
@@ -240,6 +245,7 @@ namespace WindowsFormsApp1
                     SqlCommand sqlCommand = new SqlCommand("SELECT COUNT(*) FROM KHACHHANG", nachos.sqlCon);
                     int numCustomers = (Int32)sqlCommand.ExecuteScalar();
                     numCustomers += 1;
+                    nachos.id = "KH" + numCustomers.ToString();
 
                     if (!checkBox2.Checked)
                     {
@@ -287,6 +293,7 @@ namespace WindowsFormsApp1
                         MessageBox.Show(sqlEx.Message);
                     }
                     MessageBox.Show("Đặt mua vacxin thành công");
+                    navigateToPurchase();
                 }
 
                 else
@@ -294,6 +301,7 @@ namespace WindowsFormsApp1
                     SqlCommand sqlCommand = new SqlCommand("SELECT COUNT(*) FROM KHACHHANG", nachos.sqlCon);
                     int numCustomers = (Int32)sqlCommand.ExecuteScalar();
                     numCustomers += 1;
+                    nachos.id = "KH" + numCustomers.ToString();
 
                     try
                     {
@@ -322,6 +330,7 @@ namespace WindowsFormsApp1
                         MessageBox.Show(sqlEx.Message);
                     }
                     MessageBox.Show("Đặt mua vacxin thành công");
+                    navigateToPurchase();
                 }
             }
             nachos.sqlCon.Close();
@@ -341,6 +350,14 @@ namespace WindowsFormsApp1
             comboBox2.Hide();
             label2.Show();
             textBox1.Show();
+        }
+
+        private void navigateToPurchase()
+        {
+            this.Hide();
+            thanhtoan1 thanhtoan = new thanhtoan1();
+            thanhtoan.ShowDialog();
+            this.Close();
         }
 
         private void checkBox3_CheckedChanged(object sender, EventArgs e)

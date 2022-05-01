@@ -57,5 +57,6 @@ namespace WindowsFormsApp1
         public static string servername = "";
         public static string dbname = "";
         public static string password = "";
+        public static string id = "";
     }
 }
