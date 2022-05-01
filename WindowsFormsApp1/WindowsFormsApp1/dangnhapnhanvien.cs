@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Data.SqlClient;
 using System.Drawing;
 using System.Linq;
 using System.Text;
@@ -15,6 +16,30 @@ namespace WindowsFormsApp1
         public dangnhapnhanvien()
         {
             InitializeComponent();
+        }
+
+        private void loginBtn_Click(object sender, EventArgs e)
+        {
+            nachos.username = username.Text;
+            nachos.password = password.Text;
+            string connString = @"Data Source=" + nachos.servername + ";Initial Catalog=" + nachos.dbname + ";Integrated Security=True;" + "UID=" + nachos.username.Trim() + "password=" + nachos.password.Trim();
+            nachos.sqlCon = new SqlConnection(connString);
+            try
+            {
+                nachos.sqlCon = new SqlConnection(connString);
+                nachos.sqlCon.Open();
+                MessageBox.Show("Đăng nhập thành công!");
+                nachos.sqlCon.Close();
+
+                this.Hide();
+                duyetvacxin duyetvacxin = new duyetvacxin();
+                duyetvacxin.ShowDialog();
+                this.Close();
+            }
+            catch (SqlException sqlEx)
+            {
+                MessageBox.Show(sqlEx.Message);
+            }
         }
     }
 }

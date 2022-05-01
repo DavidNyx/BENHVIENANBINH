@@ -35,3 +35,4 @@ D:\BENHVIENANBINH\WindowsFormsApp1\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.c
 D:\BENHVIENANBINH\WindowsFormsApp1\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.csproj.CoreCompileInputs.cache
 D:\BENHVIENANBINH\WindowsFormsApp1\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.exe
 D:\BENHVIENANBINH\WindowsFormsApp1\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.pdb
+D:\BENHVIENANBINH\WindowsFormsApp1\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.nhapGiaVacXin.resources

@@ -15,6 +15,8 @@ namespace WindowsFormsApp1
         public menukhachhang()
         {
             InitializeComponent();
+            nachos.username = "";
+            nachos.password = "";
         }
 
         private void button1_Click(object sender, EventArgs e)
