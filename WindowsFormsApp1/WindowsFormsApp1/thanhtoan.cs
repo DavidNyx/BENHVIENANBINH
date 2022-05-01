@@ -134,6 +134,44 @@ namespace WindowsFormsApp1
             }
         }
 
+        private void button2_Click(object sender, EventArgs e)
+        {
+            nachos.sqlCon.Open();
+            try
+            {
+                if (comboBox1.SelectedItem.ToString() == "1 lần" && comboBox1.SelectedItem != null)
+                {
+                    SqlCommand sqlCommand = new SqlCommand("SELECT COUNT(*) FROM HOADON", nachos.sqlCon);
+                    int num = (Int32)sqlCommand.ExecuteScalar();
+                    num += 1;
+
+                    var strSQLCommand = "EXEC dbo.THANH_TOAN_1_LAN 'HD" + num.ToString() + "', '" + time.ToString("d") + "', '" + maPhieuDKT.Text + "', '" + textBox1.Text + "', 0, " + tongTien.Text;  // statement is wrong! will raise an exception
+                    var command = new SqlCommand(strSQLCommand, nachos.sqlCon);
+                    command.ExecuteNonQuery();
+                }
+                else if (comboBox1.SelectedItem.ToString() == "đợt 1" && comboBox1.SelectedItem != null)
+                {
+                    SqlCommand sqlCommand = new SqlCommand("SELECT COUNT(*) FROM HOADON", nachos.sqlCon);
+                    int num = (Int32)sqlCommand.ExecuteScalar();
+                    num += 1;
+
+                    var strSQLCommand = "EXEC dbo.THANH_TOAN_THEO_DOT 'HD" + num.ToString() + "', '" + time.ToString("d") + "', '" + maPhieuDKT.Text + "', '" + textBox1.Text + "', " + tongTien.Text;  // statement is wrong! will raise an exception
+                    var command = new SqlCommand(strSQLCommand, nachos.sqlCon);
+                    command.ExecuteNonQuery();
+
+                    strSQLCommand = "UPDATE CHITIET_HD SET DATHANHTOAN=0 WHERE MA_HD='HD" + num.ToString() + "' AND DOTTHANHTOAN=1";
+                    command = new SqlCommand(strSQLCommand, nachos.sqlCon);
+                    command.ExecuteNonQuery();
+                }
+            }
+            catch (SqlException sqlEx)
+            {
+                MessageBox.Show(sqlEx.Message);
+            }
+            MessageBox.Show("Bạn vui lòng thanh toán sớm nhất có thể ở màn hình thanh toán lẻ!");
+            nachos.sqlCon.Close();
+        }
+
         private void button1_Click(object sender, EventArgs e)
         {
             nachos.sqlCon.Open();
@@ -164,6 +202,7 @@ namespace WindowsFormsApp1
             {
                 MessageBox.Show(sqlEx.Message);
             }
+            MessageBox.Show("Thanh toán thành công!");
             nachos.sqlCon.Close();
         }
     }

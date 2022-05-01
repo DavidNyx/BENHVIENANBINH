@@ -75,6 +75,7 @@ namespace WindowsFormsApp1
             this.dotThanhToan = new System.Windows.Forms.Label();
             this.tienCanTra = new System.Windows.Forms.Label();
             this.ngayLapHD = new System.Windows.Forms.Label();
+            this.button2 = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // label1
@@ -527,11 +528,22 @@ namespace WindowsFormsApp1
             this.ngayLapHD.Size = new System.Drawing.Size(0, 16);
             this.ngayLapHD.TabIndex = 176;
             // 
+            // button2
+            // 
+            this.button2.Location = new System.Drawing.Point(502, 255);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(115, 36);
+            this.button2.TabIndex = 177;
+            this.button2.Text = "Thanh toán sau";
+            this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
+            // 
             // thanhtoan1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(845, 512);
+            this.Controls.Add(this.button2);
             this.Controls.Add(this.ngayLapHD);
             this.Controls.Add(this.tienCanTra);
             this.Controls.Add(this.dotThanhToan);
@@ -635,5 +647,6 @@ namespace WindowsFormsApp1
         private System.Windows.Forms.Label dotThanhToan;
         private System.Windows.Forms.Label tienCanTra;
         private System.Windows.Forms.Label ngayLapHD;
+        private System.Windows.Forms.Button button2;
     }
 }
