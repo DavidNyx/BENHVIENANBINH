@@ -11,10 +11,10 @@ using System.Windows.Forms;
 
 namespace WindowsFormsApp1
 {
-    public partial class thanhtoan2 : Form
+    public partial class MHthanhtoanle : Form
     {
         DateTime time;
-        public thanhtoan2()
+        public MHthanhtoanle()
         {
             InitializeComponent();
             string connString = @"Data Source=" + nachos.servername + ";Initial Catalog=" + nachos.dbname + ";Integrated Security=True;" + "UID=" + nachos.username.Trim() + "password=" + nachos.password.Trim();

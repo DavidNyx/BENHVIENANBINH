@@ -1,7 +1,7 @@
 ﻿
 namespace WindowsFormsApp1
 {
-    partial class tracuutiemchung
+    partial class MHtracuutiemchung
     {
         /// <summary>
         /// Required designer variable.

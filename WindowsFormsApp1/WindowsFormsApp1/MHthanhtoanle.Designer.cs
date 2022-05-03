@@ -1,7 +1,7 @@
 ﻿
 namespace WindowsFormsApp1
 {
-    partial class thanhtoan2
+    partial class MHthanhtoanle
     {
         /// <summary>
         /// Required designer variable.

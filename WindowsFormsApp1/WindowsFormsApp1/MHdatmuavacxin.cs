@@ -11,9 +11,9 @@ using System.Data.SqlClient;
 
 namespace WindowsFormsApp1
 {
-    public partial class datmuavacxin : Form
+    public partial class MHdatmuavacxin : Form
     {
-        public datmuavacxin()
+        public MHdatmuavacxin()
         {
             InitializeComponent();
 
@@ -25,16 +25,16 @@ namespace WindowsFormsApp1
             adapt.SelectCommand = cmd;
             DataTable table = new DataTable();
             adapt.Fill(table);
-            comboBox4.DataSource = table;
-            comboBox4.DisplayMember = "ten_tt";
-            comboBox4.ValueMember = "ma_tt";
+            Dktrungtamtiem.DataSource = table;
+            Dktrungtamtiem.DisplayMember = "ten_tt";
+            Dktrungtamtiem.ValueMember = "ma_tt";
 
-            maskedTextBox1.Mask = "00/00/0000";
-            maskedTextBox1.ValidatingType = typeof(System.DateTime);
-            maskedTextBox2.Mask = "00/00/0000";
-            maskedTextBox2.ValidatingType = typeof(System.DateTime);
-            ngaytiem.Mask = "00/00/0000";
-            ngaytiem.ValidatingType = typeof(System.DateTime);
+            Ngaysinh.Mask = "00/00/0000";
+            Ngaysinh.ValidatingType = typeof(System.DateTime);
+            NgaysinhNGH.Mask = "00/00/0000";
+            NgaysinhNGH.ValidatingType = typeof(System.DateTime);
+            Dkngaytiem.Mask = "00/00/0000";
+            Dkngaytiem.ValidatingType = typeof(System.DateTime);
             disableShowInfoToRegister();
             disableShowInfoUnder18ToRegister();
             disableShowInfoVacxin();
@@ -44,17 +44,17 @@ namespace WindowsFormsApp1
         {
             nachos.sqlCon.Open();
 
-            object selecteditem = comboBox4.SelectedValue;
-            string trungtam = selecteditem.ToString();
+            object selecteditem = Dktrungtamtiem.SelectedValue;
+            trungtam.matrungtam = selecteditem.ToString();
 
-            SqlCommand cmd1 = new SqlCommand("select GOIVACXIN.MA_GVX, ten_gvx from goivacxin, kho where soluongton = 0 and ma_tt= '" + trungtam + "' ", nachos.sqlCon);
+            SqlCommand cmd1 = new SqlCommand("select GOIVACXIN.MA_GVX, ten_gvx from goivacxin, kho where soluongton = 0 and ma_tt= '" + trungtam.matrungtam + "' ", nachos.sqlCon);
             SqlDataAdapter adapt1 = new SqlDataAdapter();
             adapt1.SelectCommand = cmd1;
             DataTable table1 = new DataTable();
             adapt1.Fill(table1);
-            comboBox2.DataSource = table1;
-            comboBox2.DisplayMember = "TEN_GVX";
-            comboBox2.ValueMember = "MA_GVX";
+            Vacxin.DataSource = table1;
+            Vacxin.DisplayMember = "TEN_GVX";
+            Vacxin.ValueMember = "MA_GVX";
 
             nachos.sqlCon.Close();
         }
@@ -66,12 +66,12 @@ namespace WindowsFormsApp1
             SqlDataAdapter adapt3 = new SqlDataAdapter("SELECT * from goivacxin, kho where soluongton = 0 and LOAI_GVX = 0", nachos.sqlCon);
             DataTable table3 = new DataTable();
             adapt3.Fill(table3);
-            dataGridView1.DataSource = new BindingSource(table3, null);
+            Vacxinle.DataSource = new BindingSource(table3, null);
 
             SqlDataAdapter adapt4 = new SqlDataAdapter("SELECT * from goivacxin, kho where soluongton = 0 and LOAI_GVX != 0", nachos.sqlCon);
             DataTable table4 = new DataTable();
             adapt4.Fill(table4);
-            dataGridView2.DataSource = new BindingSource(table4, null);
+            Goivacxin.DataSource = new BindingSource(table4, null);
 
             nachos.sqlCon.Close();
         }
@@ -84,60 +84,60 @@ namespace WindowsFormsApp1
         private void showInfoToRegister()
         {
             label10.Show();
-            hoten.Show();
+            Hoten.Show();
             label6.Show();
-            maskedTextBox1.Show();
+            Ngaysinh.Show();
             label8.Show();
-            textBox3.Show();
+            Diachi.Show();
             label7.Show();
-            textBox2.Show();
+            Sdt.Show();
             label9.Show();
-            textBox7.Show();
+            Cmnd.Show();
 
             label20.Hide();
-            makh.Hide();
+            Makh.Hide();
         }
 
         private void disableShowInfoToRegister()
         {
             label10.Hide();
-            hoten.Hide();
+            Hoten.Hide();
             label6.Hide();
-            maskedTextBox1.Hide();
+            Ngaysinh.Hide();
             label8.Hide();
-            textBox3.Hide();
-            textBox2.Hide();
+            Diachi.Hide();
+            Sdt.Hide();
             label9.Hide();
-            textBox7.Hide();
+            Cmnd.Hide();
             label7.Hide();
             label20.Show();
-            makh.Show();
+            Makh.Show();
 
         }
 
         private void showInfoUnder18ToRegister()
         {
             label25.Show();
-            textBox6.Show();
+            HotenNGH.Show();
             label24.Show();
-            textBox6.Show();
-            maskedTextBox2.Show();
+            HotenNGH.Show();
+            NgaysinhNGH.Show();
             label23.Show();
             label22.Show();
-            textBox4.Show();
-            textBox5.Show();
+            DiachiNGH.Show();
+            SdtNGH.Show();
         }
         private void disableShowInfoUnder18ToRegister()
         {
             label25.Hide();
-            textBox6.Hide();
+            HotenNGH.Hide();
             label23.Hide();
-            textBox6.Hide();
-            maskedTextBox2.Hide();
+            HotenNGH.Hide();
+            NgaysinhNGH.Hide();
             label24.Hide();
             label22.Hide();
-            textBox4.Hide();
-            textBox5.Hide();
+            DiachiNGH.Hide();
+            SdtNGH.Hide();
         }
 
         private void checkBox1_CheckedChanged(object sender, EventArgs e)
@@ -173,28 +173,34 @@ namespace WindowsFormsApp1
                 {
                     try
                     {
-                        object selecteditem = comboBox4.SelectedValue;
-                        string trungtam = selecteditem.ToString();
-                        object selecteditem2 = comboBox2.SelectedValue;
-                        string goivacxin = selecteditem2.ToString();
-                        nachos.id = makh.Text;
+                        object selecteditem = Dktrungtamtiem.SelectedValue;
+                        phieudangkytiem.trungtam = selecteditem.ToString();
+                        object selecteditem2 = Vacxin.SelectedValue;
+                        phieudangkytiem.vacxin = selecteditem2.ToString();
+                        phieudangkytiem.thoigian = Dkngaytiem.Text;
+                        phieudangkytiem.makhachhang = Makh.Text;
+                        nachos.id = Makh.Text;
 
                         SqlCommand sqlCommand = new SqlCommand("SELECT COUNT(*) FROM PHIEUDKTIEM", nachos.sqlCon);
                         int num = (Int32)sqlCommand.ExecuteScalar();
                         num += 1;
+                        phieudangkytiem.maphieudangkytiem = "DK" + num.ToString();
 
-                        var strSQLCommand = "EXEC dbo.INSERT_PDKT 'DK" + num.ToString() + "', '" + makh.Text + "', '" + ngaytiem.Text + "', '" + trungtam + "', '" + goivacxin + "'";  // statement is wrong! will raise an exception
+                        var strSQLCommand = "EXEC dbo.INSERT_PDKT '" + phieudangkytiem.maphieudangkytiem + "', '" + phieudangkytiem.makhachhang + "', '" + phieudangkytiem.thoigian + "', '" + phieudangkytiem.trungtam + "', '" + phieudangkytiem.vacxin + "'";  // statement is wrong! will raise an exception
                         var command = new SqlCommand(strSQLCommand, nachos.sqlCon);
                         command.ExecuteNonQuery();
 
                         sqlCommand = new SqlCommand("SELECT COUNT(*) FROM PHIEUDATMUAVX", nachos.sqlCon);
                         int numOrder = (Int32)sqlCommand.ExecuteScalar();
                         numOrder += 1;
+                        phieudatmua.maphieudatmua = "DM" + numOrder.ToString();
 
-                        sqlCommand = new SqlCommand("SELECT TEN_GVX FROM GOIVACXIN WHERE MA_GVX='" + goivacxin + "'", nachos.sqlCon);
-                        String vacxinName = (String)sqlCommand.ExecuteScalar();
+                        sqlCommand = new SqlCommand("SELECT TEN_GVX FROM GOIVACXIN WHERE MA_GVX='" + phieudangkytiem.vacxin + "'", nachos.sqlCon);
+                        phieudatmua.tenvacxin = (String)sqlCommand.ExecuteScalar();
+                        phieudatmua.magoivacxin = phieudangkytiem.vacxin;
+                        phieudatmua.maphieudangkytiem = phieudangkytiem.maphieudangkytiem;
                         
-                        strSQLCommand = "EXEC dbo.INSERT_PDMVX 'DM" + numOrder.ToString() + "', 'DK" + num.ToString() + "', '" + goivacxin + "', '" + vacxinName + "'";  // statement is wrong! will raise an exception
+                        strSQLCommand = "EXEC dbo.INSERT_PDMVX '" + phieudatmua.maphieudatmua + "', '" + phieudatmua.maphieudangkytiem + "', '" + phieudatmua.magoivacxin + "', '" + phieudatmua.tenvacxin + "'";  // statement is wrong! will raise an exception
                         command = new SqlCommand(strSQLCommand, nachos.sqlCon);
                         command.ExecuteNonQuery();
                     }
@@ -209,23 +215,29 @@ namespace WindowsFormsApp1
                 {
                     try
                     {
-                        object selecteditem = comboBox4.SelectedValue;
-                        string trungtam = selecteditem.ToString();
-                        nachos.id = makh.Text;
+                        object selecteditem = Dktrungtamtiem.SelectedValue;
+                        phieudangkytiem.trungtam = selecteditem.ToString();
+                        phieudangkytiem.thoigian = Dkngaytiem.Text;
+                        phieudangkytiem.makhachhang = Makh.Text;
+                        nachos.id = Makh.Text;
 
                         SqlCommand sqlCommand = new SqlCommand("SELECT COUNT(*) FROM PHIEUDKTIEM", nachos.sqlCon);
                         int num = (Int32)sqlCommand.ExecuteScalar();
                         num += 1;
+                        phieudangkytiem.maphieudangkytiem = "DK" + num.ToString();
 
-                        var strSQLCommand = "EXEC dbo.INSERT_PDKT 'DK" + num.ToString() + "', '" + makh.Text + "', '" + ngaytiem.Text + "', '" + trungtam + "', null";  // statement is wrong! will raise an exception
+                        var strSQLCommand = "EXEC dbo.INSERT_PDKT '" + phieudangkytiem.maphieudangkytiem + "', '" + phieudangkytiem.makhachhang + "', '" + phieudangkytiem.thoigian + "', '" + phieudangkytiem.trungtam + "', null";  // statement is wrong! will raise an exception
                         var command = new SqlCommand(strSQLCommand, nachos.sqlCon);
                         command.ExecuteNonQuery();
 
                         sqlCommand = new SqlCommand("SELECT COUNT(*) FROM PHIEUDATMUAVX", nachos.sqlCon);
                         int numOrder = (Int32)sqlCommand.ExecuteScalar();
                         numOrder += 1;
+                        phieudatmua.tenvacxin = Vacxinngoai.Text;
+                        phieudatmua.maphieudatmua = "DM" + numOrder.ToString();
+                        phieudatmua.maphieudangkytiem = phieudangkytiem.maphieudangkytiem;
 
-                        strSQLCommand = "EXEC dbo.INSERT_PDMVX 'DM" + numOrder.ToString() + "', 'DK" + num.ToString() + "', null, '" + textBox1.Text + "'";  // statement is wrong! will raise an exception
+                        strSQLCommand = "EXEC dbo.INSERT_PDMVX '" + phieudatmua.maphieudatmua + "', '" + phieudatmua.maphieudangkytiem + "', null, '" + phieudatmua.tenvacxin + "'";  // statement is wrong! will raise an exception
                         command = new SqlCommand(strSQLCommand, nachos.sqlCon);
                         command.ExecuteNonQuery();
                     }
@@ -246,15 +258,27 @@ namespace WindowsFormsApp1
                     int numCustomers = (Int32)sqlCommand.ExecuteScalar();
                     numCustomers += 1;
                     nachos.id = "KH" + numCustomers.ToString();
+                    khachhang.makhachhang = nachos.id;
+                    khachhang.hoten = Hoten.Text;
+                    khachhang.ngaysinh = Ngaysinh.Text;
+                    khachhang.diachi = Diachi.Text;
+                    khachhang.cmnd = Cmnd.Text;
+                    khachhang.sdt = Sdt.Text;
+                    //nguoi giam ho
+                    nguoigiamho.hoten = HotenNGH.Text;
+                    nguoigiamho.ngaysinh = NgaysinhNGH.Text;
+                    nguoigiamho.sdt = SdtNGH.Text;
+                    nguoigiamho.diachi = DiachiNGH.Text;
+                    nguoigiamho.khachhang = khachhang.makhachhang;
 
                     if (!checkBox2.Checked)
                     {
-                        maskedTextBox2.Text = "01/01/2022";
+                        NgaysinhNGH.Text = "01/01/2022";
                     }
 
                     try
                     {
-                        var strSQLCommand = "EXEC dbo.INSERT_KH 'KH" + numCustomers.ToString() + "', N'" + textBox1.Text + "', '" + maskedTextBox1.Text + "', '" + textBox3.Text + "', '" + textBox2.Text + "', '" + textBox7.Text + "', '" + textBox6.Text + "', '" + maskedTextBox2.Text + "', '" + textBox5.Text + "', '" + textBox4.Text + "'";  // statement is wrong! will raise an exception
+                        var strSQLCommand = "EXEC dbo.INSERT_KH '" + khachhang.makhachhang + "', N'" + khachhang.hoten + "', '" + khachhang.ngaysinh + "', '" + khachhang.diachi + "', '" + khachhang.sdt + "', '" + khachhang.cmnd + "', '" + nguoigiamho.hoten + "', '" + nguoigiamho.ngaysinh + "', '" + nguoigiamho.sdt + "', '" + nguoigiamho.diachi + "'";  // statement is wrong! will raise an exception
                         var command = new SqlCommand(strSQLCommand, nachos.sqlCon);
                         command.ExecuteNonQuery();
                     }
@@ -265,26 +289,33 @@ namespace WindowsFormsApp1
 
                     try
                     {
-                        object selecteditem = comboBox4.SelectedValue;
-                        string trungtam = selecteditem.ToString();
-                        object selecteditem2 = comboBox2.SelectedValue;
-                        string goivacxin = selecteditem2.ToString();
+                        object selecteditem = Dktrungtamtiem.SelectedValue;
+                        phieudangkytiem.trungtam = selecteditem.ToString();
+                        object selecteditem2 = Vacxin.SelectedValue;
+                        phieudangkytiem.vacxin = selecteditem2.ToString();
+                        phieudangkytiem.thoigian = Dkngaytiem.Text;
+                        phieudangkytiem.makhachhang = khachhang.makhachhang;
+                        //
                         sqlCommand = new SqlCommand("SELECT COUNT(*) FROM PHIEUDKTIEM", nachos.sqlCon);
                         int num = (Int32)sqlCommand.ExecuteScalar();
                         num += 1;
+                        phieudangkytiem.maphieudangkytiem = "DK" + num.ToString();
 
-                        var strSQLCommand = "EXEC dbo.INSERT_PDKT 'DK" + num.ToString() + "', '" + "KH" + numCustomers.ToString() + "', '" + ngaytiem.Text + "', '" + trungtam + "', '" + goivacxin + "' ";  // statement is wrong! will raise an exception
+                        var strSQLCommand = "EXEC dbo.INSERT_PDKT '" + phieudangkytiem.maphieudangkytiem + "', '" + phieudangkytiem.makhachhang + "', '" + phieudangkytiem.thoigian + "', '" + phieudangkytiem.trungtam + "', '" + phieudangkytiem.vacxin + "' ";  // statement is wrong! will raise an exception
                         var command = new SqlCommand(strSQLCommand, nachos.sqlCon);
                         command.ExecuteNonQuery();
 
                         sqlCommand = new SqlCommand("SELECT COUNT(*) FROM PHIEUDATMUAVX", nachos.sqlCon);
                         int numOrder = (Int32)sqlCommand.ExecuteScalar();
                         numOrder += 1;
+                        phieudatmua.maphieudatmua = "DM" + numOrder.ToString();
+                        phieudatmua.maphieudangkytiem = phieudangkytiem.maphieudangkytiem;
+                        phieudatmua.magoivacxin = phieudangkytiem.vacxin;
 
-                        sqlCommand = new SqlCommand("SELECT TEN_GVX FROM GOIVACXIN WHERE MA_GVX='" + goivacxin + "'", nachos.sqlCon);
-                        String vacxinName = (String)sqlCommand.ExecuteScalar();
+                        sqlCommand = new SqlCommand("SELECT TEN_GVX FROM GOIVACXIN WHERE MA_GVX='" + phieudangkytiem.vacxin + "'", nachos.sqlCon);
+                        phieudatmua.tenvacxin = (String)sqlCommand.ExecuteScalar();
 
-                        strSQLCommand = "EXEC dbo.INSERT_PDMVX 'DM" + numOrder.ToString() + "', 'DK" + num.ToString() + "', '" + goivacxin + "', '" + vacxinName + "'";  // statement is wrong! will raise an exception
+                        strSQLCommand = "EXEC dbo.INSERT_PDMVX '" + phieudatmua.maphieudatmua + "', '" + phieudatmua.maphieudangkytiem + "', '" + phieudatmua.magoivacxin + "', '" + phieudatmua.tenvacxin + "'";  // statement is wrong! will raise an exception
                         command = new SqlCommand(strSQLCommand, nachos.sqlCon);
                         command.ExecuteNonQuery();
                     }
@@ -302,25 +333,34 @@ namespace WindowsFormsApp1
                     int numCustomers = (Int32)sqlCommand.ExecuteScalar();
                     numCustomers += 1;
                     nachos.id = "KH" + numCustomers.ToString();
+                    khachhang.makhachhang = nachos.id;
 
                     try
                     {
                         sqlCommand = new SqlCommand("SELECT COUNT(*) FROM PHIEUDKTIEM", nachos.sqlCon);
                         int num = (Int32)sqlCommand.ExecuteScalar();
                         num += 1;
+                        phieudangkytiem.maphieudangkytiem = "DK" + num.ToString();
 
-                        object selecteditem = comboBox4.SelectedValue;
-                        string trungtam = selecteditem.ToString();
+                        object selecteditem = Dktrungtamtiem.SelectedValue;
+                        phieudangkytiem.trungtam = selecteditem.ToString();
+                        object selecteditem2 = Vacxin.SelectedValue;
+                        phieudangkytiem.vacxin = selecteditem2.ToString();
+                        phieudangkytiem.thoigian = Dkngaytiem.Text;
+                        phieudangkytiem.makhachhang = khachhang.makhachhang;
 
-                        var strSQLCommand = "EXEC dbo.INSERT_PDKT 'DK" + num.ToString() + "', '" + "KH" + numCustomers.ToString() + "', '" + ngaytiem.Text + "', '" + trungtam + "', null";  // statement is wrong! will raise an exception
+                        var strSQLCommand = "EXEC dbo.INSERT_PDKT '" + phieudangkytiem.maphieudangkytiem + "', '" + phieudangkytiem.makhachhang + "', '" + phieudangkytiem.thoigian + "', '" + phieudangkytiem.trungtam + "', null";  // statement is wrong! will raise an exception
                         var command = new SqlCommand(strSQLCommand, nachos.sqlCon);
                         command.ExecuteNonQuery();
 
                         sqlCommand = new SqlCommand("SELECT COUNT(*) FROM PHIEUDATMUAVX", nachos.sqlCon);
                         int numOrder = (Int32)sqlCommand.ExecuteScalar();
                         numOrder += 1;
+                        phieudatmua.maphieudatmua = "DM" + numOrder.ToString();
+                        phieudatmua.maphieudangkytiem = phieudangkytiem.maphieudangkytiem;
+                        phieudatmua.tenvacxin = Vacxinngoai.Text;
 
-                        strSQLCommand = "EXEC dbo.INSERT_PDMVX 'DM" + numOrder.ToString() + "', 'DK" + num.ToString() + "', null, '" + textBox1.Text + "'";  // statement is wrong! will raise an exception
+                        strSQLCommand = "EXEC dbo.INSERT_PDMVX '" + phieudatmua.maphieudatmua + "', '" + phieudangkytiem.maphieudangkytiem + "', null, '" + phieudatmua.tenvacxin + "'";  // statement is wrong! will raise an exception
                         command = new SqlCommand(strSQLCommand, nachos.sqlCon);
                         command.ExecuteNonQuery();
                     }
@@ -339,17 +379,17 @@ namespace WindowsFormsApp1
         private void showInfoVacxin()
         {
             label17.Show();
-            comboBox2.Show();
+            Vacxin.Show();
             label2.Hide();
-            textBox1.Hide();
+            Vacxinngoai.Hide();
         }
 
         private void disableShowInfoVacxin()
         {
             label17.Hide();
-            comboBox2.Hide();
+            Vacxin.Hide();
             label2.Show();
-            textBox1.Show();
+            Vacxinngoai.Show();
         }
 
         private void navigateToPurchase()
@@ -370,6 +410,11 @@ namespace WindowsFormsApp1
             {
                 disableShowInfoVacxin();
             }
+
+        }
+
+        private void MHdatmuavacxin_Load(object sender, EventArgs e)
+        {
 
         }
     }

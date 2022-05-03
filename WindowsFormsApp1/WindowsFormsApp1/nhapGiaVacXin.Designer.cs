@@ -39,9 +39,10 @@
             // 
             this.tenVX.AutoSize = true;
             this.tenVX.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tenVX.Location = new System.Drawing.Point(77, 44);
+            this.tenVX.Location = new System.Drawing.Point(58, 36);
+            this.tenVX.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.tenVX.Name = "tenVX";
-            this.tenVX.Size = new System.Drawing.Size(100, 20);
+            this.tenVX.Size = new System.Drawing.Size(85, 17);
             this.tenVX.TabIndex = 0;
             this.tenVX.Text = "Tên vắc-xin:";
             // 
@@ -49,32 +50,36 @@
             // 
             this.giaTien.AutoSize = true;
             this.giaTien.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.giaTien.Location = new System.Drawing.Point(78, 97);
+            this.giaTien.Location = new System.Drawing.Point(58, 79);
+            this.giaTien.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.giaTien.Name = "giaTien";
-            this.giaTien.Size = new System.Drawing.Size(72, 20);
+            this.giaTien.Size = new System.Drawing.Size(61, 17);
             this.giaTien.TabIndex = 1;
             this.giaTien.Text = "Giá tiền:";
             // 
             // giaTienInput
             // 
-            this.giaTienInput.Location = new System.Drawing.Point(156, 97);
+            this.giaTienInput.Location = new System.Drawing.Point(117, 79);
+            this.giaTienInput.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.giaTienInput.Name = "giaTienInput";
-            this.giaTienInput.Size = new System.Drawing.Size(127, 22);
+            this.giaTienInput.Size = new System.Drawing.Size(96, 20);
             this.giaTienInput.TabIndex = 2;
             // 
             // tenVXlbl
             // 
             this.tenVXlbl.AutoSize = true;
-            this.tenVXlbl.Location = new System.Drawing.Point(184, 47);
+            this.tenVXlbl.Location = new System.Drawing.Point(138, 38);
+            this.tenVXlbl.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.tenVXlbl.Name = "tenVXlbl";
-            this.tenVXlbl.Size = new System.Drawing.Size(0, 16);
+            this.tenVXlbl.Size = new System.Drawing.Size(0, 13);
             this.tenVXlbl.TabIndex = 3;
             // 
             // confirmBtn
             // 
-            this.confirmBtn.Location = new System.Drawing.Point(175, 136);
+            this.confirmBtn.Location = new System.Drawing.Point(131, 110);
+            this.confirmBtn.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.confirmBtn.Name = "confirmBtn";
-            this.confirmBtn.Size = new System.Drawing.Size(75, 23);
+            this.confirmBtn.Size = new System.Drawing.Size(82, 19);
             this.confirmBtn.TabIndex = 4;
             this.confirmBtn.Text = "Xác nhận";
             this.confirmBtn.UseVisualStyleBackColor = true;
@@ -82,14 +87,15 @@
             // 
             // nhapGiaVacXin
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(398, 181);
+            this.ClientSize = new System.Drawing.Size(298, 147);
             this.Controls.Add(this.confirmBtn);
             this.Controls.Add(this.tenVXlbl);
             this.Controls.Add(this.giaTienInput);
             this.Controls.Add(this.giaTien);
             this.Controls.Add(this.tenVX);
+            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Name = "nhapGiaVacXin";
             this.Text = "nhapGiaVacXin";
             this.ResumeLayout(false);
