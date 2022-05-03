@@ -11,11 +11,11 @@ using System.Windows.Forms;
 
 namespace WindowsFormsApp1
 {
-    public partial class duyetvacxin : Form
+    public partial class MHduyetvacxin : Form
     {
         DataSet ds = null, ds2 = null;
         String maNCC = "";
-        public duyetvacxin()
+        public MHduyetvacxin()
         {
             InitializeComponent();
             string connString = @"Data Source=" + nachos.servername + ";Initial Catalog=" + nachos.dbname + ";Integrated Security=True;" + "UID=" + nachos.username.Trim() + "password=" + nachos.password.Trim();

@@ -11,9 +11,9 @@ using System.Data.SqlClient;
 
 namespace WindowsFormsApp1
 {
-    public partial class tracuutiemchung : Form
+    public partial class MHtracuutiemchung : Form
     {
-        public tracuutiemchung()
+        public MHtracuutiemchung()
         {
             InitializeComponent();
 

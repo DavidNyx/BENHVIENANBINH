@@ -22,10 +22,11 @@ namespace WindowsFormsApp1
             nachos.sqlCon = new SqlConnection(connString);
             nachos.sqlCon.Open();
 
-            comboBox1.Items.Add("1 lần");
-            comboBox1.Items.Add("đợt 1");
+            Hinhthuc.Items.Add("1 lần");
+            Hinhthuc.Items.Add("đợt 1");
 
             maKhachHang.Text = nachos.id;
+            
             SqlCommand sqlCommand = new SqlCommand("SELECT TEN_KH FROM KHACHHANG WHERE MA_KH='" + nachos.id + "'", nachos.sqlCon);
             String customerName = (String)sqlCommand.ExecuteScalar();
             hoTen.Text = customerName;
@@ -116,7 +117,7 @@ namespace WindowsFormsApp1
 
         private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
         {
-            if (comboBox1.SelectedItem.ToString() == "1 lần" && comboBox1.SelectedItem != null)
+            if (Hinhthuc.SelectedItem.ToString() == "1 lần" && Hinhthuc.SelectedItem != null)
             {
                 
                 dotThanhToan.Text = "1 lần";
@@ -125,7 +126,7 @@ namespace WindowsFormsApp1
                 tienCanTra.Text = giaTien.ToString();
                 
             }
-            else if (comboBox1.SelectedItem.ToString() == "đợt 1" && comboBox1.SelectedItem != null)
+            else if (Hinhthuc.SelectedItem.ToString() == "đợt 1" && Hinhthuc.SelectedItem != null)
             {
                 dotThanhToan.Text = "đợt 1";
                 ngayLapHD.Text = time.ToString("D");
@@ -139,23 +140,23 @@ namespace WindowsFormsApp1
             nachos.sqlCon.Open();
             try
             {
-                if (comboBox1.SelectedItem.ToString() == "1 lần" && comboBox1.SelectedItem != null)
+                if (Hinhthuc.SelectedItem.ToString() == "1 lần" && Hinhthuc.SelectedItem != null)
                 {
                     SqlCommand sqlCommand = new SqlCommand("SELECT COUNT(*) FROM HOADON", nachos.sqlCon);
                     int num = (Int32)sqlCommand.ExecuteScalar();
                     num += 1;
 
-                    var strSQLCommand = "EXEC dbo.THANH_TOAN_1_LAN 'HD" + num.ToString() + "', '" + time.ToString("d") + "', '" + maPhieuDKT.Text + "', '" + textBox1.Text + "', 0, " + tongTien.Text;  // statement is wrong! will raise an exception
+                    var strSQLCommand = "EXEC dbo.THANH_TOAN_1_LAN 'HD" + num.ToString() + "', '" + time.ToString("d") + "', '" + maPhieuDKT.Text + "', '" + Stk.Text + "', 0, " + tongTien.Text;  // statement is wrong! will raise an exception
                     var command = new SqlCommand(strSQLCommand, nachos.sqlCon);
                     command.ExecuteNonQuery();
                 }
-                else if (comboBox1.SelectedItem.ToString() == "đợt 1" && comboBox1.SelectedItem != null)
+                else if (Hinhthuc.SelectedItem.ToString() == "đợt 1" && Hinhthuc.SelectedItem != null)
                 {
                     SqlCommand sqlCommand = new SqlCommand("SELECT COUNT(*) FROM HOADON", nachos.sqlCon);
                     int num = (Int32)sqlCommand.ExecuteScalar();
                     num += 1;
 
-                    var strSQLCommand = "EXEC dbo.THANH_TOAN_THEO_DOT 'HD" + num.ToString() + "', '" + time.ToString("d") + "', '" + maPhieuDKT.Text + "', '" + textBox1.Text + "', " + tongTien.Text;  // statement is wrong! will raise an exception
+                    var strSQLCommand = "EXEC dbo.THANH_TOAN_THEO_DOT 'HD" + num.ToString() + "', '" + time.ToString("d") + "', '" + maPhieuDKT.Text + "', '" + Stk.Text + "', " + tongTien.Text;  // statement is wrong! will raise an exception
                     var command = new SqlCommand(strSQLCommand, nachos.sqlCon);
                     command.ExecuteNonQuery();
 
@@ -177,23 +178,23 @@ namespace WindowsFormsApp1
             nachos.sqlCon.Open();
             try
             {
-                if (comboBox1.SelectedItem.ToString() == "1 lần" && comboBox1.SelectedItem != null)
+                if (Hinhthuc.SelectedItem.ToString() == "1 lần" && Hinhthuc.SelectedItem != null)
                 {
                     SqlCommand sqlCommand = new SqlCommand("SELECT COUNT(*) FROM HOADON", nachos.sqlCon);
                     int num = (Int32)sqlCommand.ExecuteScalar();
                     num += 1;
 
-                    var strSQLCommand = "EXEC dbo.THANH_TOAN_1_LAN 'HD" + num.ToString() + "', '" + time.ToString("d") + "', '" + maPhieuDKT.Text + "', '" + textBox1.Text + "', 1, " + tongTien.Text;  // statement is wrong! will raise an exception
+                    var strSQLCommand = "EXEC dbo.THANH_TOAN_1_LAN 'HD" + num.ToString() + "', '" + time.ToString("d") + "', '" + maPhieuDKT.Text + "', '" + Stk.Text + "', 1, " + tongTien.Text;  // statement is wrong! will raise an exception
                     var command = new SqlCommand(strSQLCommand, nachos.sqlCon);
                     command.ExecuteNonQuery();
                 }
-                else if (comboBox1.SelectedItem.ToString() == "đợt 1" && comboBox1.SelectedItem != null)
+                else if (Hinhthuc.SelectedItem.ToString() == "đợt 1" && Hinhthuc.SelectedItem != null)
                 {
                     SqlCommand sqlCommand = new SqlCommand("SELECT COUNT(*) FROM HOADON", nachos.sqlCon);
                     int num = (Int32)sqlCommand.ExecuteScalar();
                     num += 1;
 
-                    var strSQLCommand = "EXEC dbo.THANH_TOAN_THEO_DOT 'HD" + num.ToString() + "', '" + time.ToString("d") + "', '" + maPhieuDKT.Text + "', '" + textBox1.Text + "', " + tongTien.Text;  // statement is wrong! will raise an exception
+                    var strSQLCommand = "EXEC dbo.THANH_TOAN_THEO_DOT 'HD" + num.ToString() + "', '" + time.ToString("d") + "', '" + maPhieuDKT.Text + "', '" + Stk.Text + "', " + tongTien.Text;  // statement is wrong! will raise an exception
                     var command = new SqlCommand(strSQLCommand, nachos.sqlCon);
                     command.ExecuteNonQuery();
                 }

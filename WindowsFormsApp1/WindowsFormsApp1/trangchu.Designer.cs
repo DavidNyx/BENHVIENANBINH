@@ -76,6 +76,7 @@ namespace WindowsFormsApp1
             this.Controls.Add(this.label1);
             this.Name = "trangchu";
             this.Text = "Trang chủ";
+            this.Load += new System.EventHandler(this.trangchu_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 

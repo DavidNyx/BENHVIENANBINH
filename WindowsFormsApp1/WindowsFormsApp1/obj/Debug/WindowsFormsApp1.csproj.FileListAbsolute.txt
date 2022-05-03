@@ -2,14 +2,9 @@ D:\PTTK HTTT\BENHVIENANBINH\WindowsFormsApp1\WindowsFormsApp1\bin\Debug\WindowsF
 D:\PTTK HTTT\BENHVIENANBINH\WindowsFormsApp1\WindowsFormsApp1\bin\Debug\WindowsFormsApp1.exe
 D:\PTTK HTTT\BENHVIENANBINH\WindowsFormsApp1\WindowsFormsApp1\bin\Debug\WindowsFormsApp1.pdb
 D:\PTTK HTTT\BENHVIENANBINH\WindowsFormsApp1\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.csproj.AssemblyReference.cache
-D:\PTTK HTTT\BENHVIENANBINH\WindowsFormsApp1\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.dangkytiemchung.resources
-D:\PTTK HTTT\BENHVIENANBINH\WindowsFormsApp1\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.datmuavacxin.resources
-D:\PTTK HTTT\BENHVIENANBINH\WindowsFormsApp1\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.duyetvacxin.resources
 D:\PTTK HTTT\BENHVIENANBINH\WindowsFormsApp1\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.menukhachhang.resources
 D:\PTTK HTTT\BENHVIENANBINH\WindowsFormsApp1\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.Properties.Resources.resources
 D:\PTTK HTTT\BENHVIENANBINH\WindowsFormsApp1\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.thanhtoan1.resources
-D:\PTTK HTTT\BENHVIENANBINH\WindowsFormsApp1\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.thanhtoan2.resources
-D:\PTTK HTTT\BENHVIENANBINH\WindowsFormsApp1\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.tracuutiemchung.resources
 D:\PTTK HTTT\BENHVIENANBINH\WindowsFormsApp1\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.trangchu.resources
 D:\PTTK HTTT\BENHVIENANBINH\WindowsFormsApp1\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.csproj.GenerateResource.cache
 D:\PTTK HTTT\BENHVIENANBINH\WindowsFormsApp1\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.csproj.CoreCompileInputs.cache
@@ -36,3 +31,9 @@ D:\BENHVIENANBINH\WindowsFormsApp1\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.c
 D:\BENHVIENANBINH\WindowsFormsApp1\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.exe
 D:\BENHVIENANBINH\WindowsFormsApp1\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.pdb
 D:\BENHVIENANBINH\WindowsFormsApp1\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.nhapGiaVacXin.resources
+D:\PTTK HTTT\BENHVIENANBINH\WindowsFormsApp1\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.MHdangkytiemchung.resources
+D:\PTTK HTTT\BENHVIENANBINH\WindowsFormsApp1\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.MHdatmuavacxin.resources
+D:\PTTK HTTT\BENHVIENANBINH\WindowsFormsApp1\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.MHduyetvacxin.resources
+D:\PTTK HTTT\BENHVIENANBINH\WindowsFormsApp1\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.nhapGiaVacXin.resources
+D:\PTTK HTTT\BENHVIENANBINH\WindowsFormsApp1\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.MHthanhtoanle.resources
+D:\PTTK HTTT\BENHVIENANBINH\WindowsFormsApp1\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.MHtracuutiemchung.resources

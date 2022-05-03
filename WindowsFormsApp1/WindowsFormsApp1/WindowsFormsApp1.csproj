@@ -46,11 +46,11 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="dangkytiemchung.cs">
+    <Compile Include="MHdangkytiemchung.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="dangkytiemchung.Designer.cs">
-      <DependentUpon>dangkytiemchung.cs</DependentUpon>
+    <Compile Include="MHdangkytiemchung.Designer.cs">
+      <DependentUpon>MHdangkytiemchung.cs</DependentUpon>
     </Compile>
     <Compile Include="dangnhapnhanvien.cs">
       <SubType>Form</SubType>
@@ -58,17 +58,17 @@
     <Compile Include="dangnhapnhanvien.Designer.cs">
       <DependentUpon>dangnhapnhanvien.cs</DependentUpon>
     </Compile>
-    <Compile Include="datmuavacxin.cs">
+    <Compile Include="MHdatmuavacxin.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="datmuavacxin.Designer.cs">
-      <DependentUpon>datmuavacxin.cs</DependentUpon>
+    <Compile Include="MHdatmuavacxin.Designer.cs">
+      <DependentUpon>MHdatmuavacxin.cs</DependentUpon>
     </Compile>
-    <Compile Include="duyetvacxin.cs">
+    <Compile Include="MHduyetvacxin.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="duyetvacxin.Designer.cs">
-      <DependentUpon>duyetvacxin.cs</DependentUpon>
+    <Compile Include="MHduyetvacxin.Designer.cs">
+      <DependentUpon>MHduyetvacxin.cs</DependentUpon>
     </Compile>
     <Compile Include="menukhachhang.cs">
       <SubType>Form</SubType>
@@ -84,23 +84,23 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="thanhtoan.cs">
+    <Compile Include="MHthanhtoan.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="thanhtoan.Designer.cs">
-      <DependentUpon>thanhtoan.cs</DependentUpon>
+    <Compile Include="MHthanhtoan.Designer.cs">
+      <DependentUpon>MHthanhtoan.cs</DependentUpon>
     </Compile>
-    <Compile Include="thanhtoan2.cs">
+    <Compile Include="MHthanhtoanle.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="thanhtoan2.Designer.cs">
-      <DependentUpon>thanhtoan2.cs</DependentUpon>
+    <Compile Include="MHthanhtoanle.Designer.cs">
+      <DependentUpon>MHthanhtoanle.cs</DependentUpon>
     </Compile>
-    <Compile Include="tracuutiemchung.cs">
+    <Compile Include="MHtracuutiemchung.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="tracuutiemchung.Designer.cs">
-      <DependentUpon>tracuutiemchung.cs</DependentUpon>
+    <Compile Include="MHtracuutiemchung.Designer.cs">
+      <DependentUpon>MHtracuutiemchung.cs</DependentUpon>
     </Compile>
     <Compile Include="trangchu.cs">
       <SubType>Form</SubType>
@@ -108,17 +108,17 @@
     <Compile Include="trangchu.Designer.cs">
       <DependentUpon>trangchu.cs</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="dangkytiemchung.resx">
-      <DependentUpon>dangkytiemchung.cs</DependentUpon>
+    <EmbeddedResource Include="MHdangkytiemchung.resx">
+      <DependentUpon>MHdangkytiemchung.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="dangnhapnhanvien.resx">
       <DependentUpon>dangnhapnhanvien.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="datmuavacxin.resx">
-      <DependentUpon>datmuavacxin.cs</DependentUpon>
+    <EmbeddedResource Include="MHdatmuavacxin.resx">
+      <DependentUpon>MHdatmuavacxin.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="duyetvacxin.resx">
-      <DependentUpon>duyetvacxin.cs</DependentUpon>
+    <EmbeddedResource Include="MHduyetvacxin.resx">
+      <DependentUpon>MHduyetvacxin.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="menukhachhang.resx">
       <DependentUpon>menukhachhang.cs</DependentUpon>
@@ -135,14 +135,14 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="thanhtoan.resx">
-      <DependentUpon>thanhtoan.cs</DependentUpon>
+    <EmbeddedResource Include="MHthanhtoan.resx">
+      <DependentUpon>MHthanhtoan.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="thanhtoan2.resx">
-      <DependentUpon>thanhtoan2.cs</DependentUpon>
+    <EmbeddedResource Include="MHthanhtoanle.resx">
+      <DependentUpon>MHthanhtoanle.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="tracuutiemchung.resx">
-      <DependentUpon>tracuutiemchung.cs</DependentUpon>
+    <EmbeddedResource Include="MHtracuutiemchung.resx">
+      <DependentUpon>MHtracuutiemchung.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="trangchu.resx">
       <DependentUpon>trangchu.cs</DependentUpon>

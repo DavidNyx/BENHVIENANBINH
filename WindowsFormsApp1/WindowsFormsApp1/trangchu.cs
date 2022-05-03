@@ -49,6 +49,11 @@ namespace WindowsFormsApp1
             them.ShowDialog();
             this.Close();
         }
+
+        private void trangchu_Load(object sender, EventArgs e)
+        {
+
+        }
     }
     public static class nachos
     {
