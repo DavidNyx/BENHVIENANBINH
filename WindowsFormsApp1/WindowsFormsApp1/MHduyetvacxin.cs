@@ -20,8 +20,6 @@ namespace WindowsFormsApp1
             InitializeComponent();
             string connString = @"Data Source=" + nachos.servername + ";Initial Catalog=" + nachos.dbname + ";Integrated Security=True;" + "UID=" + nachos.username.Trim() + "password=" + nachos.password.Trim();
             nachos.sqlCon = new SqlConnection(connString);
-
-
         }
 
         private void duyetvacxin_Load(object sender, EventArgs e)

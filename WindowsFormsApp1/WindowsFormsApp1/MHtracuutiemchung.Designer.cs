@@ -35,20 +35,20 @@ namespace WindowsFormsApp1
             this.label41 = new System.Windows.Forms.Label();
             this.label12 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.Makh = new System.Windows.Forms.TextBox();
+            this.Phieudktiem = new System.Windows.Forms.ComboBox();
             this.button1 = new System.Windows.Forms.Button();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.dataGridView2 = new System.Windows.Forms.DataGridView();
-            this.button2 = new System.Windows.Forms.Button();
+            this.Hosobenhan = new System.Windows.Forms.DataGridView();
+            this.Phieutiemchung = new System.Windows.Forms.DataGridView();
+            this.Tracuutiemchung = new System.Windows.Forms.Button();
             this.label4 = new System.Windows.Forms.Label();
-            this.dataGridView3 = new System.Windows.Forms.DataGridView();
             this.label5 = new System.Windows.Forms.Label();
-            this.dataGridView4 = new System.Windows.Forms.DataGridView();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView3)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView4)).BeginInit();
+            this.Nguoigiamho = new System.Windows.Forms.DataGridView();
+            this.Khachhang = new System.Windows.Forms.DataGridView();
+            ((System.ComponentModel.ISupportInitialize)(this.Hosobenhan)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Phieutiemchung)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Nguoigiamho)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Khachhang)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
@@ -85,7 +85,7 @@ namespace WindowsFormsApp1
             // 
             this.label41.AutoSize = true;
             this.label41.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label41.Location = new System.Drawing.Point(29, 352);
+            this.label41.Location = new System.Drawing.Point(29, 295);
             this.label41.Name = "label41";
             this.label41.Size = new System.Drawing.Size(133, 17);
             this.label41.TabIndex = 133;
@@ -96,7 +96,7 @@ namespace WindowsFormsApp1
             // 
             this.label12.AutoSize = true;
             this.label12.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label12.Location = new System.Drawing.Point(46, 542);
+            this.label12.Location = new System.Drawing.Point(46, 479);
             this.label12.Name = "label12";
             this.label12.Size = new System.Drawing.Size(161, 17);
             this.label12.TabIndex = 152;
@@ -107,27 +107,27 @@ namespace WindowsFormsApp1
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(51, 380);
+            this.label3.Location = new System.Drawing.Point(51, 323);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(129, 13);
             this.label3.TabIndex = 153;
             this.label3.Text = "Mã phiếu tiêm chủng:";
             // 
-            // textBox1
+            // Makh
             // 
-            this.textBox1.Location = new System.Drawing.Point(141, 82);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(128, 20);
-            this.textBox1.TabIndex = 154;
+            this.Makh.Location = new System.Drawing.Point(141, 82);
+            this.Makh.Name = "Makh";
+            this.Makh.Size = new System.Drawing.Size(128, 20);
+            this.Makh.TabIndex = 154;
             // 
-            // comboBox1
+            // Phieudktiem
             // 
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(182, 375);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(99, 21);
-            this.comboBox1.TabIndex = 155;
-            this.comboBox1.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged);
+            this.Phieudktiem.FormattingEnabled = true;
+            this.Phieudktiem.Location = new System.Drawing.Point(182, 318);
+            this.Phieudktiem.Name = "Phieudktiem";
+            this.Phieudktiem.Size = new System.Drawing.Size(99, 21);
+            this.Phieudktiem.TabIndex = 155;
+            this.Phieudktiem.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged);
             // 
             // button1
             // 
@@ -139,96 +139,96 @@ namespace WindowsFormsApp1
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
-            // dataGridView1
+            // Hosobenhan
             // 
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(46, 421);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(504, 106);
-            this.dataGridView1.TabIndex = 158;
-            this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
+            this.Hosobenhan.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.Hosobenhan.Location = new System.Drawing.Point(46, 364);
+            this.Hosobenhan.Name = "Hosobenhan";
+            this.Hosobenhan.Size = new System.Drawing.Size(504, 106);
+            this.Hosobenhan.TabIndex = 158;
+            this.Hosobenhan.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
             // 
-            // dataGridView2
+            // Phieutiemchung
             // 
-            this.dataGridView2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView2.Location = new System.Drawing.Point(48, 562);
-            this.dataGridView2.Name = "dataGridView2";
-            this.dataGridView2.Size = new System.Drawing.Size(504, 100);
-            this.dataGridView2.TabIndex = 159;
+            this.Phieutiemchung.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.Phieutiemchung.Location = new System.Drawing.Point(48, 505);
+            this.Phieutiemchung.Name = "Phieutiemchung";
+            this.Phieutiemchung.Size = new System.Drawing.Size(504, 100);
+            this.Phieutiemchung.TabIndex = 159;
             // 
-            // button2
+            // Tracuutiemchung
             // 
-            this.button2.Location = new System.Drawing.Point(287, 373);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(75, 23);
-            this.button2.TabIndex = 160;
-            this.button2.Text = "Tra cứu";
-            this.button2.UseVisualStyleBackColor = true;
-            this.button2.Click += new System.EventHandler(this.button2_Click);
+            this.Tracuutiemchung.Location = new System.Drawing.Point(287, 316);
+            this.Tracuutiemchung.Name = "Tracuutiemchung";
+            this.Tracuutiemchung.Size = new System.Drawing.Size(75, 23);
+            this.Tracuutiemchung.TabIndex = 160;
+            this.Tracuutiemchung.Text = "Tra cứu";
+            this.Tracuutiemchung.UseVisualStyleBackColor = true;
+            this.Tracuutiemchung.Click += new System.EventHandler(this.button2_Click);
             // 
             // label4
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(44, 401);
+            this.label4.Location = new System.Drawing.Point(44, 344);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(141, 17);
             this.label4.TabIndex = 161;
             this.label4.Text = "Thông tin bệnh án";
             // 
-            // dataGridView3
-            // 
-            this.dataGridView3.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView3.Location = new System.Drawing.Point(46, 108);
-            this.dataGridView3.Name = "dataGridView3";
-            this.dataGridView3.Size = new System.Drawing.Size(504, 104);
-            this.dataGridView3.TabIndex = 162;
-            // 
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(44, 223);
+            this.label5.Location = new System.Drawing.Point(44, 187);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(226, 13);
             this.label5.TabIndex = 163;
             this.label5.Text = "*Nếu bạn dưới 18 tuổi, thông tin người giám hộ";
             // 
-            // dataGridView4
+            // Nguoigiamho
             // 
-            this.dataGridView4.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView4.Location = new System.Drawing.Point(46, 243);
-            this.dataGridView4.Name = "dataGridView4";
-            this.dataGridView4.Size = new System.Drawing.Size(504, 106);
-            this.dataGridView4.TabIndex = 164;
+            this.Nguoigiamho.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.Nguoigiamho.Location = new System.Drawing.Point(46, 207);
+            this.Nguoigiamho.Name = "Nguoigiamho";
+            this.Nguoigiamho.Size = new System.Drawing.Size(504, 76);
+            this.Nguoigiamho.TabIndex = 164;
             // 
-            // tracuutiemchung
+            // Khachhang
+            // 
+            this.Khachhang.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.Khachhang.Location = new System.Drawing.Point(46, 108);
+            this.Khachhang.Name = "Khachhang";
+            this.Khachhang.Size = new System.Drawing.Size(504, 71);
+            this.Khachhang.TabIndex = 162;
+            // 
+            // MHtracuutiemchung
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(575, 683);
-            this.Controls.Add(this.dataGridView4);
+            this.ClientSize = new System.Drawing.Size(575, 633);
+            this.Controls.Add(this.Nguoigiamho);
             this.Controls.Add(this.label5);
-            this.Controls.Add(this.dataGridView3);
+            this.Controls.Add(this.Khachhang);
             this.Controls.Add(this.label4);
-            this.Controls.Add(this.button2);
-            this.Controls.Add(this.dataGridView2);
-            this.Controls.Add(this.dataGridView1);
+            this.Controls.Add(this.Tracuutiemchung);
+            this.Controls.Add(this.Phieutiemchung);
+            this.Controls.Add(this.Hosobenhan);
             this.Controls.Add(this.button1);
-            this.Controls.Add(this.comboBox1);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.Phieudktiem);
+            this.Controls.Add(this.Makh);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label12);
             this.Controls.Add(this.label41);
             this.Controls.Add(this.label20);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
-            this.Name = "tracuutiemchung";
+            this.Name = "MHtracuutiemchung";
             this.Text = "Tra cứu tiêm chủng";
             this.Load += new System.EventHandler(this.tracuutiemchung_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView3)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView4)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Hosobenhan)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Phieutiemchung)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Nguoigiamho)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Khachhang)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -242,15 +242,15 @@ namespace WindowsFormsApp1
         private System.Windows.Forms.Label label41;
         private System.Windows.Forms.Label label12;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.TextBox Makh;
+        private System.Windows.Forms.ComboBox Phieudktiem;
         private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.DataGridView dataGridView1;
-        private System.Windows.Forms.DataGridView dataGridView2;
-        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.DataGridView Hosobenhan;
+        private System.Windows.Forms.DataGridView Phieutiemchung;
+        private System.Windows.Forms.Button Tracuutiemchung;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.DataGridView dataGridView3;
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.DataGridView dataGridView4;
+        private System.Windows.Forms.DataGridView Nguoigiamho;
+        private System.Windows.Forms.DataGridView Khachhang;
     }
 }

@@ -143,7 +143,7 @@ namespace WindowsFormsApp1
                     nguoigiamho.sdt = Sdtngh.Text;
                     nguoigiamho.diachi = Diachingh.Text;
                     nguoigiamho.khachhang = khachhang.makhachhang;
-                    var strSQLCommand = "EXEC dbo.INSERT_KH '" + khachhang.makhachhang + "', N'" + khachhang.hoten + "', '" + khachhang.ngaysinh + "', '" + khachhang.diachi + "', '" + khachhang.sdt + "', '" + khachhang.cmnd + "', '" + nguoigiamho.hoten + "', '" + nguoigiamho.ngaysinh + "', '" + nguoigiamho.sdt + "', '" + nguoigiamho.diachi + "'";  // statement is wrong! will raise an exception
+                    var strSQLCommand = "EXEC dbo.INSERT_KH '" + khachhang.makhachhang + "', N'" + khachhang.hoten + "', '" + khachhang.ngaysinh + "', N'" + khachhang.diachi + "', '" + khachhang.sdt + "', '" + khachhang.cmnd + "', '" + nguoigiamho.hoten + "', '" + nguoigiamho.ngaysinh + "', '" + nguoigiamho.sdt + "', '" + nguoigiamho.diachi + "'";  // statement is wrong! will raise an exception
                     var command = new SqlCommand(strSQLCommand, nachos.sqlCon);
                     command.ExecuteNonQuery();
                 }

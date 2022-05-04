@@ -29,6 +29,15 @@ namespace WindowsFormsApp1
             Dktrungtamtiem.DisplayMember = "ten_tt";
             Dktrungtamtiem.ValueMember = "ma_tt";
 
+            SqlCommand cmd1 = new SqlCommand("select ten_tt, ma_tt from trungtam", nachos.sqlCon);
+            SqlDataAdapter adapt1 = new SqlDataAdapter();
+            adapt1.SelectCommand = cmd1;
+            DataTable table1 = new DataTable();
+            adapt1.Fill(table1);
+            Trungtam.DataSource = table1;
+            Trungtam.DisplayMember = "ten_tt";
+            Trungtam.ValueMember = "ma_tt";
+
             Ngaysinh.Mask = "00/00/0000";
             Ngaysinh.ValidatingType = typeof(System.DateTime);
             NgaysinhNGH.Mask = "00/00/0000";
@@ -53,7 +62,7 @@ namespace WindowsFormsApp1
             DataTable table1 = new DataTable();
             adapt1.Fill(table1);
             Vacxin.DataSource = table1;
-            Vacxin.DisplayMember = "TEN_GVX";
+            Vacxin.DisplayMember = "MA_GVX";
             Vacxin.ValueMember = "MA_GVX";
 
             nachos.sqlCon.Close();
@@ -63,12 +72,14 @@ namespace WindowsFormsApp1
         {
             nachos.sqlCon.Open();
 
-            SqlDataAdapter adapt3 = new SqlDataAdapter("SELECT * from goivacxin, kho where soluongton = 0 and LOAI_GVX = 0", nachos.sqlCon);
+            object selecteditem = Trungtam.SelectedValue;
+            trungtam.matrungtam = selecteditem.ToString();
+            SqlDataAdapter adapt3 = new SqlDataAdapter("SELECT * from goivacxin, kho where soluongton = 0 and LOAI_GVX = 0 and ma_tt = '" + trungtam.matrungtam + "' ", nachos.sqlCon);
             DataTable table3 = new DataTable();
             adapt3.Fill(table3);
             Vacxinle.DataSource = new BindingSource(table3, null);
 
-            SqlDataAdapter adapt4 = new SqlDataAdapter("SELECT * from goivacxin, kho where soluongton = 0 and LOAI_GVX != 0", nachos.sqlCon);
+            SqlDataAdapter adapt4 = new SqlDataAdapter("SELECT * from goivacxin, kho where soluongton = 0 and LOAI_GVX != 0 and ma_tt = '" + trungtam.matrungtam + "' ", nachos.sqlCon);
             DataTable table4 = new DataTable();
             adapt4.Fill(table4);
             Goivacxin.DataSource = new BindingSource(table4, null);

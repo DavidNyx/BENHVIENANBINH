@@ -29,7 +29,7 @@ namespace WindowsFormsApp1
 
         private void button3_Click(object sender, EventArgs e)
         {
-            object selecteditem = comboBox1.SelectedValue;
+            object selecteditem = Phieudktiem.SelectedValue;
             string maPhieuDKT = selecteditem.ToString();
             nachos.sqlCon.Open();
             SqlCommand sqlCommand = new SqlCommand("SELECT GETDATE()", nachos.sqlCon);
@@ -80,57 +80,57 @@ namespace WindowsFormsApp1
         private void traCuuBtn1_Click(object sender, EventArgs e)
         {
             nachos.sqlCon.Open();
-            SqlCommand sqlCommand = new SqlCommand("SELECT TEN_KH FROM KHACHHANG WHERE MA_KH='" + maKH.Text + "'", nachos.sqlCon);
+            SqlCommand sqlCommand = new SqlCommand("SELECT TEN_KH FROM KHACHHANG WHERE MA_KH='" + Makh.Text + "'", nachos.sqlCon);
             String customerName = (String)sqlCommand.ExecuteScalar();
             hoTen.Text = customerName;
 
-            sqlCommand = new SqlCommand("SELECT NGAYSINH FROM KHACHHANG WHERE MA_KH='" + maKH.Text + "'", nachos.sqlCon);
+            sqlCommand = new SqlCommand("SELECT NGAYSINH FROM KHACHHANG WHERE MA_KH='" + Makh.Text + "'", nachos.sqlCon);
             DateTime DOB = (DateTime)sqlCommand.ExecuteScalar();
             ngaySinh.Text = DOB.ToString("D");
 
-            sqlCommand = new SqlCommand("SELECT DIACHI_KH FROM KHACHHANG WHERE MA_KH='" + maKH.Text + "'", nachos.sqlCon);
+            sqlCommand = new SqlCommand("SELECT DIACHI_KH FROM KHACHHANG WHERE MA_KH='" + Makh.Text + "'", nachos.sqlCon);
             String addr = (String)sqlCommand.ExecuteScalar();
             diaChi.Text = addr;
 
-            sqlCommand = new SqlCommand("SELECT SDT_KH FROM KHACHHANG WHERE MA_KH='" + maKH.Text + "'", nachos.sqlCon);
+            sqlCommand = new SqlCommand("SELECT SDT_KH FROM KHACHHANG WHERE MA_KH='" + Makh.Text + "'", nachos.sqlCon);
             String phone = (String)sqlCommand.ExecuteScalar();
             sdt.Text = phone;
 
-            sqlCommand = new SqlCommand("SELECT CMND FROM KHACHHANG WHERE MA_KH='" + maKH.Text + "'", nachos.sqlCon);
+            sqlCommand = new SqlCommand("SELECT CMND FROM KHACHHANG WHERE MA_KH='" + Makh.Text + "'", nachos.sqlCon);
             String cid = (String)sqlCommand.ExecuteScalar();
             cmnd.Text = cid;
 
-            sqlCommand = new SqlCommand("SELECT HOTEN_NGH FROM NGUOIGIAMHO WHERE MA_KH='" + maKH.Text + "'", nachos.sqlCon);
+            sqlCommand = new SqlCommand("SELECT HOTEN_NGH FROM NGUOIGIAMHO WHERE MA_KH='" + Makh.Text + "'", nachos.sqlCon);
             String supervisorName = (String)sqlCommand.ExecuteScalar();
             hoTenNGH.Text = supervisorName;
 
-            sqlCommand = new SqlCommand("SELECT NGAYSINH_NGH FROM NGUOIGIAMHO WHERE MA_KH='" + maKH.Text + "'", nachos.sqlCon);
+            sqlCommand = new SqlCommand("SELECT NGAYSINH_NGH FROM NGUOIGIAMHO WHERE MA_KH='" + Makh.Text + "'", nachos.sqlCon);
             DateTime supervisorDOB = (DateTime)sqlCommand.ExecuteScalar();
             ngaySinhNGH.Text = supervisorDOB.ToString("d");
 
-            sqlCommand = new SqlCommand("SELECT DIACHI_NGH FROM NGUOIGIAMHO WHERE MA_KH='" + maKH.Text + "'", nachos.sqlCon);
+            sqlCommand = new SqlCommand("SELECT DIACHI_NGH FROM NGUOIGIAMHO WHERE MA_KH='" + Makh.Text + "'", nachos.sqlCon);
             String supervisorAddr = (String)sqlCommand.ExecuteScalar();
             diaChiNGH.Text = supervisorAddr;
 
-            sqlCommand = new SqlCommand("SELECT SDT_NGH FROM NGUOIGIAMHO WHERE MA_KH='" + maKH.Text + "'", nachos.sqlCon);
+            sqlCommand = new SqlCommand("SELECT SDT_NGH FROM NGUOIGIAMHO WHERE MA_KH='" + Makh.Text + "'", nachos.sqlCon);
             String supervisorPhone = (String)sqlCommand.ExecuteScalar();
             sdtNGH.Text = supervisorPhone;
 
-            SqlCommand cmd = new SqlCommand("select PDKT.MA_PDKT from PHIEUDKTIEM PDKT JOIN HOADON HD ON PDKT.MA_PDKT=HD.MA_PDKT WHERE PDKT.MA_KH='" + maKH.Text + "' AND HD.DATHANHTOAN=0", nachos.sqlCon);
+            SqlCommand cmd = new SqlCommand("select PDKT.MA_PDKT from PHIEUDKTIEM PDKT JOIN HOADON HD ON PDKT.MA_PDKT=HD.MA_PDKT WHERE PDKT.MA_KH='" + Makh.Text + "' AND HD.DATHANHTOAN=0", nachos.sqlCon);
             SqlDataAdapter adapt = new SqlDataAdapter();
             adapt.SelectCommand = cmd;
             DataTable table = new DataTable();
             adapt.Fill(table);
-            comboBox1.DataSource = table;
-            comboBox1.DisplayMember = "MA_PDKT";
-            comboBox1.ValueMember = "MA_PDKT";
+            Phieudktiem.DataSource = table;
+            Phieudktiem.DisplayMember = "MA_PDKT";
+            Phieudktiem.ValueMember = "MA_PDKT";
             nachos.sqlCon.Close();
         }
 
         private void traCuuBtn2_Click(object sender, EventArgs e)
         {
             nachos.sqlCon.Open();
-            object selecteditem = comboBox1.SelectedValue;
+            object selecteditem = Phieudktiem.SelectedValue;
             string maPhieuDKT = selecteditem.ToString();
 
             SqlCommand sqlCommand = new SqlCommand("SELECT GVX.TEN_GVX FROM PHIEUDKTIEM PDKT JOIN GOIVACXIN GVX ON PDKT.MA_GVX = GVX.MA_GVX WHERE PDKT.MA_PDKT='" + maPhieuDKT + "'", nachos.sqlCon);

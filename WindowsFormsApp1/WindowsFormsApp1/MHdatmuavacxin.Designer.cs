@@ -80,6 +80,8 @@ namespace WindowsFormsApp1
             this.checkBox1 = new System.Windows.Forms.CheckBox();
             this.checkBox2 = new System.Windows.Forms.CheckBox();
             this.checkBox3 = new System.Windows.Forms.CheckBox();
+            this.Trungtam = new System.Windows.Forms.ComboBox();
+            this.label18 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.Goivacxin)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Vacxinle)).BeginInit();
             this.SuspendLayout();
@@ -304,17 +306,17 @@ namespace WindowsFormsApp1
             // Goivacxin
             // 
             this.Goivacxin.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.Goivacxin.Location = new System.Drawing.Point(471, 436);
+            this.Goivacxin.Location = new System.Drawing.Point(471, 472);
             this.Goivacxin.Name = "Goivacxin";
             this.Goivacxin.RowHeadersWidth = 51;
-            this.Goivacxin.Size = new System.Drawing.Size(369, 184);
+            this.Goivacxin.Size = new System.Drawing.Size(369, 148);
             this.Goivacxin.TabIndex = 89;
             // 
             // label31
             // 
             this.label31.AutoSize = true;
             this.label31.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label31.Location = new System.Drawing.Point(468, 416);
+            this.label31.Location = new System.Drawing.Point(468, 452);
             this.label31.Name = "label31";
             this.label31.Size = new System.Drawing.Size(60, 13);
             this.label31.TabIndex = 88;
@@ -323,10 +325,10 @@ namespace WindowsFormsApp1
             // Vacxinle
             // 
             this.Vacxinle.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.Vacxinle.Location = new System.Drawing.Point(55, 436);
+            this.Vacxinle.Location = new System.Drawing.Point(55, 472);
             this.Vacxinle.Name = "Vacxinle";
             this.Vacxinle.RowHeadersWidth = 51;
-            this.Vacxinle.Size = new System.Drawing.Size(352, 184);
+            this.Vacxinle.Size = new System.Drawing.Size(352, 148);
             this.Vacxinle.TabIndex = 87;
             this.Vacxinle.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
             // 
@@ -334,7 +336,7 @@ namespace WindowsFormsApp1
             // 
             this.label32.AutoSize = true;
             this.label32.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label32.Location = new System.Drawing.Point(52, 420);
+            this.label32.Location = new System.Drawing.Point(52, 456);
             this.label32.Name = "label32";
             this.label32.Size = new System.Drawing.Size(53, 13);
             this.label32.TabIndex = 86;
@@ -558,11 +560,31 @@ namespace WindowsFormsApp1
             this.checkBox3.UseVisualStyleBackColor = true;
             this.checkBox3.CheckedChanged += new System.EventHandler(this.checkBox3_CheckedChanged);
             // 
+            // Trungtam
+            // 
+            this.Trungtam.FormattingEnabled = true;
+            this.Trungtam.Location = new System.Drawing.Point(429, 422);
+            this.Trungtam.Name = "Trungtam";
+            this.Trungtam.Size = new System.Drawing.Size(207, 21);
+            this.Trungtam.TabIndex = 121;
+            // 
+            // label18
+            // 
+            this.label18.AutoSize = true;
+            this.label18.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label18.Location = new System.Drawing.Point(277, 425);
+            this.label18.Name = "label18";
+            this.label18.Size = new System.Drawing.Size(146, 13);
+            this.label18.TabIndex = 120;
+            this.label18.Text = "*Tra cứu theo trung tâm:";
+            // 
             // MHdatmuavacxin
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(877, 675);
+            this.Controls.Add(this.Trungtam);
+            this.Controls.Add(this.label18);
             this.Controls.Add(this.checkBox3);
             this.Controls.Add(this.checkBox2);
             this.Controls.Add(this.checkBox1);
@@ -677,5 +699,7 @@ namespace WindowsFormsApp1
         private System.Windows.Forms.CheckBox checkBox1;
         private System.Windows.Forms.CheckBox checkBox2;
         private System.Windows.Forms.CheckBox checkBox3;
+        private System.Windows.Forms.ComboBox Trungtam;
+        private System.Windows.Forms.Label label18;
     }
 }

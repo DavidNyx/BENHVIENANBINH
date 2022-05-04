@@ -103,5 +103,6 @@ namespace WindowsFormsApp1
         public static string magoivacxin = " ";
         public static bool tinhtrang;
         public static string danhsachdatmua = " ";
+        public static string tenvacxin = " ";
     }
 }
