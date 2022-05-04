@@ -82,7 +82,7 @@ namespace WindowsFormsApp1
         }
 
         private void dangkytiemchung_Load(object sender, EventArgs e)
-        {
+        {   
         }
 
         private void button1_Click(object sender, EventArgs e)//btnThanhtoan_Click
@@ -106,7 +106,7 @@ namespace WindowsFormsApp1
                     num += 1;
                     phieudangkytiem.maphieudangkytiem = "DK" + num.ToString();
 
-                    var strSQLCommand = "EXEC dbo.INSERT_PDKT '" + phieudangkytiem.maphieudangkytiem + "', '" + phieudangkytiem.makhachhang + "', '" + phieudangkytiem.thoigian + "', '" + phieudangkytiem.vacxin + "', '" + phieudangkytiem.vacxin + "' ";  // statement is wrong! will raise an exception
+                    var strSQLCommand = "EXEC dbo.INSERT_PDKT '" + phieudangkytiem.maphieudangkytiem + "', '" + phieudangkytiem.makhachhang + "', '" + phieudangkytiem.thoigian + "', '" + phieudangkytiem.trungtam + "', '" + phieudangkytiem.vacxin + "' ";  // statement is wrong! will raise an exception
                     var command = new SqlCommand(strSQLCommand, nachos.sqlCon);
                     command.ExecuteNonQuery();
                 }
@@ -116,7 +116,7 @@ namespace WindowsFormsApp1
                 }
                 //MessageBox.Show("Đăng ký tiêm chủng thành công");
                 this.Hide();
-                thanhtoan1 thanhtoan1 = new thanhtoan1();
+                MHThanhtoan thanhtoan1 = new MHThanhtoan();
                 thanhtoan1.ShowDialog();
                 this.Close();
             }
@@ -177,11 +177,11 @@ namespace WindowsFormsApp1
                 {
                     MessageBox.Show(sqlEx.Message);
                 }
+                MessageBox.Show("Đăng ký tiêm chủng thành công");
                 this.Hide();
-                thanhtoan1 thanhtoan1 = new thanhtoan1();
+                MHThanhtoan thanhtoan1 = new MHThanhtoan();
                 thanhtoan1.ShowDialog();
                 this.Close();
-                //MessageBox.Show("Đăng ký tiêm chủng thành công");
             }
             
             nachos.sqlCon.Close();

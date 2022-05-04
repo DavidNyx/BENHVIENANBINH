@@ -1,7 +1,7 @@
 ﻿
 namespace WindowsFormsApp1
 {
-    partial class thanhtoan1
+    partial class MHThanhtoan
     {
         /// <summary>
         /// Required designer variable.
@@ -52,7 +52,6 @@ namespace WindowsFormsApp1
             this.label14 = new System.Windows.Forms.Label();
             this.label17 = new System.Windows.Forms.Label();
             this.label18 = new System.Windows.Forms.Label();
-            this.Thanhtoan1lan = new System.Windows.Forms.Button();
             this.label20 = new System.Windows.Forms.Label();
             this.label21 = new System.Windows.Forms.Label();
             this.label29 = new System.Windows.Forms.Label();
@@ -76,7 +75,6 @@ namespace WindowsFormsApp1
             this.tienCanTra = new System.Windows.Forms.Label();
             this.ngayLapHD = new System.Windows.Forms.Label();
             this.Thanhtoansau = new System.Windows.Forms.Button();
-            this.label16 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // label1
@@ -306,16 +304,6 @@ namespace WindowsFormsApp1
             this.label18.TabIndex = 73;
             this.label18.Text = "Tiền cần trả:";
             // 
-            // Thanhtoan1lan
-            // 
-            this.Thanhtoan1lan.Location = new System.Drawing.Point(490, 220);
-            this.Thanhtoan1lan.Name = "Thanhtoan1lan";
-            this.Thanhtoan1lan.Size = new System.Drawing.Size(101, 35);
-            this.Thanhtoan1lan.TabIndex = 74;
-            this.Thanhtoan1lan.Text = "Thanh toán 1 lần";
-            this.Thanhtoan1lan.UseVisualStyleBackColor = true;
-            this.Thanhtoan1lan.Click += new System.EventHandler(this.button1_Click);
-            // 
             // label20
             // 
             this.label20.AutoSize = true;
@@ -521,30 +509,20 @@ namespace WindowsFormsApp1
             // 
             // Thanhtoansau
             // 
-            this.Thanhtoansau.Location = new System.Drawing.Point(336, 223);
-            this.Thanhtoansau.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Thanhtoansau.Location = new System.Drawing.Point(511, 199);
+            this.Thanhtoansau.Margin = new System.Windows.Forms.Padding(2);
             this.Thanhtoansau.Name = "Thanhtoansau";
-            this.Thanhtoansau.Size = new System.Drawing.Size(102, 29);
+            this.Thanhtoansau.Size = new System.Drawing.Size(80, 29);
             this.Thanhtoansau.TabIndex = 177;
-            this.Thanhtoansau.Text = "Thanh toán sau";
+            this.Thanhtoansau.Text = "Thanh toán";
             this.Thanhtoansau.UseVisualStyleBackColor = true;
             this.Thanhtoansau.Click += new System.EventHandler(this.button2_Click);
             // 
-            // label16
-            // 
-            this.label16.AutoSize = true;
-            this.label16.Location = new System.Drawing.Point(333, 204);
-            this.label16.Name = "label16";
-            this.label16.Size = new System.Drawing.Size(243, 13);
-            this.label16.TabIndex = 178;
-            this.label16.Text = "*Vui lòng chọn theo hình thức thanh toán của bạn";
-            // 
-            // thanhtoan1
+            // MHThanhtoan
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(634, 416);
-            this.Controls.Add(this.label16);
             this.Controls.Add(this.Thanhtoansau);
             this.Controls.Add(this.ngayLapHD);
             this.Controls.Add(this.tienCanTra);
@@ -568,7 +546,6 @@ namespace WindowsFormsApp1
             this.Controls.Add(this.label29);
             this.Controls.Add(this.label21);
             this.Controls.Add(this.label20);
-            this.Controls.Add(this.Thanhtoan1lan);
             this.Controls.Add(this.label18);
             this.Controls.Add(this.label17);
             this.Controls.Add(this.label14);
@@ -592,7 +569,7 @@ namespace WindowsFormsApp1
             this.Controls.Add(this.label5);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
-            this.Name = "thanhtoan1";
+            this.Name = "MHThanhtoan";
             this.Text = "Thanh toán";
             this.Load += new System.EventHandler(this.thanhtoan_Load);
             this.ResumeLayout(false);
@@ -625,7 +602,6 @@ namespace WindowsFormsApp1
         private System.Windows.Forms.Label label14;
         private System.Windows.Forms.Label label17;
         private System.Windows.Forms.Label label18;
-        private System.Windows.Forms.Button Thanhtoan1lan;
         private System.Windows.Forms.Label label20;
         private System.Windows.Forms.Label label21;
         private System.Windows.Forms.Label label29;
@@ -649,6 +625,5 @@ namespace WindowsFormsApp1
         private System.Windows.Forms.Label tienCanTra;
         private System.Windows.Forms.Label ngayLapHD;
         private System.Windows.Forms.Button Thanhtoansau;
-        private System.Windows.Forms.Label label16;
     }
 }

@@ -105,4 +105,14 @@ namespace WindowsFormsApp1
         public static string danhsachdatmua = " ";
         public static string tenvacxin = " ";
     }
+    public static class hoadon
+    {
+        public static string mahoadon = " ";
+        public static string maphieudangkytiem = " ";
+        public static string ngaylap = " ";
+        public static double tongtien;
+        public static bool tinhtrang;
+        public static string stk = " ";
+        public static string hinhthucthanhtoan = " ";
+    }
 }

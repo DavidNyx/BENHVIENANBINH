@@ -11,11 +11,11 @@ using System.Windows.Forms;
 
 namespace WindowsFormsApp1
 {
-    public partial class thanhtoan1 : Form
+    public partial class MHThanhtoan : Form
     {
         double giaTien = 0, giaTienDot1 = 0;
         DateTime time;
-        public thanhtoan1()
+        public MHThanhtoan()
         {
             InitializeComponent();
             string connString = @"Data Source=" + nachos.servername + ";Initial Catalog=" + nachos.dbname + ";Integrated Security=True;" + "UID=" + nachos.username.Trim() + "password=" + nachos.password.Trim();
@@ -23,66 +23,70 @@ namespace WindowsFormsApp1
             nachos.sqlCon.Open();
 
             Hinhthuc.Items.Add("1 lần");
-            Hinhthuc.Items.Add("đợt 1");
-
-            maKhachHang.Text = nachos.id;
+            Hinhthuc.Items.Add("theo đợt");
             
-            SqlCommand sqlCommand = new SqlCommand("SELECT TEN_KH FROM KHACHHANG WHERE MA_KH='" + nachos.id + "'", nachos.sqlCon);
+            SqlCommand sqlCommand = new SqlCommand("SELECT TEN_KH FROM KHACHHANG WHERE MA_KH='" + phieudangkytiem.makhachhang + "'", nachos.sqlCon);
             String customerName = (String)sqlCommand.ExecuteScalar();
             hoTen.Text = customerName;
 
-            sqlCommand = new SqlCommand("SELECT NGAYSINH FROM KHACHHANG WHERE MA_KH='" + nachos.id + "'", nachos.sqlCon);
+            sqlCommand = new SqlCommand("SELECT NGAYSINH FROM KHACHHANG WHERE MA_KH='" + phieudangkytiem.makhachhang + "'", nachos.sqlCon);
             DateTime DOB = (DateTime)sqlCommand.ExecuteScalar();
             ngaySinh.Text = DOB.ToString("D");
+            //ngaySinh.Text = khachhang.ngaysinh;
 
-            sqlCommand = new SqlCommand("SELECT DIACHI_KH FROM KHACHHANG WHERE MA_KH='" + nachos.id + "'", nachos.sqlCon);
+            sqlCommand = new SqlCommand("SELECT DIACHI_KH FROM KHACHHANG WHERE MA_KH='" + phieudangkytiem.makhachhang + "'", nachos.sqlCon);
             String addr = (String)sqlCommand.ExecuteScalar();
             diaChi.Text = addr;
 
-            sqlCommand = new SqlCommand("SELECT SDT_KH FROM KHACHHANG WHERE MA_KH='" + nachos.id + "'", nachos.sqlCon);
+            sqlCommand = new SqlCommand("SELECT SDT_KH FROM KHACHHANG WHERE MA_KH='" + phieudangkytiem.makhachhang + "'", nachos.sqlCon);
             String phone = (String)sqlCommand.ExecuteScalar();
             sdt.Text = phone;
 
-            sqlCommand = new SqlCommand("SELECT CMND FROM KHACHHANG WHERE MA_KH='" + nachos.id + "'", nachos.sqlCon);
+            sqlCommand = new SqlCommand("SELECT CMND FROM KHACHHANG WHERE MA_KH='" + phieudangkytiem.makhachhang + "'", nachos.sqlCon);
             String cid = (String)sqlCommand.ExecuteScalar();
             cmnd.Text = cid;
 
-            sqlCommand = new SqlCommand("SELECT HOTEN_NGH FROM NGUOIGIAMHO WHERE MA_KH='" + nachos.id + "'", nachos.sqlCon);
+            sqlCommand = new SqlCommand("SELECT HOTEN_NGH FROM NGUOIGIAMHO WHERE MA_KH='" + phieudangkytiem.makhachhang + "'", nachos.sqlCon);
             String supervisorName = (String)sqlCommand.ExecuteScalar();
             hoTenNGH.Text = supervisorName;
 
-            sqlCommand = new SqlCommand("SELECT NGAYSINH_NGH FROM NGUOIGIAMHO WHERE MA_KH='" + nachos.id + "'", nachos.sqlCon);
+            sqlCommand = new SqlCommand("SELECT NGAYSINH_NGH FROM NGUOIGIAMHO WHERE MA_KH='" + phieudangkytiem.makhachhang + "'", nachos.sqlCon);
             DateTime supervisorDOB = (DateTime)sqlCommand.ExecuteScalar();
             ngaySinhNGH.Text = supervisorDOB.ToString("d");
+            //ngaySinhNGH.Text = nguoigiamho.ngaysinh;
 
-            sqlCommand = new SqlCommand("SELECT DIACHI_NGH FROM NGUOIGIAMHO WHERE MA_KH='" + nachos.id + "'", nachos.sqlCon);
+            sqlCommand = new SqlCommand("SELECT DIACHI_NGH FROM NGUOIGIAMHO WHERE MA_KH='" + phieudangkytiem.makhachhang + "'", nachos.sqlCon);
             String supervisorAddr = (String)sqlCommand.ExecuteScalar();
             diaChiNGH.Text = supervisorAddr;
 
-            sqlCommand = new SqlCommand("SELECT SDT_NGH FROM NGUOIGIAMHO WHERE MA_KH='" + nachos.id + "'", nachos.sqlCon);
+            sqlCommand = new SqlCommand("SELECT SDT_NGH FROM NGUOIGIAMHO WHERE MA_KH='" + phieudangkytiem.makhachhang + "'", nachos.sqlCon);
             String supervisorPhone = (String)sqlCommand.ExecuteScalar();
             sdtNGH.Text = supervisorPhone;
 
-            sqlCommand = new SqlCommand("SELECT MA_PDKT FROM PHIEUDKTIEM WHERE MA_KH='" + nachos.id + "'", nachos.sqlCon);
-            String maPhieuDKTiem = (String)sqlCommand.ExecuteScalar();
-            maPhieuDKT.Text = maPhieuDKTiem;
+            //sqlCommand = new SqlCommand("SELECT MA_PDKT FROM PHIEUDKTIEM WHERE MA_KH='" + phieudangkytiem.makhachhang + "'", nachos.sqlCon);
+            //String maPhieuDKTiem = (String)sqlCommand.ExecuteScalar();
+            maPhieuDKT.Text = phieudangkytiem.maphieudangkytiem;
 
-            sqlCommand = new SqlCommand("SELECT GVX.TEN_GVX FROM PHIEUDKTIEM PDKT JOIN GOIVACXIN GVX ON PDKT.MA_GVX = GVX.MA_GVX WHERE PDKT.MA_KH='" + nachos.id + "'", nachos.sqlCon);
-            String vacxinTiem = (String)sqlCommand.ExecuteScalar();
-            tenVX.Text = vacxinTiem;
+            sqlCommand = new SqlCommand("SELECT GVX.TEN_GVX FROM PHIEUDKTIEM PDKT JOIN GOIVACXIN GVX ON PDKT.MA_GVX = GVX.MA_GVX WHERE PDKT.MA_KH='" + phieudangkytiem.makhachhang + "'", nachos.sqlCon);
+            //String vacxinTiem = (String)sqlCommand.ExecuteScalar();
+            goivacxin.tenvacxin = (String)sqlCommand.ExecuteScalar();
+            tenVX.Text = goivacxin.tenvacxin;
 
-            sqlCommand = new SqlCommand("SELECT THOIGIANTIEM FROM PHIEUDKTIEM WHERE MA_KH='" + nachos.id + "'", nachos.sqlCon);
-            DateTime thoiGianTiem = (DateTime)sqlCommand.ExecuteScalar();
-            ngayTiem.Text = thoiGianTiem.ToString("D");
+            //sqlCommand = new SqlCommand("SELECT THOIGIANTIEM FROM PHIEUDKTIEM WHERE MA_KH='" + phieudangkytiem.makhachhang + "'", nachos.sqlCon);
+            //DateTime thoiGianTiem = (DateTime)sqlCommand.ExecuteScalar();
+            //ngayTiem.Text = thoiGianTiem.ToString("D");
+            ngayTiem.Text = phieudangkytiem.thoigian;
 
-            sqlCommand = new SqlCommand("SELECT TT.TEN_TT FROM PHIEUDKTIEM PDKT JOIN TRUNGTAM TT ON PDKT.MA_TT = TT.MA_TT WHERE PDKT.MA_KH='" + nachos.id + "'", nachos.sqlCon);
+            sqlCommand = new SqlCommand("SELECT TT.TEN_TT FROM PHIEUDKTIEM PDKT JOIN TRUNGTAM TT ON PDKT.MA_TT = TT.MA_TT WHERE PDKT.MA_KH='" + phieudangkytiem.makhachhang + "'", nachos.sqlCon);
             String trungTamTiem = (String)sqlCommand.ExecuteScalar();
-            trungTam.Text = trungTamTiem;
+            trungtam.tentrungtam = trungTamTiem;
+            trungTam.Text = trungtam.tentrungtam;
 
-            sqlCommand = new SqlCommand("SELECT GVX.GIATIEN FROM PHIEUDKTIEM PDKT JOIN GOIVACXIN GVX ON PDKT.MA_GVX = GVX.MA_GVX WHERE PDKT.MA_KH='" + nachos.id + "'", nachos.sqlCon);
+            sqlCommand = new SqlCommand("SELECT GVX.GIATIEN FROM PHIEUDKTIEM PDKT JOIN GOIVACXIN GVX ON PDKT.MA_GVX = GVX.MA_GVX WHERE PDKT.MA_KH='" + phieudangkytiem.makhachhang + "'", nachos.sqlCon);
             giaTien = (double)sqlCommand.ExecuteScalar();
             giaTienDot1 = (double)(giaTien * 0.25);
-            tongTien.Text = giaTien.ToString();
+            hoadon.tongtien = giaTien;
+            tongTien.Text = hoadon.tongtien.ToString();
 
             sqlCommand = new SqlCommand("SELECT GETDATE()", nachos.sqlCon);
             time = (DateTime)sqlCommand.ExecuteScalar();
@@ -126,9 +130,9 @@ namespace WindowsFormsApp1
                 tienCanTra.Text = giaTien.ToString();
                 
             }
-            else if (Hinhthuc.SelectedItem.ToString() == "đợt 1" && Hinhthuc.SelectedItem != null)
+            else if (Hinhthuc.SelectedItem.ToString() == "theo đợt" && Hinhthuc.SelectedItem != null)
             {
-                dotThanhToan.Text = "đợt 1";
+                dotThanhToan.Text = "theo đợt";
                 ngayLapHD.Text = time.ToString("D");
 
                 tienCanTra.Text = giaTienDot1.ToString();
@@ -145,31 +149,39 @@ namespace WindowsFormsApp1
                     SqlCommand sqlCommand = new SqlCommand("SELECT COUNT(*) FROM HOADON", nachos.sqlCon);
                     int num = (Int32)sqlCommand.ExecuteScalar();
                     num += 1;
+                    hoadon.mahoadon = "HD" + num.ToString();
+                    hoadon.maphieudangkytiem = phieudangkytiem.maphieudangkytiem;
+                    hoadon.ngaylap = time.ToString("d");
+                    hoadon.stk = Stk.Text;
 
-                    var strSQLCommand = "EXEC dbo.THANH_TOAN_1_LAN 'HD" + num.ToString() + "', '" + time.ToString("d") + "', '" + maPhieuDKT.Text + "', '" + Stk.Text + "', 0, " + tongTien.Text;  // statement is wrong! will raise an exception
+                    var strSQLCommand = "EXEC dbo.THANH_TOAN_1_LAN '" + hoadon.mahoadon + "', '" + hoadon.ngaylap + "', '" + hoadon.maphieudangkytiem + "', '" + hoadon.stk + "', 1, " + hoadon.tongtien;  // statement is wrong! will raise an exception
                     var command = new SqlCommand(strSQLCommand, nachos.sqlCon);
                     command.ExecuteNonQuery();
                 }
-                else if (Hinhthuc.SelectedItem.ToString() == "đợt 1" && Hinhthuc.SelectedItem != null)
+                else if (Hinhthuc.SelectedItem.ToString() == "theo đợt" && Hinhthuc.SelectedItem != null)
                 {
                     SqlCommand sqlCommand = new SqlCommand("SELECT COUNT(*) FROM HOADON", nachos.sqlCon);
                     int num = (Int32)sqlCommand.ExecuteScalar();
                     num += 1;
+                    hoadon.mahoadon = "HD" + num.ToString();
+                    hoadon.maphieudangkytiem = phieudangkytiem.maphieudangkytiem;
+                    hoadon.ngaylap = time.ToString("d");
+                    hoadon.stk = Stk.Text;
 
-                    var strSQLCommand = "EXEC dbo.THANH_TOAN_THEO_DOT 'HD" + num.ToString() + "', '" + time.ToString("d") + "', '" + maPhieuDKT.Text + "', '" + Stk.Text + "', " + tongTien.Text;  // statement is wrong! will raise an exception
+                    var strSQLCommand = "EXEC dbo.THANH_TOAN_THEO_DOT '" + hoadon.mahoadon + "', '" + hoadon.ngaylap + "', '" + hoadon.ngaylap + "', '" + hoadon.stk + "', " + hoadon.tongtien;  // statement is wrong! will raise an exception
                     var command = new SqlCommand(strSQLCommand, nachos.sqlCon);
                     command.ExecuteNonQuery();
 
-                    strSQLCommand = "UPDATE CHITIET_HD SET DATHANHTOAN=0 WHERE MA_HD='HD" + num.ToString() + "' AND DOTTHANHTOAN=1";
+                    /*strSQLCommand = "UPDATE CHITIET_HD SET DATHANHTOAN=0 WHERE MA_HD='" + hoadon.mahoadon + "' AND DOTTHANHTOAN=1";
                     command = new SqlCommand(strSQLCommand, nachos.sqlCon);
-                    command.ExecuteNonQuery();
+                    command.ExecuteNonQuery();*/
                 }
             }
             catch (SqlException sqlEx)
             {
                 MessageBox.Show(sqlEx.Message);
             }
-            MessageBox.Show("Bạn vui lòng thanh toán sớm nhất có thể ở màn hình thanh toán lẻ!");
+            MessageBox.Show("Thanh toán thành công!");
             nachos.sqlCon.Close();
         }
 
@@ -188,7 +200,7 @@ namespace WindowsFormsApp1
                     var command = new SqlCommand(strSQLCommand, nachos.sqlCon);
                     command.ExecuteNonQuery();
                 }
-                else if (Hinhthuc.SelectedItem.ToString() == "đợt 1" && Hinhthuc.SelectedItem != null)
+                else if (Hinhthuc.SelectedItem.ToString() == "theo đợt" && Hinhthuc.SelectedItem != null)
                 {
                     SqlCommand sqlCommand = new SqlCommand("SELECT COUNT(*) FROM HOADON", nachos.sqlCon);
                     int num = (Int32)sqlCommand.ExecuteScalar();

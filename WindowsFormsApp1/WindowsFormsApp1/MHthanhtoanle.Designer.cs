@@ -156,9 +156,9 @@ namespace WindowsFormsApp1
             this.label22.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label22.Location = new System.Drawing.Point(49, 292);
             this.label22.Name = "label22";
-            this.label22.Size = new System.Drawing.Size(14, 13);
+            this.label22.Size = new System.Drawing.Size(51, 13);
             this.label22.TabIndex = 85;
-            this.label22.Text = "+";
+            this.label22.Text = "Dia chi:";
             // 
             // label24
             // 

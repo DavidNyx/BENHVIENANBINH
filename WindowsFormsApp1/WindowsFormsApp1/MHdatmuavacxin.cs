@@ -406,7 +406,7 @@ namespace WindowsFormsApp1
         private void navigateToPurchase()
         {
             this.Hide();
-            thanhtoan1 thanhtoan = new thanhtoan1();
+            MHThanhtoan thanhtoan = new MHThanhtoan();
             thanhtoan.ShowDialog();
             this.Close();
         }

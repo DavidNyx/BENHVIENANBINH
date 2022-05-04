@@ -4,7 +4,6 @@ D:\PTTK HTTT\BENHVIENANBINH\WindowsFormsApp1\WindowsFormsApp1\bin\Debug\WindowsF
 D:\PTTK HTTT\BENHVIENANBINH\WindowsFormsApp1\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.csproj.AssemblyReference.cache
 D:\PTTK HTTT\BENHVIENANBINH\WindowsFormsApp1\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.menukhachhang.resources
 D:\PTTK HTTT\BENHVIENANBINH\WindowsFormsApp1\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.Properties.Resources.resources
-D:\PTTK HTTT\BENHVIENANBINH\WindowsFormsApp1\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.thanhtoan1.resources
 D:\PTTK HTTT\BENHVIENANBINH\WindowsFormsApp1\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.trangchu.resources
 D:\PTTK HTTT\BENHVIENANBINH\WindowsFormsApp1\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.csproj.GenerateResource.cache
 D:\PTTK HTTT\BENHVIENANBINH\WindowsFormsApp1\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.csproj.CoreCompileInputs.cache
@@ -37,3 +36,4 @@ D:\PTTK HTTT\BENHVIENANBINH\WindowsFormsApp1\WindowsFormsApp1\obj\Debug\WindowsF
 D:\PTTK HTTT\BENHVIENANBINH\WindowsFormsApp1\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.nhapGiaVacXin.resources
 D:\PTTK HTTT\BENHVIENANBINH\WindowsFormsApp1\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.MHthanhtoanle.resources
 D:\PTTK HTTT\BENHVIENANBINH\WindowsFormsApp1\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.MHtracuutiemchung.resources
+D:\PTTK HTTT\BENHVIENANBINH\WindowsFormsApp1\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.MHThanhtoan.resources
