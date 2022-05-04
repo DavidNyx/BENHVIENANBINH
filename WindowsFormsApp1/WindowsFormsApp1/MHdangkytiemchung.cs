@@ -115,6 +115,10 @@ namespace WindowsFormsApp1
                     MessageBox.Show(sqlEx.Message);
                 }
                 //MessageBox.Show("Đăng ký tiêm chủng thành công");
+                this.Hide();
+                thanhtoan1 thanhtoan1 = new thanhtoan1();
+                thanhtoan1.ShowDialog();
+                this.Close();
             }
 
             else
@@ -173,6 +177,10 @@ namespace WindowsFormsApp1
                 {
                     MessageBox.Show(sqlEx.Message);
                 }
+                this.Hide();
+                thanhtoan1 thanhtoan1 = new thanhtoan1();
+                thanhtoan1.ShowDialog();
+                this.Close();
                 //MessageBox.Show("Đăng ký tiêm chủng thành công");
             }
             
