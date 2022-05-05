@@ -19,6 +19,7 @@ namespace WindowsFormsApp1
 
             string connString = @"Data Source=" + nachos.servername + ";Initial Catalog=" + nachos.dbname + ";Integrated Security=True;" + "UID=" + nachos.username.Trim() + "password=" + nachos.password.Trim();
             nachos.sqlCon = new SqlConnection(connString);
+            nachos.sqlCon.Open();
 
             SqlCommand cmd = new SqlCommand("select ten_tt, ma_tt from trungtam", nachos.sqlCon);
             SqlDataAdapter adapt = new SqlDataAdapter();
@@ -45,6 +46,7 @@ namespace WindowsFormsApp1
             Dkngaytiem.ValidatingType = typeof(System.DateTime);
             disableShowInfoToRegister();
             disableShowInfoUnder18ToRegister();
+            nachos.sqlCon.Close();
         }
 
         private void button3_Click(object sender, EventArgs e) //btnLocvacxin_Click

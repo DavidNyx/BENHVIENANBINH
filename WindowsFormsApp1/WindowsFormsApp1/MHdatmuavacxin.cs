@@ -190,7 +190,6 @@ namespace WindowsFormsApp1
                         phieudangkytiem.vacxin = selecteditem2.ToString();
                         phieudangkytiem.thoigian = Dkngaytiem.Text;
                         phieudangkytiem.makhachhang = Makh.Text;
-                        nachos.id = Makh.Text;
 
                         SqlCommand sqlCommand = new SqlCommand("SELECT COUNT(*) FROM PHIEUDKTIEM", nachos.sqlCon);
                         int num = (Int32)sqlCommand.ExecuteScalar();
@@ -230,7 +229,6 @@ namespace WindowsFormsApp1
                         phieudangkytiem.trungtam = selecteditem.ToString();
                         phieudangkytiem.thoigian = Dkngaytiem.Text;
                         phieudangkytiem.makhachhang = Makh.Text;
-                        nachos.id = Makh.Text;
 
                         SqlCommand sqlCommand = new SqlCommand("SELECT COUNT(*) FROM PHIEUDKTIEM", nachos.sqlCon);
                         int num = (Int32)sqlCommand.ExecuteScalar();
@@ -268,8 +266,7 @@ namespace WindowsFormsApp1
                     SqlCommand sqlCommand = new SqlCommand("SELECT COUNT(*) FROM KHACHHANG", nachos.sqlCon);
                     int numCustomers = (Int32)sqlCommand.ExecuteScalar();
                     numCustomers += 1;
-                    nachos.id = "KH" + numCustomers.ToString();
-                    khachhang.makhachhang = nachos.id;
+                    khachhang.makhachhang = "KH" + numCustomers.ToString();
                     khachhang.hoten = Hoten.Text;
                     khachhang.ngaysinh = Ngaysinh.Text;
                     khachhang.diachi = Diachi.Text;
@@ -343,8 +340,7 @@ namespace WindowsFormsApp1
                     SqlCommand sqlCommand = new SqlCommand("SELECT COUNT(*) FROM KHACHHANG", nachos.sqlCon);
                     int numCustomers = (Int32)sqlCommand.ExecuteScalar();
                     numCustomers += 1;
-                    nachos.id = "KH" + numCustomers.ToString();
-                    khachhang.makhachhang = nachos.id;
+                    khachhang.makhachhang = "KH" + numCustomers.ToString();
 
                     try
                     {

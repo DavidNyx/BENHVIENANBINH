@@ -49,7 +49,6 @@ namespace WindowsFormsApp1
             this.label9 = new System.Windows.Forms.Label();
             this.Makh = new System.Windows.Forms.TextBox();
             this.Tracuuthongtin = new System.Windows.Forms.Button();
-            this.label21 = new System.Windows.Forms.Label();
             this.button3 = new System.Windows.Forms.Button();
             this.label18 = new System.Windows.Forms.Label();
             this.label17 = new System.Windows.Forms.Label();
@@ -60,7 +59,6 @@ namespace WindowsFormsApp1
             this.label29 = new System.Windows.Forms.Label();
             this.Tracuutiemchung = new System.Windows.Forms.Button();
             this.Phieudktiem = new System.Windows.Forms.ComboBox();
-            this.label13 = new System.Windows.Forms.Label();
             this.label16 = new System.Windows.Forms.Label();
             this.hoTen = new System.Windows.Forms.Label();
             this.ngaySinh = new System.Windows.Forms.Label();
@@ -275,19 +273,9 @@ namespace WindowsFormsApp1
             this.Tracuuthongtin.UseVisualStyleBackColor = true;
             this.Tracuuthongtin.Click += new System.EventHandler(this.traCuuBtn1_Click);
             // 
-            // label21
-            // 
-            this.label21.AutoSize = true;
-            this.label21.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label21.Location = new System.Drawing.Point(355, 170);
-            this.label21.Name = "label21";
-            this.label21.Size = new System.Drawing.Size(112, 13);
-            this.label21.TabIndex = 109;
-            this.label21.Text = "Ngày lập hóa đơn:";
-            // 
             // button3
             // 
-            this.button3.Location = new System.Drawing.Point(529, 187);
+            this.button3.Location = new System.Drawing.Point(529, 168);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(84, 32);
             this.button3.TabIndex = 108;
@@ -379,15 +367,6 @@ namespace WindowsFormsApp1
             this.Phieudktiem.Name = "Phieudktiem";
             this.Phieudktiem.Size = new System.Drawing.Size(99, 21);
             this.Phieudktiem.TabIndex = 97;
-            // 
-            // label13
-            // 
-            this.label13.AutoSize = true;
-            this.label13.Location = new System.Drawing.Point(355, 230);
-            this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(282, 13);
-            this.label13.TabIndex = 112;
-            this.label13.Text = "*Nếu thanh toán theo đợt thì không cần ngày lập hóa đơn";
             // 
             // label16
             // 
@@ -575,9 +554,7 @@ namespace WindowsFormsApp1
             this.Controls.Add(this.ngaySinh);
             this.Controls.Add(this.hoTen);
             this.Controls.Add(this.label16);
-            this.Controls.Add(this.label13);
             this.Controls.Add(this.label29);
-            this.Controls.Add(this.label21);
             this.Controls.Add(this.button3);
             this.Controls.Add(this.label18);
             this.Controls.Add(this.label17);
@@ -637,7 +614,6 @@ namespace WindowsFormsApp1
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.TextBox Makh;
         private System.Windows.Forms.Button Tracuuthongtin;
-        private System.Windows.Forms.Label label21;
         private System.Windows.Forms.Button button3;
         private System.Windows.Forms.Label label18;
         private System.Windows.Forms.Label label17;
@@ -648,7 +624,6 @@ namespace WindowsFormsApp1
         private System.Windows.Forms.Label label29;
         private System.Windows.Forms.Button Tracuutiemchung;
         private System.Windows.Forms.ComboBox Phieudktiem;
-        private System.Windows.Forms.Label label13;
         private System.Windows.Forms.Label label16;
         private System.Windows.Forms.Label hoTen;
         private System.Windows.Forms.Label ngaySinh;

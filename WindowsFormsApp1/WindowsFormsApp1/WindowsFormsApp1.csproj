@@ -46,6 +46,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="MHdangKyLichRanh.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MHdangKyLichRanh.Designer.cs">
+      <DependentUpon>MHdangKyLichRanh.cs</DependentUpon>
+    </Compile>
     <Compile Include="MHdangkytiemchung.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -75,6 +81,18 @@
     </Compile>
     <Compile Include="menukhachhang.Designer.cs">
       <DependentUpon>menukhachhang.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MHxemLichCaNhan.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MHxemLichCaNhan.Designer.cs">
+      <DependentUpon>MHxemLichCaNhan.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MHxepLichLamViec.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MHxepLichLamViec.Designer.cs">
+      <DependentUpon>MHxepLichLamViec.cs</DependentUpon>
     </Compile>
     <Compile Include="nhapGiaVacXin.cs">
       <SubType>Form</SubType>
@@ -108,6 +126,9 @@
     <Compile Include="trangchu.Designer.cs">
       <DependentUpon>trangchu.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="MHdangKyLichRanh.resx">
+      <DependentUpon>MHdangKyLichRanh.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="MHdangkytiemchung.resx">
       <DependentUpon>MHdangkytiemchung.cs</DependentUpon>
     </EmbeddedResource>
@@ -122,6 +143,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="menukhachhang.resx">
       <DependentUpon>menukhachhang.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MHxemLichCaNhan.resx">
+      <DependentUpon>MHxemLichCaNhan.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MHxepLichLamViec.resx">
+      <DependentUpon>MHxepLichLamViec.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="nhapGiaVacXin.resx">
       <DependentUpon>nhapGiaVacXin.cs</DependentUpon>
