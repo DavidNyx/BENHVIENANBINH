@@ -37,3 +37,6 @@ D:\PTTK HTTT\BENHVIENANBINH\WindowsFormsApp1\WindowsFormsApp1\obj\Debug\WindowsF
 D:\PTTK HTTT\BENHVIENANBINH\WindowsFormsApp1\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.MHthanhtoanle.resources
 D:\PTTK HTTT\BENHVIENANBINH\WindowsFormsApp1\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.MHtracuutiemchung.resources
 D:\PTTK HTTT\BENHVIENANBINH\WindowsFormsApp1\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.MHThanhtoan.resources
+D:\PTTK HTTT\BENHVIENANBINH\WindowsFormsApp1\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.MHdangKyLichRanh.resources
+D:\PTTK HTTT\BENHVIENANBINH\WindowsFormsApp1\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.MHxemLichCaNhan.resources
+D:\PTTK HTTT\BENHVIENANBINH\WindowsFormsApp1\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.MHxepLichLamViec.resources

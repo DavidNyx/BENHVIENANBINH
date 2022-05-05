@@ -168,7 +168,7 @@ namespace WindowsFormsApp1
                     hoadon.ngaylap = time.ToString("d");
                     hoadon.stk = Stk.Text;
 
-                    var strSQLCommand = "EXEC dbo.THANH_TOAN_THEO_DOT '" + hoadon.mahoadon + "', '" + hoadon.ngaylap + "', '" + hoadon.ngaylap + "', '" + hoadon.stk + "', " + hoadon.tongtien;  // statement is wrong! will raise an exception
+                    var strSQLCommand = "EXEC dbo.THANH_TOAN_THEO_DOT '" + hoadon.mahoadon + "', '" + hoadon.ngaylap + "', '" + hoadon.maphieudangkytiem + "', '" + hoadon.stk + "', " + hoadon.tongtien;  // statement is wrong! will raise an exception
                     var command = new SqlCommand(strSQLCommand, nachos.sqlCon);
                     command.ExecuteNonQuery();
 
@@ -195,8 +195,12 @@ namespace WindowsFormsApp1
                     SqlCommand sqlCommand = new SqlCommand("SELECT COUNT(*) FROM HOADON", nachos.sqlCon);
                     int num = (Int32)sqlCommand.ExecuteScalar();
                     num += 1;
+                    hoadon.mahoadon = "HD" + num.ToString();
+                    hoadon.maphieudangkytiem = phieudangkytiem.maphieudangkytiem;
+                    hoadon.ngaylap = time.ToString("d");
+                    hoadon.stk = Stk.Text;
 
-                    var strSQLCommand = "EXEC dbo.THANH_TOAN_1_LAN 'HD" + num.ToString() + "', '" + time.ToString("d") + "', '" + maPhieuDKT.Text + "', '" + Stk.Text + "', 1, " + tongTien.Text;  // statement is wrong! will raise an exception
+                    var strSQLCommand = "EXEC dbo.THANH_TOAN_1_LAN '" + hoadon.mahoadon + "', '" + hoadon.ngaylap + "', '" + hoadon.maphieudangkytiem + "', '" + hoadon.stk + "', 1, " + hoadon.tongtien;  // statement is wrong! will raise an exception
                     var command = new SqlCommand(strSQLCommand, nachos.sqlCon);
                     command.ExecuteNonQuery();
                 }
@@ -205,8 +209,12 @@ namespace WindowsFormsApp1
                     SqlCommand sqlCommand = new SqlCommand("SELECT COUNT(*) FROM HOADON", nachos.sqlCon);
                     int num = (Int32)sqlCommand.ExecuteScalar();
                     num += 1;
+                    hoadon.mahoadon = "HD" + num.ToString();
+                    hoadon.maphieudangkytiem = phieudangkytiem.maphieudangkytiem;
+                    hoadon.ngaylap = time.ToString("d");
+                    hoadon.stk = Stk.Text;
 
-                    var strSQLCommand = "EXEC dbo.THANH_TOAN_THEO_DOT 'HD" + num.ToString() + "', '" + time.ToString("d") + "', '" + maPhieuDKT.Text + "', '" + Stk.Text + "', " + tongTien.Text;  // statement is wrong! will raise an exception
+                    var strSQLCommand = "EXEC dbo.THANH_TOAN_THEO_DOT '" + hoadon.mahoadon + "', '" + hoadon.ngaylap + "', '" + hoadon.maphieudangkytiem + "', '" + hoadon.stk + "', " + hoadon.tongtien;  // statement is wrong! will raise an exception
                     var command = new SqlCommand(strSQLCommand, nachos.sqlCon);
                     command.ExecuteNonQuery();
                 }
