@@ -19,7 +19,6 @@ namespace WindowsFormsApp1
             InitializeComponent();
             string connString = @"Data Source=" + nachos.servername + ";Initial Catalog=" + nachos.dbname + ";Integrated Security=True;" + "UID=" + nachos.username.Trim() + "password=" + nachos.password.Trim();
             nachos.sqlCon = new SqlConnection(connString);
-
         }
 
         private void thanhtoan2_Load(object sender, EventArgs e)
@@ -169,7 +168,7 @@ namespace WindowsFormsApp1
                 Int32 dot = (Int32)sqlCommand.ExecuteScalar();
                 dotTT.Text = dot.ToString();
 
-                sqlCommand = new SqlCommand("SELECT CT.SOTIENTHANHTOAN FROM CHITIET_HD CT JOIN HOADON HD ON CT.MA_HD = HD.MA_HD WHERE MA_PDKT='" + phieudangkytiem.maphieudangkytiem + "' AND CT.DOTTHANHTOAN=" + dot.ToString(), nachos.sqlCon);
+                sqlCommand = new SqlCommand("SELECT CT.SOTIENTHANHTOAN FROM CHITIET_HD CT JOIN HOADON HD ON CT.MA_HD = HD.MA_HD WHERE MA_PDKT='" + phieudangkytiem.maphieudangkytiem + "' AND CT.DOTTHANHTOAN=0" + dot.ToString(), nachos.sqlCon);
                 double tienTra = (double)sqlCommand.ExecuteScalar();
                 tienCanTra.Text = tienTra.ToString();
 
