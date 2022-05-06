@@ -24,7 +24,8 @@ namespace WindowsFormsApp1
 
             Hinhthuc.Items.Add("1 lần");
             Hinhthuc.Items.Add("theo đợt");
-            
+
+            maKH.Text = phieudangkytiem.makhachhang;           
             SqlCommand sqlCommand = new SqlCommand("SELECT TEN_KH FROM KHACHHANG WHERE MA_KH='" + phieudangkytiem.makhachhang + "'", nachos.sqlCon);
             String customerName = (String)sqlCommand.ExecuteScalar();
             hoTen.Text = customerName;

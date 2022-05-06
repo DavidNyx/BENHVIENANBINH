@@ -115,6 +115,7 @@ namespace WindowsFormsApp1
                 catch (SqlException sqlEx)
                 {
                     MessageBox.Show(sqlEx.Message);
+                    return;
                 }
                 //MessageBox.Show("Đăng ký tiêm chủng thành công");
                 this.Hide();
@@ -156,6 +157,7 @@ namespace WindowsFormsApp1
                 catch (SqlException sqlEx)
                 {
                     MessageBox.Show(sqlEx.Message);
+                    return;
                 }
 
                 try
@@ -165,7 +167,7 @@ namespace WindowsFormsApp1
                     object selecteditem2 = Vacxin.SelectedValue;
                     phieudangkytiem.vacxin = selecteditem2.ToString();
                     phieudangkytiem.thoigian = Dkngaytiem.Text;
-                    phieudangkytiem.makhachhang = khachhang.makhachhang;
+                    phieudangkytiem.makhachhang = "KH" + numCustomers.ToString();
                     sqlCommand = new SqlCommand("SELECT COUNT(*) FROM PHIEUDKTIEM", nachos.sqlCon);
                     int num = (Int32)sqlCommand.ExecuteScalar();
                     num += 1;
@@ -178,6 +180,7 @@ namespace WindowsFormsApp1
                 catch (SqlException sqlEx)
                 {
                     MessageBox.Show(sqlEx.Message);
+                    return;
                 }
                 MessageBox.Show("Đăng ký tiêm chủng thành công");
                 this.Hide();

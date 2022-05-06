@@ -87,7 +87,7 @@ namespace WindowsFormsApp1
             }
             else
             {
-                nhapGiaVacXin nhapGiaVacXin = new nhapGiaVacXin();
+                MHnhapGiaVacXin nhapGiaVacXin = new MHnhapGiaVacXin();
                 nhapGiaVacXin.ShowDialog();
 
                 sqlCommand = new SqlCommand("UPDATE PHIEUDATMUAVX SET DUYET_PDMVX=1 WHERE MA_PDMVX='" + maPhieuDM.Text + "'", nachos.sqlCon);

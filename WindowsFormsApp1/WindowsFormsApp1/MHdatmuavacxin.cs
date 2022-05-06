@@ -217,6 +217,7 @@ namespace WindowsFormsApp1
                     catch (SqlException sqlEx)
                     {
                         MessageBox.Show(sqlEx.Message);
+                        return;
                     }
                     MessageBox.Show("Đặt mua vacxin thành công");
                     navigateToPurchase();
@@ -250,10 +251,10 @@ namespace WindowsFormsApp1
                         command = new SqlCommand(strSQLCommand, nachos.sqlCon);
                         command.ExecuteNonQuery();
                     }
-                    
                     catch (SqlException sqlEx)
                     {
                         MessageBox.Show(sqlEx.Message);
+                        return;
                     }
                     MessageBox.Show("Đặt mua vacxin thành công");
                     navigateToPurchase();
@@ -293,6 +294,7 @@ namespace WindowsFormsApp1
                     catch (SqlException sqlEx)
                     {
                         MessageBox.Show(sqlEx.Message);
+                        return;
                     }
 
                     try
@@ -330,6 +332,7 @@ namespace WindowsFormsApp1
                     catch (SqlException sqlEx)
                     {
                         MessageBox.Show(sqlEx.Message);
+                        return;
                     }
                     MessageBox.Show("Đặt mua vacxin thành công");
                     navigateToPurchase();
@@ -375,6 +378,7 @@ namespace WindowsFormsApp1
                     catch (SqlException sqlEx)
                     {
                         MessageBox.Show(sqlEx.Message);
+                        return;
                     }
                     MessageBox.Show("Đặt mua vacxin thành công");
                     navigateToPurchase();

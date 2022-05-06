@@ -94,11 +94,11 @@
     <Compile Include="MHxepLichLamViec.Designer.cs">
       <DependentUpon>MHxepLichLamViec.cs</DependentUpon>
     </Compile>
-    <Compile Include="nhapGiaVacXin.cs">
+    <Compile Include="MHnhapGiaVacXin.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="nhapGiaVacXin.Designer.cs">
-      <DependentUpon>nhapGiaVacXin.cs</DependentUpon>
+    <Compile Include="MHnhapGiaVacXin.Designer.cs">
+      <DependentUpon>MHnhapGiaVacXin.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -150,8 +150,8 @@
     <EmbeddedResource Include="MHxepLichLamViec.resx">
       <DependentUpon>MHxepLichLamViec.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="nhapGiaVacXin.resx">
-      <DependentUpon>nhapGiaVacXin.cs</DependentUpon>
+    <EmbeddedResource Include="MHnhapGiaVacXin.resx">
+      <DependentUpon>MHnhapGiaVacXin.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

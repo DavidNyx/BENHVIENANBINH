@@ -116,7 +116,7 @@ namespace WindowsFormsApp1
             this.Lapphieudathang.Name = "Lapphieudathang";
             this.Lapphieudathang.Size = new System.Drawing.Size(98, 23);
             this.Lapphieudathang.TabIndex = 108;
-            this.Lapphieudathang.Text = "Lập danh sách";
+            this.Lapphieudathang.Text = "Lập phiếu nhập hàng";
             this.Lapphieudathang.UseVisualStyleBackColor = true;
             this.Lapphieudathang.Click += new System.EventHandler(this.button2_Click);
             // 

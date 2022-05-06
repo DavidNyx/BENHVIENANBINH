@@ -75,6 +75,7 @@ namespace WindowsFormsApp1
             this.tienCanTra = new System.Windows.Forms.Label();
             this.ngayLapHD = new System.Windows.Forms.Label();
             this.Thanhtoansau = new System.Windows.Forms.Button();
+            this.maKH = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // label1
@@ -518,11 +519,20 @@ namespace WindowsFormsApp1
             this.Thanhtoansau.UseVisualStyleBackColor = true;
             this.Thanhtoansau.Click += new System.EventHandler(this.button2_Click);
             // 
+            // maKH
+            // 
+            this.maKH.AutoSize = true;
+            this.maKH.Location = new System.Drawing.Point(142, 84);
+            this.maKH.Name = "maKH";
+            this.maKH.Size = new System.Drawing.Size(0, 13);
+            this.maKH.TabIndex = 178;
+            // 
             // MHThanhtoan
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(634, 416);
+            this.Controls.Add(this.maKH);
             this.Controls.Add(this.Thanhtoansau);
             this.Controls.Add(this.ngayLapHD);
             this.Controls.Add(this.tienCanTra);
@@ -625,5 +635,6 @@ namespace WindowsFormsApp1
         private System.Windows.Forms.Label tienCanTra;
         private System.Windows.Forms.Label ngayLapHD;
         private System.Windows.Forms.Button Thanhtoansau;
+        private System.Windows.Forms.Label maKH;
     }
 }

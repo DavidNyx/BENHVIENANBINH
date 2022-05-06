@@ -32,7 +32,6 @@ D:\BENHVIENANBINH\WindowsFormsApp1\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.p
 D:\BENHVIENANBINH\WindowsFormsApp1\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.nhapGiaVacXin.resources
 D:\PTTK HTTT\BENHVIENANBINH\WindowsFormsApp1\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.MHdangkytiemchung.resources
 D:\PTTK HTTT\BENHVIENANBINH\WindowsFormsApp1\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.MHdatmuavacxin.resources
-D:\PTTK HTTT\BENHVIENANBINH\WindowsFormsApp1\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.nhapGiaVacXin.resources
 D:\PTTK HTTT\BENHVIENANBINH\WindowsFormsApp1\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.MHthanhtoanle.resources
 D:\PTTK HTTT\BENHVIENANBINH\WindowsFormsApp1\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.MHtracuutiemchung.resources
 D:\PTTK HTTT\BENHVIENANBINH\WindowsFormsApp1\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.MHThanhtoan.resources
@@ -40,3 +39,4 @@ D:\PTTK HTTT\BENHVIENANBINH\WindowsFormsApp1\WindowsFormsApp1\obj\Debug\WindowsF
 D:\PTTK HTTT\BENHVIENANBINH\WindowsFormsApp1\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.MHxemLichCaNhan.resources
 D:\PTTK HTTT\BENHVIENANBINH\WindowsFormsApp1\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.MHxepLichLamViec.resources
 D:\PTTK HTTT\BENHVIENANBINH\WindowsFormsApp1\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.MHDatHangVacXin.resources
+D:\PTTK HTTT\BENHVIENANBINH\WindowsFormsApp1\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.MHnhapGiaVacXin.resources
