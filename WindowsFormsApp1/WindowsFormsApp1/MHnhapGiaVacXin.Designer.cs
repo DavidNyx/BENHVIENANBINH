@@ -1,6 +1,6 @@
 ﻿namespace WindowsFormsApp1
 {
-    partial class nhapGiaVacXin
+    partial class MHnhapGiaVacXin
     {
         /// <summary>
         /// Required designer variable.

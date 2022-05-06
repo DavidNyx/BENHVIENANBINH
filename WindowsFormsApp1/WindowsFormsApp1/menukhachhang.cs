@@ -115,4 +115,12 @@ namespace WindowsFormsApp1
         public static string stk = " ";
         public static string hinhthucthanhtoan = " ";
     }
+    public static class chitiethoadon
+    {
+        public static string mahoadon = " ";
+        public static double sotienthanhtoan;
+        public static int dotthanhtoan;
+        public static string hanthanhtoan = " ";
+        public static bool tinhtrang;
+    }
 }

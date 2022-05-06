@@ -11,11 +11,11 @@ using System.Windows.Forms;
 
 namespace WindowsFormsApp1
 {
-    public partial class MHduyetvacxin : Form
+    public partial class MHDatHangVacXin : Form
     {
         DataSet ds = null, ds2 = null;
         String maNCC = "";
-        public MHduyetvacxin()
+        public MHDatHangVacXin()
         {
             InitializeComponent();
             string connString = @"Data Source=" + nachos.servername + ";Initial Catalog=" + nachos.dbname + ";Integrated Security=True;" + "UID=" + nachos.username.Trim() + "password=" + nachos.password.Trim();
@@ -32,7 +32,7 @@ namespace WindowsFormsApp1
 
             ds = new DataSet();
             adapt3.Fill(ds, "tblPDM");
-            dataGridView1.DataSource = ds.Tables["tblPDM"];
+            danhsachxetduyet.DataSource = ds.Tables["tblPDM"];
 
             SqlDataAdapter adapt4 = new SqlDataAdapter("SELECT * FROM NHACUNGCAP", nachos.sqlCon);
             DataTable table4 = new DataTable();
@@ -40,7 +40,7 @@ namespace WindowsFormsApp1
 
             ds2 = new DataSet();
             adapt4.Fill(ds2, "tblNCC");
-            dataGridView2.DataSource = ds2.Tables["tblNCC"];
+            nhacungcapvx.DataSource = ds2.Tables["tblNCC"];
 
             nachos.sqlCon.Close();
         }
@@ -81,7 +81,7 @@ namespace WindowsFormsApp1
 
                 ds = new DataSet();
                 adapt3.Fill(ds, "tblPDM");
-                dataGridView1.DataSource = ds.Tables["tblPDM"];
+                danhsachxetduyet.DataSource = ds.Tables["tblPDM"];
                 maPhieuDM.Text = " ";
                 tenVX.Text = " ";
             }
@@ -102,7 +102,7 @@ namespace WindowsFormsApp1
 
                 ds = new DataSet();
                 adapt3.Fill(ds, "tblPDM");
-                dataGridView1.DataSource = ds.Tables["tblPDM"];
+                danhsachxetduyet.DataSource = ds.Tables["tblPDM"];
                 maPhieuDM.Text = " ";
                 tenVX.Text = " ";
             }
@@ -139,7 +139,7 @@ namespace WindowsFormsApp1
                 SqlDataAdapter adapt = new SqlDataAdapter("SELECT * FROM PHIEUNHAPHANG WHERE MA_PNH='PN" + num2.ToString() + "'", nachos.sqlCon);
                 DataTable table = new DataTable();
                 adapt.Fill(table);
-                dataGridView3.DataSource = new BindingSource(table, null);
+                Phieudathang.DataSource = new BindingSource(table, null);
             }
             else
             {

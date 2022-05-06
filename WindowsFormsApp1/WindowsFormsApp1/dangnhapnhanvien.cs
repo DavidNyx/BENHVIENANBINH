@@ -32,7 +32,7 @@ namespace WindowsFormsApp1
                 nachos.sqlCon.Close();
 
                 this.Hide();
-                MHduyetvacxin duyetvacxin = new MHduyetvacxin();
+                MHDatHangVacXin duyetvacxin = new MHDatHangVacXin();
                 duyetvacxin.ShowDialog();
                 this.Close();
             }

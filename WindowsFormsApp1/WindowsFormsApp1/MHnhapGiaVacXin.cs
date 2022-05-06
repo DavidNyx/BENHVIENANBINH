@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace WindowsFormsApp1
 {
-    public partial class nhapGiaVacXin : Form
+    public partial class MHnhapGiaVacXin : Form
     {
-        public nhapGiaVacXin()
+        public MHnhapGiaVacXin()
         {
             InitializeComponent();
             tenVXlbl.Text = nachos.tenVacXin;

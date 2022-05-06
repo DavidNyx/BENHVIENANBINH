@@ -637,7 +637,7 @@ namespace WindowsFormsApp1
             this.Controls.Add(this.label12);
             this.Controls.Add(this.label1);
             this.Name = "MHdatmuavacxin";
-            this.Text = " Đăng ký tiêm chủng:";
+            this.Text = "SS";
             this.Load += new System.EventHandler(this.MHdatmuavacxin_Load);
             ((System.ComponentModel.ISupportInitialize)(this.Goivacxin)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.Vacxinle)).EndInit();

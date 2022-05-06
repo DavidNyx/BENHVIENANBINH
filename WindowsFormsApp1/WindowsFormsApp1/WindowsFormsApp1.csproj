@@ -70,11 +70,11 @@
     <Compile Include="MHdatmuavacxin.Designer.cs">
       <DependentUpon>MHdatmuavacxin.cs</DependentUpon>
     </Compile>
-    <Compile Include="MHduyetvacxin.cs">
+    <Compile Include="MHDatHangVacXin.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="MHduyetvacxin.Designer.cs">
-      <DependentUpon>MHduyetvacxin.cs</DependentUpon>
+    <Compile Include="MHDatHangVacXin.Designer.cs">
+      <DependentUpon>MHDatHangVacXin.cs</DependentUpon>
     </Compile>
     <Compile Include="menukhachhang.cs">
       <SubType>Form</SubType>
@@ -138,8 +138,8 @@
     <EmbeddedResource Include="MHdatmuavacxin.resx">
       <DependentUpon>MHdatmuavacxin.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="MHduyetvacxin.resx">
-      <DependentUpon>MHduyetvacxin.cs</DependentUpon>
+    <EmbeddedResource Include="MHDatHangVacXin.resx">
+      <DependentUpon>MHDatHangVacXin.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="menukhachhang.resx">
       <DependentUpon>menukhachhang.cs</DependentUpon>

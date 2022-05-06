@@ -54,22 +54,26 @@ namespace WindowsFormsApp1
                 command.ExecuteNonQuery();
                 MessageBox.Show("Thanh toán thành công");
             }*/
-                hinhThucTT.Text = "Theo đợt";
-                sqlCommand = new SqlCommand("SELECT TOP 1 CT.DOTTHANHTOAN FROM CHITIET_HD CT JOIN HOADON HD ON CT.MA_HD = HD.MA_HD WHERE MA_PDKT='" + phieudangkytiem.maphieudangkytiem + "' AND CT.DATHANHTOAN=0 ", nachos.sqlCon);
-                Int32 dot = (Int32)sqlCommand.ExecuteScalar();
-                dotTT.Text = dot.ToString();
+            hinhThucTT.Text = "Theo đợt";
+            sqlCommand = new SqlCommand("SELECT TOP 1 CT.DOTTHANHTOAN FROM CHITIET_HD CT JOIN HOADON HD ON CT.MA_HD = HD.MA_HD WHERE MA_PDKT='" + phieudangkytiem.maphieudangkytiem + "' AND CT.DATHANHTOAN=0 ", nachos.sqlCon);
+            Int32 dot = (Int32)sqlCommand.ExecuteScalar();
+            dotTT.Text = dot.ToString();
+            chitiethoadon.dotthanhtoan = dot;
 
-                sqlCommand = new SqlCommand("SELECT CT.SOTIENTHANHTOAN FROM CHITIET_HD CT JOIN HOADON HD ON CT.MA_HD = HD.MA_HD WHERE MA_PDKT='" + phieudangkytiem.maphieudangkytiem + "' AND CT.DOTTHANHTOAN=" + dot.ToString(), nachos.sqlCon);
-                double tienTra = (double)sqlCommand.ExecuteScalar();
-                tienCanTra.Text = tienTra.ToString();
+            sqlCommand = new SqlCommand("SELECT CT.SOTIENTHANHTOAN FROM CHITIET_HD CT JOIN HOADON HD ON CT.MA_HD = HD.MA_HD WHERE MA_PDKT='" + phieudangkytiem.maphieudangkytiem + "' AND CT.DOTTHANHTOAN=" + dot.ToString(), nachos.sqlCon);
+            double tienTra = (double)sqlCommand.ExecuteScalar();
+            tienCanTra.Text = tienTra.ToString();
+            chitiethoadon.sotienthanhtoan = tienTra;
 
-                sqlCommand = new SqlCommand("SELECT CT.MA_HD FROM CHITIET_HD CT JOIN HOADON HD ON CT.MA_HD = HD.MA_HD WHERE MA_PDKT='" + phieudangkytiem.maphieudangkytiem + "' AND CT.DATHANHTOAN=0 ", nachos.sqlCon);
-                String maHD = (String)sqlCommand.ExecuteScalar();
+            sqlCommand = new SqlCommand("SELECT CT.MA_HD FROM CHITIET_HD CT JOIN HOADON HD ON CT.MA_HD = HD.MA_HD WHERE MA_PDKT='" + phieudangkytiem.maphieudangkytiem + "' AND CT.DATHANHTOAN=0 ", nachos.sqlCon);
+            chitiethoadon.mahoadon = (String)sqlCommand.ExecuteScalar();
 
-                var strSQLCommand = "EXEC dbo.CAP_NHAP_HOA_DON '" + maHD + "', " + dot.ToString() + ", null, '" + time.ToString("d") + "', 1";
-                var command = new SqlCommand(strSQLCommand, nachos.sqlCon);
-                command.ExecuteNonQuery();
-                MessageBox.Show("Thanh toán thành công");
+            chitiethoadon.hanthanhtoan = time.ToString("d");
+
+            var strSQLCommand = "EXEC dbo.CAP_NHAP_HOA_DON '" + chitiethoadon.mahoadon + "', " + chitiethoadon.dotthanhtoan + ", null, '" + chitiethoadon.hanthanhtoan + "', 1";
+            var command = new SqlCommand(strSQLCommand, nachos.sqlCon);
+            command.ExecuteNonQuery();
+            MessageBox.Show("Thanh toán thành công");
             nachos.sqlCon.Close();
         }
 

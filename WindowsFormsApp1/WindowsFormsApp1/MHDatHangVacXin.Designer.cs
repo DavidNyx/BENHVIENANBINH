@@ -1,7 +1,7 @@
 ﻿
 namespace WindowsFormsApp1
 {
-    partial class MHduyetvacxin
+    partial class MHDatHangVacXin
     {
         /// <summary>
         /// Required designer variable.
@@ -32,11 +32,11 @@ namespace WindowsFormsApp1
             this.label1 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label14 = new System.Windows.Forms.Label();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.button1 = new System.Windows.Forms.Button();
+            this.danhsachxetduyet = new System.Windows.Forms.DataGridView();
+            this.Xetduyet = new System.Windows.Forms.Button();
             this.label2 = new System.Windows.Forms.Label();
-            this.button2 = new System.Windows.Forms.Button();
-            this.dataGridView2 = new System.Windows.Forms.DataGridView();
+            this.Lapphieudathang = new System.Windows.Forms.Button();
+            this.nhacungcapvx = new System.Windows.Forms.DataGridView();
             this.label5 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
@@ -44,21 +44,21 @@ namespace WindowsFormsApp1
             this.tenVX = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.nhaCungCap = new System.Windows.Forms.Label();
-            this.dataGridView3 = new System.Windows.Forms.DataGridView();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView3)).BeginInit();
+            this.Phieudathang = new System.Windows.Forms.DataGridView();
+            ((System.ComponentModel.ISupportInitialize)(this.danhsachxetduyet)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nhacungcapvx)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Phieudathang)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(163, 18);
+            this.label1.Location = new System.Drawing.Point(261, 9);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(302, 31);
+            this.label1.Size = new System.Drawing.Size(447, 31);
             this.label1.TabIndex = 2;
-            this.label1.Text = "Duyệt vắc xin đặt mua";
+            this.label1.Text = "Lập danh sách nhập hàng vắc xin";
             // 
             // label3
             // 
@@ -80,25 +80,25 @@ namespace WindowsFormsApp1
             this.label14.TabIndex = 99;
             this.label14.Text = "*Danh sách lọc";
             // 
-            // dataGridView1
+            // danhsachxetduyet
             // 
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(27, 96);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.RowHeadersWidth = 51;
-            this.dataGridView1.Size = new System.Drawing.Size(240, 272);
-            this.dataGridView1.TabIndex = 100;
-            this.dataGridView1.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellClick);
+            this.danhsachxetduyet.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.danhsachxetduyet.Location = new System.Drawing.Point(27, 96);
+            this.danhsachxetduyet.Name = "danhsachxetduyet";
+            this.danhsachxetduyet.RowHeadersWidth = 51;
+            this.danhsachxetduyet.Size = new System.Drawing.Size(240, 272);
+            this.danhsachxetduyet.TabIndex = 100;
+            this.danhsachxetduyet.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellClick);
             // 
-            // button1
+            // Xetduyet
             // 
-            this.button1.Location = new System.Drawing.Point(193, 374);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 23);
-            this.button1.TabIndex = 104;
-            this.button1.Text = "Xét duyệt";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
+            this.Xetduyet.Location = new System.Drawing.Point(193, 374);
+            this.Xetduyet.Name = "Xetduyet";
+            this.Xetduyet.Size = new System.Drawing.Size(75, 23);
+            this.Xetduyet.TabIndex = 104;
+            this.Xetduyet.Text = "Xét duyệt";
+            this.Xetduyet.UseVisualStyleBackColor = true;
+            this.Xetduyet.Click += new System.EventHandler(this.button1_Click);
             // 
             // label2
             // 
@@ -110,25 +110,25 @@ namespace WindowsFormsApp1
             this.label2.TabIndex = 105;
             this.label2.Text = "2. Chọn nhà cung cấp";
             // 
-            // button2
+            // Lapphieudathang
             // 
-            this.button2.Location = new System.Drawing.Point(470, 374);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(98, 23);
-            this.button2.TabIndex = 108;
-            this.button2.Text = "Lập danh sách";
-            this.button2.UseVisualStyleBackColor = true;
-            this.button2.Click += new System.EventHandler(this.button2_Click);
+            this.Lapphieudathang.Location = new System.Drawing.Point(470, 374);
+            this.Lapphieudathang.Name = "Lapphieudathang";
+            this.Lapphieudathang.Size = new System.Drawing.Size(98, 23);
+            this.Lapphieudathang.TabIndex = 108;
+            this.Lapphieudathang.Text = "Lập danh sách";
+            this.Lapphieudathang.UseVisualStyleBackColor = true;
+            this.Lapphieudathang.Click += new System.EventHandler(this.button2_Click);
             // 
-            // dataGridView2
+            // nhacungcapvx
             // 
-            this.dataGridView2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView2.Location = new System.Drawing.Point(328, 80);
-            this.dataGridView2.Name = "dataGridView2";
-            this.dataGridView2.RowHeadersWidth = 51;
-            this.dataGridView2.Size = new System.Drawing.Size(240, 288);
-            this.dataGridView2.TabIndex = 110;
-            this.dataGridView2.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView2_CellContentClick);
+            this.nhacungcapvx.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.nhacungcapvx.Location = new System.Drawing.Point(328, 80);
+            this.nhacungcapvx.Name = "nhacungcapvx";
+            this.nhacungcapvx.RowHeadersWidth = 51;
+            this.nhacungcapvx.Size = new System.Drawing.Size(240, 288);
+            this.nhacungcapvx.TabIndex = 110;
+            this.nhacungcapvx.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView2_CellContentClick);
             // 
             // label5
             // 
@@ -200,23 +200,23 @@ namespace WindowsFormsApp1
             this.nhaCungCap.Size = new System.Drawing.Size(0, 13);
             this.nhaCungCap.TabIndex = 120;
             // 
-            // dataGridView3
+            // Phieudathang
             // 
-            this.dataGridView3.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView3.Location = new System.Drawing.Point(608, 80);
-            this.dataGridView3.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.dataGridView3.Name = "dataGridView3";
-            this.dataGridView3.RowHeadersWidth = 51;
-            this.dataGridView3.RowTemplate.Height = 24;
-            this.dataGridView3.Size = new System.Drawing.Size(272, 62);
-            this.dataGridView3.TabIndex = 121;
+            this.Phieudathang.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.Phieudathang.Location = new System.Drawing.Point(608, 80);
+            this.Phieudathang.Margin = new System.Windows.Forms.Padding(2);
+            this.Phieudathang.Name = "Phieudathang";
+            this.Phieudathang.RowHeadersWidth = 51;
+            this.Phieudathang.RowTemplate.Height = 24;
+            this.Phieudathang.Size = new System.Drawing.Size(272, 62);
+            this.Phieudathang.TabIndex = 121;
             // 
-            // duyetvacxin
+            // MHDatHangVacXin
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(903, 500);
-            this.Controls.Add(this.dataGridView3);
+            this.Controls.Add(this.Phieudathang);
             this.Controls.Add(this.nhaCungCap);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.tenVX);
@@ -224,20 +224,20 @@ namespace WindowsFormsApp1
             this.Controls.Add(this.label8);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.label5);
-            this.Controls.Add(this.dataGridView2);
-            this.Controls.Add(this.button2);
+            this.Controls.Add(this.nhacungcapvx);
+            this.Controls.Add(this.Lapphieudathang);
             this.Controls.Add(this.label2);
-            this.Controls.Add(this.button1);
-            this.Controls.Add(this.dataGridView1);
+            this.Controls.Add(this.Xetduyet);
+            this.Controls.Add(this.danhsachxetduyet);
             this.Controls.Add(this.label14);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label1);
-            this.Name = "duyetvacxin";
-            this.Text = "Duyệt danh sách vắc xin";
+            this.Name = "MHDatHangVacXin";
+            this.Text = "Duyệt danh sách đặt hàng vắc xin";
             this.Load += new System.EventHandler(this.duyetvacxin_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.danhsachxetduyet)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nhacungcapvx)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Phieudathang)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -248,11 +248,11 @@ namespace WindowsFormsApp1
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label14;
-        private System.Windows.Forms.DataGridView dataGridView1;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.DataGridView danhsachxetduyet;
+        private System.Windows.Forms.Button Xetduyet;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.DataGridView dataGridView2;
+        private System.Windows.Forms.Button Lapphieudathang;
+        private System.Windows.Forms.DataGridView nhacungcapvx;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label8;
@@ -260,6 +260,6 @@ namespace WindowsFormsApp1
         private System.Windows.Forms.Label tenVX;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label nhaCungCap;
-        private System.Windows.Forms.DataGridView dataGridView3;
+        private System.Windows.Forms.DataGridView Phieudathang;
     }
 }
